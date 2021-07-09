@@ -226,8 +226,7 @@ class SwitchHandler:
         self.switches = set()
 
     async def start_server(self):
-        """start server
-        """
+        """start server"""
         server = await asyncio.start_server(self.handle_switch, host=self.host, port=self.port)
         self.logger.info("Server on {}".format(server.sockets[0].getsockname()))
 
@@ -342,7 +341,7 @@ class ControllerHandler:
             channel (Channel) :
 
         Returns:
-            asyncio.StreamWriter : if succeeded to connect, return writer, else None
+            asyncio.StreamWriter or None : if succeeded to connect, return writer, else None
         """
         try:
             reader, writer = await asyncio.open_connection(host=self.host, port=self.port, loop=self.loop)
@@ -384,9 +383,9 @@ class ControllerHandler:
             raise
         finally:
             self.logger.info("Close the connection and do exit processing")
-            # self.controllers.remove(peername)
-            # if len(self.controllers) == 0:
-            #     self.channel_manager.has_controller_join = False
+            self.controllers.remove(peername)
+            if len(self.controllers) == 0:
+                self.channel_manager.has_controller_join = False
             writer.close()
 
     async def send_to_controller(self, writer, data):

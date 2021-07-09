@@ -24,12 +24,18 @@ class Message:
         self.data = data
         self.switch2controller = switch2controller
         self.msg_name = ""
+        self.of_msg = None
 
-    def set_msg_name(self, msg_name):
-        self.msg_name = msg_name
-
-    def get_datetime(self):
+    @property
+    def datetime(self):
         return datetime.fromtimestamp(self.timestamp)
+
+    @property
+    def message_type(self):
+        if self.of_msg:
+            return self.of_msg.header.message_type
+        else:
+            return None
 
     def __repr__(self):
         return "<Message msg_name={} timestamp={}>".format(self.msg_name, self.timestamp)

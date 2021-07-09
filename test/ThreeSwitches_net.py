@@ -29,7 +29,7 @@ def setup():
     topo = Three_switches_topo(n=5)
     net = Mininet(topo=topo, controller=partial(RemoteController, ip='127.0.0.1', port=63333))
     # ネットに繋がるようにする
-    net.addNAT().configDefault()
+    # net.addNAT().configDefault()
     net.start()
     dumpNodeConnections(net.hosts)
     CLI(net)

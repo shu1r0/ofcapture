@@ -6,12 +6,11 @@ Todo:
 """
 import asyncio
 import datetime
-from logging import getLogger, Logger, DEBUG, StreamHandler, Formatter, handlers
+from logging import getLogger, DEBUG, StreamHandler, Formatter, handlers
 
-from capture.flowCapture import CaputerFlowTables
-from proxy.proxy import ChannelManager, SwitchHandler, ControllerHandler
+from capture.capture import CaptureWithRepo
+from proxy.proxy import ChannelManager, SwitchHandler
 from proxy.observable import ObservableData
-from api.observer import OFObserver
 
 logger = getLogger()
 
@@ -34,6 +33,15 @@ def setup_logger():
 
 
 class OFCapture:
+    """OpenFlow proxy to capture
+
+    Attributes:
+        channel_manager (ChannelManager) :
+        observable (Observable) : observable instance
+        observer (Observer) : observer instance
+        switch_handler (SwitchHandler) : local server
+        event_loop (asyncio.EventLoop) : event loop
+    """
 
     def __init__(self, local_ip='127.0.0.1', local_port=63333, controller_ip='127.0.0.1', controller_port=6633,
                  event_loop=None, logger=None):
@@ -44,14 +52,11 @@ class OFCapture:
                                               controller_ip=controller_ip,
                                               controller_port=controller_port)
         self.observable = ObservableData(self.channel_manager.get_queue_all_data())
-        self.observer = CaputerFlowTables(self.observable)
+        self.observer = CaptureWithRepo(self.observable)
         self.switch_handler = SwitchHandler(host=local_ip,
                                             port=local_port,
                                             loop=self.event_loop,
                                             channel_manager=self.channel_manager)
-
-    def get_packet_inout_repository(self):
-        pass
 
     def start_server(self):
         self.event_loop.run_until_complete(asyncio.wait([
@@ -59,7 +64,7 @@ class OFCapture:
         ]))
 
     def server_restart(self):
-        pass
+        raise NotImplementedError
 
 #
 # def main():
@@ -80,9 +85,12 @@ class OFCapture:
 #     ]))
 #
 
+
 if __name__ == "__main__":
+    setup_logger()
+    ofcapture = OFCapture(logger=logger)
     try:
-        main()
+        ofcapture.start_server()
     except KeyboardInterrupt as e:
         logger.info("keyboardInterrupt : {}".format(str(e)))
 

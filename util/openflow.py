@@ -29,7 +29,7 @@ def parse(msg, logger=None):
     try:
         # header, _, _ = openflow.parser(msg.data)
         of_msg = unpack_message(msg.data)
-        msg_name = of_msg.header.message_type.__class__.__name__
+        msg_name = of_msg.header.message_type.name
         dict_of_msg = todict(of_msg, logger)
         if logger:
             logger.info("Parsed msg : {} {} {}".format(msg_name, of_msg, dict_of_msg))
@@ -37,7 +37,7 @@ def parse(msg, logger=None):
     except Exception as e:
         header = Header()
         header.unpack(msg.data[:header.get_size()])
-        msg_name = new_message_from_header(header).__class__.__name__
+        msg_name = new_message_from_header(header).name
         if logger:
             logger.error("Failed to unpack msg({}) : {}".format(msg_name, str(e)))
         return msg_name, None, None

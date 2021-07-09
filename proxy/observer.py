@@ -34,21 +34,10 @@ class OFObserver(AbstractObserver):
     def update(self, msg):
         self.logger.debug("observed from observable: {}".format(msg.data[:8]))  # 8 : header Byte size
         msg_name, of_msg, dict_of_msg = util.openflow.parse(msg, self.logger)
-        msg.set_msg_name(msg_name)
-        self.add_repo(msg)
-        # self.dict_ofmsg_handler(dict_of_msg, msg)
+        msg.msg_name = msg_name
+        msg.of_msg = of_msg
+        self.get_msg(msg)
 
-    def dict_ofmsg_handler(self, dict_of_msg, msg):
-        """
-
-        Args:
-            dict_ofmsg (dict) :
-            msg (Message) :
-        """
+    def get_msg(self, msg):
         pass
-
-    def add_repo(self, msg):
-        if msg.msg_name == "OFPT_PACKETOUT":
-            self.logger.debug("add repo {}".format(msg))
-            packet_in_out_repo.add(msg)
 

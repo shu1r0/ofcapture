@@ -1,4 +1,4 @@
-# OpenFlow Capture (ofcapture)
+# OpenFlow Proxy (ofcapture)
 
 This program monitors the communication between switches and controller, 
 and reproduces the flow table from the messages.
