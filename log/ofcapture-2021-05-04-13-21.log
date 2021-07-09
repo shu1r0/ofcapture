@@ -1,0 +1,4 @@
+2021-05-04 13:21:07,065 | 9130 | asyncio, __init__, 59 | DEBUG | Using selector: KqueueSelector
+2021-05-04 13:21:07,066 | 9130 | proxy, open_connection, 213 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6653)
+2021-05-04 13:21:07,067 | 9130 | proxy, start_server, 117 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-04 13:21:07,067 | 9130 | proxy, start_server, 120 | INFO | Server serve forever ('127.0.0.1', 63333)

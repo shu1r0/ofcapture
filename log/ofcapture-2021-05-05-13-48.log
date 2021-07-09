@@ -1,0 +1,273 @@
+2021-05-05 13:48:17,721 | 3049 | proxy.proxy, start_server, 155 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 13:48:17,722 | 3049 | proxy.proxy, start_server, 158 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 13:48:36,754 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44872) is connected
+2021-05-05 13:48:36,756 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:36,756 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:38,366 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44878) is connected
+2021-05-05 13:48:38,368 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:38,371 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:38,373 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44882) is connected
+2021-05-05 13:48:38,375 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:38,385 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:38,401 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44886) is connected
+2021-05-05 13:48:38,408 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:38,421 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:39,413 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44890) is connected
+2021-05-05 13:48:39,414 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:39,415 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:39,482 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44894) is connected
+2021-05-05 13:48:39,483 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:39,484 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:39,489 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44898) is connected
+2021-05-05 13:48:39,490 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:39,491 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:41,548 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44902) is connected
+2021-05-05 13:48:41,549 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44904) is connected
+2021-05-05 13:48:41,550 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44906) is connected
+2021-05-05 13:48:41,551 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:41,554 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:41,559 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:41,562 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:41,565 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:41,565 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:46,055 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44916) is connected
+2021-05-05 13:48:46,057 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44918) is connected
+2021-05-05 13:48:46,057 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44920) is connected
+2021-05-05 13:48:46,058 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:46,059 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:46,059 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:46,060 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:46,060 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:46,061 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:54,569 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44932) is connected
+2021-05-05 13:48:54,570 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:54,571 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:54,573 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44936) is connected
+2021-05-05 13:48:54,574 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44938) is connected
+2021-05-05 13:48:54,575 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:54,575 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:48:54,576 | 3049 | proxy.proxy, open_connection, 268 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:48:54,577 | 3049 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:49:03,082 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44946) is connected
+2021-05-05 13:49:03,086 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44948) is connected
+2021-05-05 13:49:03,090 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44950) is connected
+2021-05-05 13:49:03,107 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:03,113 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:03,120 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:03,121 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:03,121 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:03,121 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:03,122 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08\x88\xed\xa0y'
+2021-05-05 13:49:03,122 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:03,123 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:03,123 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-40' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=AttributeError("'Channel' object has no attribute 'switch_writer'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:03,136 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08l3\x92B'
+2021-05-05 13:49:03,137 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:03,140 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:03,141 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-41' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=KeyError(('127.0.0.1', 6633))>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 306, in handle_controller
+    self.controllers.remove(peername)
+KeyError: ('127.0.0.1', 6633)
+2021-05-05 13:49:03,149 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08\x07\xb4\x8f\x87'
+2021-05-05 13:49:03,156 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:03,157 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:03,157 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-42' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=KeyError(('127.0.0.1', 6633))>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 306, in handle_controller
+    self.controllers.remove(peername)
+KeyError: ('127.0.0.1', 6633)
+2021-05-05 13:49:19,181 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44962) is connected
+2021-05-05 13:49:19,185 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44964) is connected
+2021-05-05 13:49:19,186 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44966) is connected
+2021-05-05 13:49:19,189 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:19,193 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:19,194 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:19,194 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:19,195 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:19,195 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:19,196 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08\xc5\xafWe'
+2021-05-05 13:49:19,199 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:19,202 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:19,202 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-46' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=AttributeError("'Channel' object has no attribute 'switch_writer'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:19,206 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08\xfe\xb5\xc0L'
+2021-05-05 13:49:19,207 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:19,207 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:19,209 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-47' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=KeyError(('127.0.0.1', 6633))>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 306, in handle_controller
+    self.controllers.remove(peername)
+KeyError: ('127.0.0.1', 6633)
+2021-05-05 13:49:19,220 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08\xa6:\xdd\xb1'
+2021-05-05 13:49:19,221 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:19,221 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:19,222 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-48' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=KeyError(('127.0.0.1', 6633))>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 306, in handle_controller
+    self.controllers.remove(peername)
+KeyError: ('127.0.0.1', 6633)
+2021-05-05 13:49:35,208 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44978) is connected
+2021-05-05 13:49:35,212 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44980) is connected
+2021-05-05 13:49:35,214 | 3049 | proxy.proxy, handle_switch, 172 | INFO | Client ('127.0.0.1', 44982) is connected
+2021-05-05 13:49:35,223 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:35,225 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:35,226 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:35,227 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:35,227 | 3049 | proxy.proxy, handle_controller, 285 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:49:35,228 | 3049 | proxy.proxy, handle_controller, 290 | DEBUG | waiting data ......
+2021-05-05 13:49:35,229 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08\xa5\xdbh\x80'
+2021-05-05 13:49:35,230 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:35,230 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:35,231 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-52' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=AttributeError("'Channel' object has no attribute 'switch_writer'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:35,242 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x087\xc9\xadx'
+2021-05-05 13:49:35,243 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:35,244 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:35,244 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-53' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=KeyError(('127.0.0.1', 6633))>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 306, in handle_controller
+    self.controllers.remove(peername)
+KeyError: ('127.0.0.1', 6633)
+2021-05-05 13:49:35,263 | 3049 | proxy.proxy, handle_controller, 292 | DEBUG | read b'\x04\x00\x00\x08\xc2\xb3\xde\xda'
+2021-05-05 13:49:35,264 | 3049 | proxy.proxy, handle_controller, 302 | ERROR | Failed to read: 'Channel' object has no attribute 'switch_writer'
+2021-05-05 13:49:35,265 | 3049 | proxy.proxy, handle_controller, 305 | INFO | Close the connection and do exit processing
+2021-05-05 13:49:35,271 | 3049 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-54' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:161> exception=KeyError(('127.0.0.1', 6633))>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 296, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 62, in is_closing
+    if self.switch_writer and self.controller_writer:
+AttributeError: 'Channel' object has no attribute 'switch_writer'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 176, in handle_switch
+    channel = await self.channel_manager.create_channel(self, writer)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 95, in create_channel
+    controller_writer = await self.controller_handler.open_connection(channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 266, in open_connection
+    await self.handle_controller(reader, writer, channel)
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 306, in handle_controller
+    self.controllers.remove(peername)
+KeyError: ('127.0.0.1', 6633)
+2021-05-05 13:49:50,761 | 3049 | root, <module>, 51 | INFO | keyboardInterrupt : 

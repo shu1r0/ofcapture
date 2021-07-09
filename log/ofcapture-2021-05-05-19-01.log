@@ -1,0 +1,680 @@
+2021-05-05 19:01:49,273 | 3040 | proxy.proxy, start_server, 208 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 19:01:49,274 | 3040 | proxy.proxy, start_server, 211 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 19:02:09,761 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35314) is connected
+2021-05-05 19:02:09,762 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:09,763 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:11,714 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35318) is connected
+2021-05-05 19:02:11,715 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:11,716 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:11,718 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35322) is connected
+2021-05-05 19:02:11,720 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:11,732 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:11,736 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35326) is connected
+2021-05-05 19:02:11,753 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:11,765 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:12,902 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35330) is connected
+2021-05-05 19:02:12,904 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35332) is connected
+2021-05-05 19:02:12,906 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35334) is connected
+2021-05-05 19:02:12,907 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:12,910 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:12,911 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:12,912 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:12,914 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:12,917 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:15,266 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35342) is connected
+2021-05-05 19:02:15,269 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:15,270 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:15,271 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35344) is connected
+2021-05-05 19:02:15,272 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35346) is connected
+2021-05-05 19:02:15,274 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:15,275 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:15,276 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:15,279 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:19,770 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35354) is connected
+2021-05-05 19:02:19,771 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35356) is connected
+2021-05-05 19:02:19,775 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:19,775 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:19,777 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:19,777 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:19,778 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35360) is connected
+2021-05-05 19:02:19,780 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:19,781 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:28,040 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35366) is connected
+2021-05-05 19:02:28,041 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35368) is connected
+2021-05-05 19:02:28,042 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35370) is connected
+2021-05-05 19:02:28,043 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:28,043 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:28,044 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:28,044 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:28,046 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:28,047 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:36,291 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35378) is connected
+2021-05-05 19:02:36,292 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35380) is connected
+2021-05-05 19:02:36,293 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35382) is connected
+2021-05-05 19:02:36,293 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:36,294 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:36,294 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:36,295 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:36,296 | 3040 | proxy.proxy, open_connection, 321 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 19:02:36,296 | 3040 | proxy.proxy, create_channel, 156 | DEBUG | no connectable controller
+2021-05-05 19:02:44,809 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35394) is connected
+2021-05-05 19:02:44,811 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35396) is connected
+2021-05-05 19:02:44,814 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35398) is connected
+2021-05-05 19:02:44,815 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:02:44,823 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:02:44,824 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:02:44,824 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:02:44,825 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:02:44,826 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:02:44,826 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:02:44,827 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:02:44,828 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:02:52,826 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x15\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,833 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x15\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,833 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x15\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,834 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:02:52,834 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:02:52,834 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:02:52,835 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:02:52,835 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x16\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,844 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x16\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,846 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x16\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,847 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:02:52,848 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:02:52,849 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:02:52,850 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:02:52,851 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x17\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,853 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x17\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,854 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x17\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,855 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:02:52,855 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:02:52,855 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:02:52,859 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:02:52,860 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x15\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,861 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x15\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,872 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:02:52,874 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-49' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d2437a8b0>()]>>
+2021-05-05 19:02:52,874 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:02:52,875 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-50' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d2437a730>()]>>
+2021-05-05 19:02:52,881 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:02:52,882 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-51' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d2437a100>()]>>
+2021-05-05 19:02:52,971 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:02:52,971 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x16\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,972 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x16\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,973 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:02:52,974 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x17\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,974 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x17\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:02:52,975 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:00,838 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35410) is connected
+2021-05-05 19:03:00,844 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35412) is connected
+2021-05-05 19:03:00,847 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35416) is connected
+2021-05-05 19:03:00,848 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:00,858 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:00,859 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:00,859 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:00,861 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:00,862 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:00,870 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:00,871 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:00,878 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:08,850 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x19\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,851 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x19\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,853 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x19\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,854 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:08,854 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:08,855 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:08,855 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:08,856 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x1a\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,858 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x1a\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,858 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x1a\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,858 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:08,859 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:08,870 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:08,871 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:08,872 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x1b\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,874 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x1b\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,874 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x1b\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,875 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:08,875 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:08,883 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:08,888 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:08,889 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x19\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,889 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x19\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,890 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:08,897 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x1a\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,898 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x1a\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,903 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:08,907 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x1b\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,908 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x1b\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:08,922 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:16,875 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35424) is connected
+2021-05-05 19:03:16,878 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35426) is connected
+2021-05-05 19:03:16,880 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35428) is connected
+2021-05-05 19:03:16,883 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:16,883 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:16,884 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:16,885 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:16,885 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:16,886 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:16,886 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:16,888 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:16,888 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:24,890 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x1c\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,891 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x1c\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,894 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x1c\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,895 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:24,895 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:24,895 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:24,896 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,896 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x1d\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,898 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x1d\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,898 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x1d\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,898 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:24,899 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:24,899 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:24,899 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,900 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x1e\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,903 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x1e\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,904 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x1e\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,904 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:24,905 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:24,905 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:24,905 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,906 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x1c\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,906 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x1c\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,907 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,909 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-58' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d2437ac40>()]>>
+2021-05-05 19:03:24,910 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,911 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-59' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240a9a60>()]>>
+2021-05-05 19:03:24,911 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,912 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-60' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240a9e50>()]>>
+2021-05-05 19:03:24,912 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,913 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-67' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d24044e20>()]>>
+2021-05-05 19:03:24,913 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,914 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-68' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d24044670>()]>>
+2021-05-05 19:03:24,914 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:24,915 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-69' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d24044220>()]>>
+2021-05-05 19:03:24,915 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:24,916 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x1d\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,916 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x1d\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,917 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:24,922 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x1e\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,923 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x1e\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:24,924 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:32,905 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35438) is connected
+2021-05-05 19:03:32,912 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35440) is connected
+2021-05-05 19:03:32,915 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35442) is connected
+2021-05-05 19:03:32,919 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:32,924 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:32,925 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:32,925 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:32,926 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:32,926 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:32,927 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:32,927 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:32,927 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:40,918 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x1f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,919 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00\x1f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,921 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00\x1f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,921 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:40,922 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:40,922 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:40,923 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:40,926 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00 \x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,944 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00 \x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,947 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00 \x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,959 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:40,960 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:40,962 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:40,962 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:40,964 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00!\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,975 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00!\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,977 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00!\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,979 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:40,986 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:40,990 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:40,992 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:40,997 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00\x1f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:40,998 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00\x1f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:41,000 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:41,005 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00 \x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:41,011 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00 \x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:41,023 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:41,047 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00!\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:41,049 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00!\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:41,060 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:48,928 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35454) is connected
+2021-05-05 19:03:48,931 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35456) is connected
+2021-05-05 19:03:48,933 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35458) is connected
+2021-05-05 19:03:48,936 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:48,937 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:48,937 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:48,937 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:48,938 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:48,938 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:48,939 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:48,941 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:03:48,941 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:03:56,941 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00"\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,944 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00"\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,945 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00"\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,946 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:56,946 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:56,947 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:56,947 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:56,948 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00"\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,948 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00"\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,949 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:56,950 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00#\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,952 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00#\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,955 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00#\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,956 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:56,957 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:56,957 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:56,957 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:56,958 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00$\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,960 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00$\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,960 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00$\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,961 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:03:56,961 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:03:56,962 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:03:56,962 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:03:56,963 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00#\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,963 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00#\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,964 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:03:56,965 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00$\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,966 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00$\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:03:56,967 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:04,992 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35470) is connected
+2021-05-05 19:04:04,997 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35474) is connected
+2021-05-05 19:04:05,001 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35476) is connected
+2021-05-05 19:04:05,004 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:05,007 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:05,007 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:05,008 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:05,009 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:05,009 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:05,010 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:05,010 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:05,011 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:13,014 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00%\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,048 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00%\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,050 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00%\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,052 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:13,058 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:13,058 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:13,061 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:13,061 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00&\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,063 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00&\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,064 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00&\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,065 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:13,065 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:13,065 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:13,073 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:13,074 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b"\x04\x00\x00\x10\x00\x00\x00'\x00\x01\x00\x08\x00\x00\x00\x10"
+2021-05-05 19:04:13,077 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b"\x04\x00\x00\x10\x00\x00\x00'\x00\x01\x00\x08\x00\x00\x00\x10"
+2021-05-05 19:04:13,078 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b"\x04\x00\x00\x10\x00\x00\x00'\x00\x01\x00\x08\x00\x00\x00\x10"
+2021-05-05 19:04:13,078 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:13,079 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:13,079 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:13,081 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:13,086 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00%\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,087 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00%\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,092 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:13,100 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00&\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,103 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00&\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:13,104 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:13,107 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b"\x04\x00\x00\x10\x00\x00\x00'\x00\x01\x00\x08\x00\x00\x00\x10"
+2021-05-05 19:04:13,108 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b"\x04\x00\x00\x10\x00\x00\x00'\x00\x01\x00\x08\x00\x00\x00\x10"
+2021-05-05 19:04:13,109 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:21,039 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35484) is connected
+2021-05-05 19:04:21,042 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:21,064 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:21,075 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:21,156 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,157 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-76' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240bad90>()]>>
+2021-05-05 19:04:21,158 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,158 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-77' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240440a0>()]>>
+2021-05-05 19:04:21,159 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,160 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-78' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d24044220>()]>>
+2021-05-05 19:04:21,165 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,175 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-85' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d2436c520>()]>>
+2021-05-05 19:04:21,182 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,203 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-86' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240a1d00>()]>>
+2021-05-05 19:04:21,207 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,213 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-87' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240a1b50>()]>>
+2021-05-05 19:04:21,215 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,255 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-94' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fde6a0>()]>>
+2021-05-05 19:04:21,256 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,257 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-95' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fde3a0>()]>>
+2021-05-05 19:04:21,258 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:21,261 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-96' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fde490>()]>>
+2021-05-05 19:04:21,269 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35488) is connected
+2021-05-05 19:04:21,276 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35490) is connected
+2021-05-05 19:04:21,298 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:21,319 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:21,331 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:21,342 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:21,343 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:21,348 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:29,167 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00(\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,167 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00(\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,169 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00(\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,169 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:29,169 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:29,170 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:29,170 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:29,170 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00)\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,172 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00)\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,173 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00)\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,173 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:29,174 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:29,174 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:29,175 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:29,175 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00*\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,177 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00*\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,177 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00*\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,179 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:29,180 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:29,180 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:29,181 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:29,181 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00(\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,181 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00(\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,182 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:29,183 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00)\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,183 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00)\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,184 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:29,185 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00*\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,185 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00*\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:29,186 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:37,168 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35498) is connected
+2021-05-05 19:04:37,200 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35500) is connected
+2021-05-05 19:04:37,213 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35502) is connected
+2021-05-05 19:04:37,221 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:37,227 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:37,230 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:37,233 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:37,234 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:37,236 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:37,238 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:37,240 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:37,242 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:45,204 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00+\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,208 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00+\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,210 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00+\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,211 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:45,215 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:45,222 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:45,224 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:45,225 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00+\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,226 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00+\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,228 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:45,241 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00,\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,273 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00,\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,362 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00,\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,388 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:45,390 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:45,391 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:45,394 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:45,395 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00-\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,401 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00-\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,402 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00-\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,403 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:45,404 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:04:45,406 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:04:45,406 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:04:45,407 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00,\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,410 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00,\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,412 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:45,413 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00-\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,414 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00-\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:04:45,415 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:04:53,257 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35512) is connected
+2021-05-05 19:04:53,259 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35514) is connected
+2021-05-05 19:04:53,276 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35516) is connected
+2021-05-05 19:04:53,282 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:53,283 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:53,284 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:04:53,291 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:53,293 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:53,296 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:53,297 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:04:53,299 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:04:53,299 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:01,272 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00.\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,275 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00.\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,276 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00.\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,277 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:01,278 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:01,279 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:01,280 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:01,281 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00/\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,289 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x00/\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,297 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x00/\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,298 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:01,298 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:01,299 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:01,299 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:01,300 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x000\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,316 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x000\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,316 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x000\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,322 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:01,323 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:01,324 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:01,324 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:01,334 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00.\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,362 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00.\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,366 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:01,382 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x00/\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,383 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x00/\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,387 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:01,397 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x000\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,398 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x000\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:01,421 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:09,354 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35526) is connected
+2021-05-05 19:05:09,366 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35528) is connected
+2021-05-05 19:05:09,368 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35530) is connected
+2021-05-05 19:05:09,372 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:09,382 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:09,383 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:09,388 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:09,389 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:09,391 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:09,391 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:09,400 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:09,401 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:17,384 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x001\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,386 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x001\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,388 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x001\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,388 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:17,388 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:17,389 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:17,389 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,390 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x002\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,391 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x002\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,392 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x002\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,392 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:17,393 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:17,393 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:17,394 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,394 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x001\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,398 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x001\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,399 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:17,400 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x002\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,400 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x002\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,401 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:17,886 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x003\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,892 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x003\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,893 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x003\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,894 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:17,909 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:17,910 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:17,910 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,911 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x003\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,923 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x003\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:17,926 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:17,931 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-99' coro=<ControllerHandler.handle_controller() running at /home/shu/Network/ofcapture/proxy/proxy.py:344> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fcffa0>()]>>
+2021-05-05 19:05:17,943 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,962 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,966 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-104' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fcfdf0>()]>>
+2021-05-05 19:05:17,967 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,967 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-105' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fcfe50>()]>>
+2021-05-05 19:05:17,968 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,969 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-112' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240a96d0>()]>>
+2021-05-05 19:05:17,970 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:17,971 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-113' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240a98b0>()]>>
+2021-05-05 19:05:17,972 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:18,023 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-114' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240a9a60>()]>>
+2021-05-05 19:05:18,024 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:18,026 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-121' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240540d0>()]>>
+2021-05-05 19:05:18,027 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:18,045 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-122' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d24054250>()]>>
+2021-05-05 19:05:18,050 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:18,050 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-123' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d24044dc0>()]>>
+2021-05-05 19:05:18,051 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:18,051 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-130' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fdef10>()]>>
+2021-05-05 19:05:18,052 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:18,053 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-131' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fde340>()]>>
+2021-05-05 19:05:18,059 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:18,060 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-132' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fd70d0>()]>>
+2021-05-05 19:05:25,398 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35540) is connected
+2021-05-05 19:05:25,403 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35542) is connected
+2021-05-05 19:05:25,407 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:25,408 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:25,412 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:25,413 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:25,414 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:25,415 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:25,899 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35548) is connected
+2021-05-05 19:05:25,902 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:25,904 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:25,905 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:33,417 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x004\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,423 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x004\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,423 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x004\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,424 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:33,424 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:33,425 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:33,425 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:33,426 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x005\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,427 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x005\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,428 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x005\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,428 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:33,429 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:33,430 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:33,431 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:33,442 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x004\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,443 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x004\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,445 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:33,450 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x005\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,453 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x005\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,456 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:33,916 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x006\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,917 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x006\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,918 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x006\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,919 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:33,920 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:33,920 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:33,921 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:33,921 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x006\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,922 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x006\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:33,923 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:41,439 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35554) is connected
+2021-05-05 19:05:41,443 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35556) is connected
+2021-05-05 19:05:41,445 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:41,448 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:41,450 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:41,456 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:41,457 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:41,457 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:41,936 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35562) is connected
+2021-05-05 19:05:41,938 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:41,939 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:41,939 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:49,461 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x007\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,465 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x007\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,466 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x007\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,467 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:49,469 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:49,470 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:49,476 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:49,478 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x008\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,483 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x008\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,484 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x008\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,486 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:49,502 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:49,513 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:49,545 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:49,550 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x007\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,555 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x007\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,562 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:49,577 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x008\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,581 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x008\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:49,593 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:49,971 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x009\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:50,018 | 3040 | proxy.proxy, send_to_controller, 379 | DEBUG | sent data to controller: b'\x04\x00\x00\x10\x00\x00\x009\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:50,019 | 3040 | proxy.proxy, send_to_controller, 71 | DEBUG | set data and sent to controller : b'\x04\x00\x00\x10\x00\x00\x009\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:50,020 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:50,021 | 3040 | proxy.proxy, handle_switch, 238 | DEBUG | read b''
+2021-05-05 19:05:50,022 | 3040 | proxy.proxy, handle_switch, 240 | DEBUG | no data from switch read
+2021-05-05 19:05:50,023 | 3040 | proxy.proxy, handle_switch, 255 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:50,024 | 3040 | proxy.observable, notify_observers, 63 | DEBUG | notify data to observer: b'\x04\x00\x00\x10\x00\x00\x009\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:50,026 | 3040 | api.observer, update, 33 | DEBUG | observed from observable: b'\x04\x00\x00\x10\x00\x00\x009\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 19:05:50,038 | 3040 | api.observer, update, 36 | DEBUG | parsed message : openflow(msg=OFPHello(elements=[OFPHelloElemVersionBitmap(length=8,type=1,versions=[4])]))
+2021-05-05 19:05:57,477 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35568) is connected
+2021-05-05 19:05:57,480 | 3040 | proxy.proxy, handle_switch, 225 | INFO | Client ('127.0.0.1', 35570) is connected
+2021-05-05 19:05:57,490 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:57,491 | 3040 | proxy.proxy, handle_switch, 236 | DEBUG | waiting data ......
+2021-05-05 19:05:57,492 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:57,492 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:57,493 | 3040 | proxy.proxy, handle_controller, 338 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 19:05:57,494 | 3040 | proxy.proxy, handle_controller, 343 | DEBUG | waiting data ......
+2021-05-05 19:05:57,970 | 3040 | root, <module>, 54 | INFO | keyboardInterrupt : 
+2021-05-05 19:05:58,008 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:58,011 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-137' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fd76a0>()]>>
+2021-05-05 19:05:58,011 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:58,012 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-138' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fd7c10>()]>>
+2021-05-05 19:05:58,013 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:58,013 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-141' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d23fd7d60>()]>>
+2021-05-05 19:05:58,014 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:58,014 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-146' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d24044ee0>()]>>
+2021-05-05 19:05:58,015 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:58,016 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-147' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240aeb80>()]>>
+2021-05-05 19:05:58,022 | 3040 | proxy.proxy, handle_controller, 359 | INFO | Close the connection and do exit processing
+2021-05-05 19:05:58,023 | 3040 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-150' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:326> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f8d240ae610>()]>>

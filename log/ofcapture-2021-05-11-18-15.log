@@ -1,0 +1,6 @@
+2021-05-11 18:15:48,531 | 3128 | proxy.proxy, start_server, 224 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-11 18:15:48,532 | 3128 | proxy.proxy, start_server, 227 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-11 18:27:27,020 | 3128 | proxy.proxy, handle_switch, 241 | INFO | Client ('127.0.0.1', 43854) is connected
+2021-05-11 18:27:27,023 | 3128 | proxy.proxy, open_connection, 338 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-11 18:27:27,024 | 3128 | proxy.proxy, create_channel, 172 | DEBUG | no connectable controller
+2021-05-11 18:29:06,255 | 3128 | root, <module>, 55 | INFO | keyboardInterrupt : 

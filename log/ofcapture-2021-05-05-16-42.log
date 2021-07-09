@@ -1,0 +1,159 @@
+2021-05-05 16:42:35,422 | 3754 | proxy.proxy, start_server, 203 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 16:42:35,423 | 3754 | proxy.proxy, start_server, 206 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 16:42:42,932 | 3754 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33732) is connected
+2021-05-05 16:42:42,935 | 3754 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33734) is connected
+2021-05-05 16:42:42,938 | 3754 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33736) is connected
+2021-05-05 16:42:42,942 | 3754 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:42:42,945 | 3754 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00i\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:42:42,945 | 3754 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,946 | 3754 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:42,947 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,957 | 3754 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:42:42,958 | 3754 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00j\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:42:42,959 | 3754 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,960 | 3754 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:42,962 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,968 | 3754 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:42:42,968 | 3754 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00k\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:42:42,969 | 3754 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,969 | 3754 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:42,970 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,976 | 3754 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:42:42,976 | 3754 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:42:42,977 | 3754 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x089\xd3gr'
+2021-05-05 16:42:42,977 | 3754 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,978 | 3754 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:42,978 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,981 | 3754 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:42:42,985 | 3754 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:42:42,985 | 3754 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\xc0\xe9\xb5f'
+2021-05-05 16:42:42,986 | 3754 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,987 | 3754 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:42,987 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:42,991 | 3754 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:42:42,993 | 3754 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:42:43,003 | 3754 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\x84[\x85N'
+2021-05-05 16:42:43,004 | 3754 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:43,005 | 3754 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:43,006 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,444 | 3754 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33750) is connected
+2021-05-05 16:42:51,451 | 3754 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33752) is connected
+2021-05-05 16:42:51,454 | 3754 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33754) is connected
+2021-05-05 16:42:51,465 | 3754 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:42:51,472 | 3754 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00l\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:42:51,475 | 3754 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,490 | 3754 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:51,492 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,502 | 3754 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:42:51,508 | 3754 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00m\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:42:51,509 | 3754 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,510 | 3754 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:51,511 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,515 | 3754 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:42:51,516 | 3754 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00n\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:42:51,517 | 3754 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,518 | 3754 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:51,519 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,523 | 3754 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:42:51,527 | 3754 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:42:51,528 | 3754 | proxy.proxy, handle_controller, 340 | DEBUG | read b"\x04\x00\x00\x08\xab'\xdf\xb3"
+2021-05-05 16:42:51,528 | 3754 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,529 | 3754 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:51,530 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,536 | 3754 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:42:51,536 | 3754 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:42:51,537 | 3754 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08F\\\xaf\xf4'
+2021-05-05 16:42:51,538 | 3754 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,538 | 3754 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:51,541 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,555 | 3754 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:42:51,557 | 3754 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:42:51,559 | 3754 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\x03\xbf^f'
+2021-05-05 16:42:51,561 | 3754 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:51,568 | 3754 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:42:51,573 | 3754 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'str' and 'str'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(str(is_closing), str(self.switch_writer), str(self.controller_writer), str(self.switch_handler), str(self.controller_handler)/
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+2021-05-05 16:42:52,570 | 3754 | root, <module>, 51 | INFO | keyboardInterrupt : 

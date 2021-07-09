@@ -1,0 +1,162 @@
+2021-05-05 13:56:43,753 | 3494 | proxy.proxy, start_server, 165 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 13:56:43,754 | 3494 | proxy.proxy, start_server, 168 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 13:56:47,638 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45374) is connected
+2021-05-05 13:56:47,700 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45376) is connected
+2021-05-05 13:56:47,708 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45378) is connected
+2021-05-05 13:56:47,733 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:56:47,737 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:56:47,738 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08&\x964\xe1'
+2021-05-05 13:56:47,739 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08&\x964\xe1'
+2021-05-05 13:56:47,740 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:56:47,742 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:56:47,744 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:56:47,747 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:56:47,772 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:56:47,772 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\xd9S \x8e'
+2021-05-05 13:56:47,773 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xd9S \x8e'
+2021-05-05 13:56:47,775 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:56:47,775 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\x18\xd3\x88~'
+2021-05-05 13:56:47,776 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x18\xd3\x88~'
+2021-05-05 13:56:47,779 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:03,796 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45390) is connected
+2021-05-05 13:57:03,824 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:03,835 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:03,844 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:57:03,845 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-6' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7aa7f0>()]>>
+2021-05-05 13:57:03,860 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:57:03,862 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-9' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7aae20>()]>>
+2021-05-05 13:57:03,864 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:57:03,869 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-10' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7aadf0>()]>>
+2021-05-05 13:57:03,880 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:57:03,885 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-12' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7aaf10>()]>>
+2021-05-05 13:57:03,900 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45394) is connected
+2021-05-05 13:57:03,907 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45396) is connected
+2021-05-05 13:57:03,915 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:03,927 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:03,928 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:03,928 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:03,930 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\xf1Qp\xc1'
+2021-05-05 13:57:03,930 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xf1Qp\xc1'
+2021-05-05 13:57:03,935 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:03,944 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\xe2\xe1\xc4V'
+2021-05-05 13:57:03,948 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xe2\xe1\xc4V'
+2021-05-05 13:57:03,948 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:19,825 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45406) is connected
+2021-05-05 13:57:19,829 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:19,830 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:19,838 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08 oe5'
+2021-05-05 13:57:19,840 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08 oe5'
+2021-05-05 13:57:19,844 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:19,847 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45410) is connected
+2021-05-05 13:57:19,850 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45412) is connected
+2021-05-05 13:57:19,856 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:19,857 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:19,860 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:19,861 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:19,862 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\x19Z\x7f\xf3'
+2021-05-05 13:57:19,863 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x19Z\x7f\xf3'
+2021-05-05 13:57:19,863 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:19,864 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\x9c\xed\xe1\x12'
+2021-05-05 13:57:19,865 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x9c\xed\xe1\x12'
+2021-05-05 13:57:19,865 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:35,850 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45420) is connected
+2021-05-05 13:57:35,853 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45422) is connected
+2021-05-05 13:57:35,855 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45424) is connected
+2021-05-05 13:57:35,858 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:35,859 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:35,859 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:35,859 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:35,860 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:35,860 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:35,861 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08Xi9?'
+2021-05-05 13:57:35,862 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08Xi9?'
+2021-05-05 13:57:35,863 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:35,863 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\xfas\xaf\xba'
+2021-05-05 13:57:35,863 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xfas\xaf\xba'
+2021-05-05 13:57:35,864 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:35,864 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\x0b\x84\x10\x11'
+2021-05-05 13:57:35,864 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x0b\x84\x10\x11'
+2021-05-05 13:57:35,865 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:51,871 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45434) is connected
+2021-05-05 13:57:51,874 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45436) is connected
+2021-05-05 13:57:51,877 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45438) is connected
+2021-05-05 13:57:51,880 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:51,880 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:51,881 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:51,888 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:51,892 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:57:51,892 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:51,893 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\xab8\x06\xdb'
+2021-05-05 13:57:51,894 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xab8\x06\xdb'
+2021-05-05 13:57:51,895 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:51,895 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\x8d\x97`l'
+2021-05-05 13:57:51,896 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x8d\x97`l'
+2021-05-05 13:57:51,896 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:57:51,898 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\xbb2\x89\x91'
+2021-05-05 13:57:51,904 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xbb2\x89\x91'
+2021-05-05 13:57:51,905 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:58:07,900 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45448) is connected
+2021-05-05 13:58:07,907 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45450) is connected
+2021-05-05 13:58:07,909 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,910 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-15' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7aa610>()]>>
+2021-05-05 13:58:07,910 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,912 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-16' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7aa670>()]>>
+2021-05-05 13:58:07,913 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,914 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-18' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7aa820>()]>>
+2021-05-05 13:58:07,914 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,915 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-21' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c44f0>()]>>
+2021-05-05 13:58:07,916 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,916 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-22' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c44c0>()]>>
+2021-05-05 13:58:07,917 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,917 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-26' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c4d30>()]>>
+2021-05-05 13:58:07,927 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,927 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-27' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c4d00>()]>>
+2021-05-05 13:58:07,928 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,928 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-28' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c4af0>()]>>
+2021-05-05 13:58:07,929 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,929 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-32' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea754550>()]>>
+2021-05-05 13:58:07,930 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,930 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-33' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea754520>()]>>
+2021-05-05 13:58:07,931 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:07,931 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-34' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:171> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea754310>()]>>
+2021-05-05 13:58:07,933 | 3494 | proxy.proxy, handle_switch, 182 | INFO | Client ('127.0.0.1', 45452) is connected
+2021-05-05 13:58:07,941 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:58:07,943 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:58:07,943 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:58:07,944 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:58:07,945 | 3494 | proxy.proxy, handle_controller, 295 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 13:58:07,954 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:58:07,954 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08zx\xe7\x96'
+2021-05-05 13:58:07,955 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08zx\xe7\x96'
+2021-05-05 13:58:07,955 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:58:07,956 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\x8ez\xf78'
+2021-05-05 13:58:07,960 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x8ez\xf78'
+2021-05-05 13:58:07,963 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:58:07,968 | 3494 | proxy.proxy, handle_controller, 302 | DEBUG | read b'\x04\x00\x00\x08\xb24\xdc\xef'
+2021-05-05 13:58:07,969 | 3494 | proxy.proxy, send_to_switch, 63 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xb24\xdc\xef'
+2021-05-05 13:58:07,969 | 3494 | proxy.proxy, handle_controller, 300 | DEBUG | waiting data ......
+2021-05-05 13:58:14,921 | 3494 | root, <module>, 51 | INFO | keyboardInterrupt : 
+2021-05-05 13:58:14,961 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-39' coro=<SwitchHandler.handle_switch() running at /home/shu/Network/ofcapture/proxy/proxy.py:186> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c4a00>()]>>
+2021-05-05 13:58:14,970 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:14,973 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-40' coro=<SwitchHandler.handle_switch() running at /home/shu/Network/ofcapture/proxy/proxy.py:186> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c4490>()]>>
+2021-05-05 13:58:14,975 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing
+2021-05-05 13:58:14,979 | 3494 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-38' coro=<SwitchHandler.handle_switch() running at /home/shu/Network/ofcapture/proxy/proxy.py:186> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7f61ea7c4760>()]>>
+2021-05-05 13:58:14,988 | 3494 | proxy.proxy, handle_controller, 315 | INFO | Close the connection and do exit processing

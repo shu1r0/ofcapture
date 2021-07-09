@@ -1,0 +1,168 @@
+2021-05-05 16:40:55,195 | 3730 | proxy.proxy, start_server, 203 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 16:40:55,196 | 3730 | proxy.proxy, start_server, 206 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 16:40:56,611 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33616) is connected
+2021-05-05 16:40:56,612 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33618) is connected
+2021-05-05 16:40:56,613 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33620) is connected
+2021-05-05 16:40:56,614 | 3730 | proxy.proxy, open_connection, 316 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 16:40:56,614 | 3730 | proxy.proxy, create_channel, 151 | DEBUG | no connectable controller
+2021-05-05 16:40:56,615 | 3730 | proxy.proxy, open_connection, 316 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 16:40:56,615 | 3730 | proxy.proxy, create_channel, 151 | DEBUG | no connectable controller
+2021-05-05 16:40:56,616 | 3730 | proxy.proxy, open_connection, 316 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 16:40:56,617 | 3730 | proxy.proxy, create_channel, 151 | DEBUG | no connectable controller
+2021-05-05 16:41:05,120 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33632) is connected
+2021-05-05 16:41:05,124 | 3730 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:41:05,125 | 3730 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:41:05,125 | 3730 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:41:05,126 | 3730 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08v\xb4\xf6\x07'
+2021-05-05 16:41:05,129 | 3730 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,130 | 3730 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:05,137 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,147 | 3730 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00b\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:41:05,151 | 3730 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,153 | 3730 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:05,154 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,160 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33636) is connected
+2021-05-05 16:41:05,169 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33638) is connected
+2021-05-05 16:41:05,178 | 3730 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:41:05,184 | 3730 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00c\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:41:05,184 | 3730 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,185 | 3730 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:05,185 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,187 | 3730 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:41:05,187 | 3730 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00d\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:41:05,188 | 3730 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,188 | 3730 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:05,189 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,191 | 3730 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:41:05,194 | 3730 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:41:05,194 | 3730 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\x9f\xa2\xc7\x16'
+2021-05-05 16:41:05,195 | 3730 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,195 | 3730 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:05,196 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,198 | 3730 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:41:05,199 | 3730 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:41:05,200 | 3730 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\x86C|\x1e'
+2021-05-05 16:41:05,201 | 3730 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:05,203 | 3730 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:05,211 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,645 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33646) is connected
+2021-05-05 16:41:13,650 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33648) is connected
+2021-05-05 16:41:13,652 | 3730 | proxy.proxy, handle_switch, 220 | INFO | Client ('127.0.0.1', 33650) is connected
+2021-05-05 16:41:13,658 | 3730 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:41:13,663 | 3730 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:41:13,674 | 3730 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,680 | 3730 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:13,680 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,682 | 3730 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:41:13,683 | 3730 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:41:13,684 | 3730 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\x18dl\xba'
+2021-05-05 16:41:13,684 | 3730 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,685 | 3730 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:13,686 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-26' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,691 | 3730 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:41:13,691 | 3730 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00g\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:41:13,696 | 3730 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,697 | 3730 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:13,697 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-24' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,699 | 3730 | proxy.proxy, handle_switch, 231 | DEBUG | waiting data ......
+2021-05-05 16:41:13,700 | 3730 | proxy.proxy, handle_switch, 233 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00h\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:41:13,701 | 3730 | proxy.proxy, handle_switch, 247 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,701 | 3730 | proxy.proxy, handle_switch, 250 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:13,702 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-25' coro=<SwitchHandler.handle_switch() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:209> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 237, in handle_switch
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,704 | 3730 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:41:13,708 | 3730 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:41:13,718 | 3730 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\x88.<\x7f'
+2021-05-05 16:41:13,719 | 3730 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,720 | 3730 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:13,721 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-27' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,730 | 3730 | proxy.proxy, handle_controller, 333 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:41:13,733 | 3730 | proxy.proxy, handle_controller, 338 | DEBUG | waiting data ......
+2021-05-05 16:41:13,735 | 3730 | proxy.proxy, handle_controller, 340 | DEBUG | read b'\x04\x00\x00\x08\x1b\xb8\x8f\x81'
+2021-05-05 16:41:13,743 | 3730 | proxy.proxy, handle_controller, 350 | ERROR | Failed to read: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:13,754 | 3730 | proxy.proxy, handle_controller, 353 | INFO | Close the connection and do exit processing
+2021-05-05 16:41:13,776 | 3730 | asyncio, default_exception_handler, 1707 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:321> exception=TypeError("unsupported operand type(s) for /: 'ControllerHandler' and 'bool'")>
+Traceback (most recent call last):
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 344, in handle_controller
+    if not channel.is_closing():
+  File "/home/shu/Network/ofcapture/proxy/proxy.py", line 105, in is_closing
+    .format(is_closing, self.switch_writer, self.controller_writer, self.switch_handler, self.controller_handler/
+TypeError: unsupported operand type(s) for /: 'ControllerHandler' and 'bool'
+2021-05-05 16:41:17,656 | 3730 | root, <module>, 51 | INFO | keyboardInterrupt : 

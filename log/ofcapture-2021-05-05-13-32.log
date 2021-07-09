@@ -1,0 +1,133 @@
+2021-05-05 13:32:07,976 | 21247 | proxy.proxy, start_server, 154 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 13:32:07,976 | 21247 | proxy.proxy, start_server, 157 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 13:32:13,375 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62268) is connected
+2021-05-05 13:32:13,376 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:13,377 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:13,377 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:13,377 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's0'
+2021-05-05 13:32:13,377 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:13,377 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:13,378 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:14,378 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62274) is connected
+2021-05-05 13:32:14,383 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:14,383 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:14,383 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:14,383 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's1'
+2021-05-05 13:32:14,384 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:14,384 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:14,384 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:15,383 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62276) is connected
+2021-05-05 13:32:15,384 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:15,384 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:15,384 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:15,384 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's2'
+2021-05-05 13:32:15,385 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:15,385 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:15,385 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:16,388 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62278) is connected
+2021-05-05 13:32:16,389 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:16,390 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:16,390 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:16,390 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's3'
+2021-05-05 13:32:16,390 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:16,390 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:16,391 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:17,390 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62280) is connected
+2021-05-05 13:32:17,391 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:17,391 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:17,391 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:17,391 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's4'
+2021-05-05 13:32:17,392 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:17,392 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:17,392 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:18,393 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62282) is connected
+2021-05-05 13:32:18,393 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:18,394 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:18,394 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:18,395 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's5'
+2021-05-05 13:32:18,395 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:18,395 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:18,395 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:19,395 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62284) is connected
+2021-05-05 13:32:19,396 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:19,396 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:19,396 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:19,396 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's6'
+2021-05-05 13:32:19,397 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:19,397 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:19,397 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:20,397 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62286) is connected
+2021-05-05 13:32:20,398 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:20,398 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:20,398 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:20,398 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's7'
+2021-05-05 13:32:20,399 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:20,399 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:20,399 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:21,398 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62288) is connected
+2021-05-05 13:32:21,399 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:21,399 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:21,399 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:21,399 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's8'
+2021-05-05 13:32:21,399 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:21,399 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:21,400 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:22,399 | 21247 | proxy.proxy, handle_switch, 171 | INFO | Client ('127.0.0.1', 62290) is connected
+2021-05-05 13:32:22,400 | 21247 | proxy.proxy, open_connection, 256 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 13:32:22,401 | 21247 | proxy.proxy, create_channel, 103 | DEBUG | no connectable controller
+2021-05-05 13:32:22,401 | 21247 | proxy.proxy, handle_switch, 177 | DEBUG | waiting data ......
+2021-05-05 13:32:22,402 | 21247 | proxy.proxy, handle_switch, 179 | DEBUG | read b's9'
+2021-05-05 13:32:22,402 | 21247 | proxy.proxy, handle_switch, 190 | ERROR | Failed to read: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:32:22,403 | 21247 | proxy.proxy, handle_switch, 193 | INFO | Close the connection and do exit processing
+2021-05-05 13:32:22,403 | 21247 | asyncio, default_exception_handler, 1738 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-24' coro=<SwitchHandler.handle_switch() done, defined at /Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py:160> exception=AttributeError("'NoneType' object has no attribute 'is_closing'")>
+Traceback (most recent call last):
+  File "/Users/shu_ruhe/lesson/Network/ofcapture/proxy/proxy.py", line 183, in handle_switch
+    if not channel.is_closing():
+AttributeError: 'NoneType' object has no attribute 'is_closing'
+2021-05-05 13:36:06,613 | 21247 | root, <module>, 51 | INFO | keyboardInterrupt : 

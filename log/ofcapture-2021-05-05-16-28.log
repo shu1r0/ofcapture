@@ -1,0 +1,177 @@
+2021-05-05 16:28:00,566 | 3411 | proxy.proxy, start_server, 199 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 16:28:00,567 | 3411 | proxy.proxy, start_server, 202 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 16:28:03,362 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32900) is connected
+2021-05-05 16:28:03,368 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:03,368 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x1f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:03,369 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00\x1f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:03,369 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:03,370 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:03,370 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:03,371 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x0814\x8f\xb1'
+2021-05-05 16:28:03,371 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x0814\x8f\xb1'
+2021-05-05 16:28:03,371 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:03,863 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32904) is connected
+2021-05-05 16:28:03,866 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32906) is connected
+2021-05-05 16:28:03,868 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:03,869 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00 \x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:03,870 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00 \x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:03,870 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:03,871 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:03,871 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00!\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:03,872 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00!\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:03,872 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:03,873 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:03,874 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:03,875 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08\x07z\x96\xea'
+2021-05-05 16:28:03,876 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x07z\x96\xea'
+2021-05-05 16:28:03,876 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:03,877 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:03,877 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:03,878 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08cyg5'
+2021-05-05 16:28:03,884 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08cyg5'
+2021-05-05 16:28:03,884 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:11,371 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:11,374 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:11,375 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:11,882 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:11,883 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:11,884 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:11,886 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:11,888 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:11,890 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:19,399 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32916) is connected
+2021-05-05 16:28:19,407 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:19,408 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00#\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:19,409 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00#\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:19,410 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:19,420 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:19,420 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:19,421 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08\xf9ePA'
+2021-05-05 16:28:19,421 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xf9ePA'
+2021-05-05 16:28:19,422 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:19,900 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:19,901 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-7' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1423e67f0>()]>>
+2021-05-05 16:28:19,902 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:19,902 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-12' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1423e6e20>()]>>
+2021-05-05 16:28:19,903 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:19,904 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-13' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1423e6c70>()]>>
+2021-05-05 16:28:19,905 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32922) is connected
+2021-05-05 16:28:19,908 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32924) is connected
+2021-05-05 16:28:19,911 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:19,919 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00$\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:19,919 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00$\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:19,920 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:19,920 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:19,920 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00%\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:19,921 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00%\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:19,921 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:19,922 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:19,922 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:19,922 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08kvf\xcb'
+2021-05-05 16:28:19,923 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08kvf\xcb'
+2021-05-05 16:28:19,923 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:19,923 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:19,927 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:19,927 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08\x08\xa0\x05>'
+2021-05-05 16:28:19,928 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x08\xa0\x05>'
+2021-05-05 16:28:19,928 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:27,415 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:27,418 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:27,419 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:27,916 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:27,919 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:27,921 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:27,924 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:27,931 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:27,931 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:35,425 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32932) is connected
+2021-05-05 16:28:35,428 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:35,429 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00&\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:35,429 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00&\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:35,430 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:35,430 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:35,431 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:35,431 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08\x03\x12[\xfe'
+2021-05-05 16:28:35,431 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x03\x12[\xfe'
+2021-05-05 16:28:35,432 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:35,928 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32936) is connected
+2021-05-05 16:28:35,930 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32938) is connected
+2021-05-05 16:28:35,937 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:35,945 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b"\x04\x00\x00\x10\x00\x00\x00'\x00\x01\x00\x08\x00\x00\x00\x10"
+2021-05-05 16:28:35,946 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b"\x04\x00\x00\x10\x00\x00\x00'\x00\x01\x00\x08\x00\x00\x00\x10"
+2021-05-05 16:28:35,948 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:35,949 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:35,949 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00(\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:35,952 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00(\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:35,956 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:35,957 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:35,959 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:35,960 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b"\x04\x00\x00\x08x\xfe\t'"
+2021-05-05 16:28:35,963 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b"\x04\x00\x00\x08x\xfe\t'"
+2021-05-05 16:28:35,963 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:35,964 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:35,964 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:35,964 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08\x193\xa3@'
+2021-05-05 16:28:35,965 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x193\xa3@'
+2021-05-05 16:28:35,965 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:43,439 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:43,440 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:43,440 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:43,940 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:43,941 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:43,941 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:43,942 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b''
+2021-05-05 16:28:43,942 | 3411 | proxy.proxy, handle_switch, 231 | DEBUG | no data from switch read
+2021-05-05 16:28:43,942 | 3411 | proxy.proxy, handle_switch, 246 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:51,452 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32946) is connected
+2021-05-05 16:28:51,456 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:51,474 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00)\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:51,475 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00)\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:51,477 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:51,477 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:51,478 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:51,479 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x080]\x80t'
+2021-05-05 16:28:51,483 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x080]\x80t'
+2021-05-05 16:28:51,486 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:51,954 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32950) is connected
+2021-05-05 16:28:51,957 | 3411 | proxy.proxy, handle_switch, 216 | INFO | Client ('127.0.0.1', 32952) is connected
+2021-05-05 16:28:51,961 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:51,962 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00*\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:51,962 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00*\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:51,962 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:51,963 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:51,963 | 3411 | proxy.proxy, handle_switch, 229 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00+\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:51,963 | 3411 | proxy.proxy, send_to_controller, 72 | WARNING | Failed to send to controller : b'\x04\x00\x00\x10\x00\x00\x00+\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 16:28:51,964 | 3411 | proxy.proxy, handle_switch, 227 | DEBUG | waiting data ......
+2021-05-05 16:28:51,964 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:51,969 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:51,969 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08\x87\xc1m\x13'
+2021-05-05 16:28:51,970 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\x87\xc1m\x13'
+2021-05-05 16:28:51,970 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:51,971 | 3411 | proxy.proxy, handle_controller, 329 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 16:28:51,971 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:51,972 | 3411 | proxy.proxy, handle_controller, 336 | DEBUG | read b'\x04\x00\x00\x08\xf1:\xcfu'
+2021-05-05 16:28:51,972 | 3411 | proxy.proxy, send_to_switch, 90 | WARNING | Failed to send to switch : b'\x04\x00\x00\x08\xf1:\xcfu'
+2021-05-05 16:28:51,972 | 3411 | proxy.proxy, handle_controller, 334 | DEBUG | waiting data ......
+2021-05-05 16:28:54,668 | 3411 | root, <module>, 51 | INFO | keyboardInterrupt : 
+2021-05-05 16:28:54,676 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:54,678 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-21' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1423e6d00>()]>>
+2021-05-05 16:28:54,679 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:54,683 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-22' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1423e6970>()]>>
+2021-05-05 16:28:54,684 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:54,685 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-25' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1423e6850>()]>>
+2021-05-05 16:28:54,685 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:54,686 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-30' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1424026d0>()]>>
+2021-05-05 16:28:54,687 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing
+2021-05-05 16:28:54,687 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-31' coro=<ControllerHandler.handle_controller() done, defined at /home/shu/Network/ofcapture/proxy/proxy.py:317> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc142402520>()]>>
+2021-05-05 16:28:54,688 | 3411 | asyncio, default_exception_handler, 1707 | ERROR | Task was destroyed but it is pending!
+task: <Task pending name='Task-16' coro=<ControllerHandler.handle_controller() running at /home/shu/Network/ofcapture/proxy/proxy.py:335> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fc1424020a0>()]>>
+2021-05-05 16:28:54,688 | 3411 | proxy.proxy, handle_controller, 349 | INFO | Close the connection and do exit processing

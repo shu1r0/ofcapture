@@ -1,0 +1,141 @@
+2021-05-05 14:01:07,376 | 3722 | proxy.proxy, start_server, 166 | INFO | Server on ('127.0.0.1', 63333)
+2021-05-05 14:01:07,377 | 3722 | proxy.proxy, start_server, 169 | INFO | Server serve forever ('127.0.0.1', 63333)
+2021-05-05 14:01:11,957 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45622) is connected
+2021-05-05 14:01:11,958 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45624) is connected
+2021-05-05 14:01:11,959 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45626) is connected
+2021-05-05 14:01:11,960 | 3722 | proxy.proxy, open_connection, 279 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 14:01:11,960 | 3722 | proxy.proxy, create_channel, 114 | DEBUG | no connectable controller
+2021-05-05 14:01:11,961 | 3722 | proxy.proxy, open_connection, 279 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 14:01:11,961 | 3722 | proxy.proxy, create_channel, 114 | DEBUG | no connectable controller
+2021-05-05 14:01:11,962 | 3722 | proxy.proxy, open_connection, 279 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 14:01:11,964 | 3722 | proxy.proxy, create_channel, 114 | DEBUG | no connectable controller
+2021-05-05 14:01:20,473 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45640) is connected
+2021-05-05 14:01:20,473 | 3722 | proxy.proxy, open_connection, 279 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 14:01:20,474 | 3722 | proxy.proxy, create_channel, 114 | DEBUG | no connectable controller
+2021-05-05 14:01:20,475 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45644) is connected
+2021-05-05 14:01:20,476 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45646) is connected
+2021-05-05 14:01:20,477 | 3722 | proxy.proxy, open_connection, 279 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 14:01:20,478 | 3722 | proxy.proxy, create_channel, 114 | DEBUG | no connectable controller
+2021-05-05 14:01:20,478 | 3722 | proxy.proxy, open_connection, 279 | ERROR | Failed to connect to controller : [Errno 111] Connect call failed ('127.0.0.1', 6633)
+2021-05-05 14:01:20,479 | 3722 | proxy.proxy, create_channel, 114 | DEBUG | no connectable controller
+2021-05-05 14:01:28,988 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45654) is connected
+2021-05-05 14:01:28,993 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45656) is connected
+2021-05-05 14:01:28,996 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45658) is connected
+2021-05-05 14:01:29,002 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:29,004 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:29,006 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:29,008 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:29,008 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:29,009 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:29,014 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08Y\x8d\xaf\x94'
+2021-05-05 14:01:29,014 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:29,014 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:29,017 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:29,017 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00t\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:29,017 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:29,018 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:29,024 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08\x13\x93\x93\xba'
+2021-05-05 14:01:29,024 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:29,025 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:29,025 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:29,026 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00u\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:29,026 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:29,026 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:29,027 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08\x9b\xbb\xf6\xd8'
+2021-05-05 14:01:29,028 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:29,029 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:29,032 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:29,036 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00v\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:29,049 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:29,050 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:37,504 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45668) is connected
+2021-05-05 14:01:37,517 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45670) is connected
+2021-05-05 14:01:37,520 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45672) is connected
+2021-05-05 14:01:37,523 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:37,525 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:37,526 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08~\xc9\xd6\x91'
+2021-05-05 14:01:37,528 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:37,529 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:37,530 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:37,531 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00w\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:37,531 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:37,532 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:37,533 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:37,534 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:37,539 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:37,540 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:37,540 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08\xee\x96\x92\xb6'
+2021-05-05 14:01:37,541 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:37,541 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:37,542 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:37,542 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00x\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:37,543 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:37,543 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:37,543 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08\xb9\x0e\x81L'
+2021-05-05 14:01:37,544 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:37,544 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:37,544 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:37,545 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00y\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:37,545 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:37,546 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:46,018 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45680) is connected
+2021-05-05 14:01:46,038 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45682) is connected
+2021-05-05 14:01:46,043 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45684) is connected
+2021-05-05 14:01:46,051 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:46,056 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:46,057 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:46,058 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:46,060 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:46,060 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:46,061 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08v\xae"\xec'
+2021-05-05 14:01:46,061 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:46,061 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:46,062 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:46,062 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00z\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:46,063 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:46,064 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:46,065 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08\x88\xfe\xf6\xf3'
+2021-05-05 14:01:46,066 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:46,066 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:46,067 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:46,068 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00{\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:46,068 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:46,072 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:46,073 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08\xb9+\xcb_'
+2021-05-05 14:01:46,074 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:46,074 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:46,075 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:46,075 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00|\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:46,076 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:46,076 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:54,531 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45694) is connected
+2021-05-05 14:01:54,534 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:54,535 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:54,535 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08J\xe9\x8b\x88'
+2021-05-05 14:01:54,536 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:54,537 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:54,538 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:54,539 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00}\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:54,540 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:54,541 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:54,548 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45698) is connected
+2021-05-05 14:01:54,554 | 3722 | proxy.proxy, handle_switch, 183 | INFO | Client ('127.0.0.1', 45700) is connected
+2021-05-05 14:01:54,557 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:54,559 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:54,560 | 3722 | proxy.proxy, handle_controller, 296 | INFO | connected Controller ('127.0.0.1', 6633)
+2021-05-05 14:01:54,564 | 3722 | proxy.proxy, handle_controller, 301 | DEBUG | waiting data ......
+2021-05-05 14:01:54,565 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08Lu\xcb7'
+2021-05-05 14:01:54,565 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:54,566 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:54,566 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:54,567 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00~\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:54,567 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:54,568 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:54,570 | 3722 | proxy.proxy, handle_controller, 303 | DEBUG | read b'\x04\x00\x00\x08/0\xfa\xe9'
+2021-05-05 14:01:54,571 | 3722 | proxy.proxy, handle_controller, 310 | DEBUG | the channel is close
+2021-05-05 14:01:54,573 | 3722 | proxy.proxy, handle_controller, 316 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:54,575 | 3722 | proxy.proxy, handle_switch, 194 | DEBUG | waiting data ......
+2021-05-05 14:01:54,576 | 3722 | proxy.proxy, handle_switch, 196 | DEBUG | read b'\x04\x00\x00\x10\x00\x00\x00\x7f\x00\x01\x00\x08\x00\x00\x00\x10'
+2021-05-05 14:01:54,578 | 3722 | proxy.proxy, handle_switch, 203 | DEBUG | the channel is closing
+2021-05-05 14:01:54,582 | 3722 | proxy.proxy, handle_switch, 213 | INFO | Close the connection and do exit processing
+2021-05-05 14:01:58,859 | 3722 | root, <module>, 51 | INFO | keyboardInterrupt : 
