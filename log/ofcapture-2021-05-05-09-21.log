@@ -1,5 +1,0 @@
-2021-05-05 09:21:22,331 | 18137 | proxy.proxy, open_connection, 242 | ERROR | Failed to connect to controller : [Errno 61] Connect call failed ('127.0.0.1', 6653)
-2021-05-05 09:21:22,331 | 18137 | proxy.proxy, open_connection, 248 | DEBUG | reconnect to controller a few seconds later
-2021-05-05 09:21:22,332 | 18137 | proxy.proxy, start_server, 132 | INFO | Server on ('127.0.0.1', 63333)
-2021-05-05 09:21:22,332 | 18137 | proxy.proxy, start_server, 135 | INFO | Server serve forever ('127.0.0.1', 63333)
-2021-05-05 09:21:24,788 | 18137 | root, <module>, 53 | INFO | keyboardInterrupt : 
