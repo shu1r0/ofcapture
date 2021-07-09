@@ -21,7 +21,7 @@ class Channel:
             queue (asyncio.Queue) : queue to store packet
         """
         self.q_all = queue
-        self.logger = getLogger(__name__)
+        self.logger = getLogger("ofcapture." + __name__)
         self.switch_handler = None
         self.switch_writer = None
         self.controller_handler = None
@@ -151,7 +151,7 @@ class ChannelManager:
             controller_port (int) : controller port
         """
         self.q_all = asyncio.Queue()
-        self.logger = getLogger(__name__)
+        self.logger = getLogger("ofcapture." + __name__)
 
         self.has_switch_join = False
         self.has_controller_join = False
@@ -221,7 +221,7 @@ class SwitchHandler:
         self.port = port
         self.loop = loop
         self.channel_manager = channel_manager
-        self.logger = getLogger(__name__)
+        self.logger = getLogger("ofcapture." + __name__)
 
         self.switches = set()
 
@@ -330,7 +330,7 @@ class ControllerHandler:
         self.port = port
         self.loop = loop
         self.channel_manager = channel_manager
-        self.logger = getLogger(__name__)
+        self.logger = getLogger("ofcapture." + __name__)
 
         self.controllers = set()
 

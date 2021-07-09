@@ -29,7 +29,7 @@ class OFObserver(AbstractObserver):
         """
         self.observable = observable
         self.observable.register_observer(self)
-        self.logger = getLogger(__name__)
+        self.logger = getLogger("ofcapture." + __name__)
 
     def update(self, msg):
         self.logger.debug("observed from observable: {}".format(msg.data[:8]))  # 8 : header Byte size

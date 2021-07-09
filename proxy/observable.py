@@ -42,7 +42,7 @@ class ObservableData(Observable):
         """
         self.observers = set()
         self.data_queue = data_queue
-        self.logger = getLogger(__name__)
+        self.logger = getLogger("ofcapture." + __name__)
         asyncio.ensure_future(self.search_msg())
 
     async def search_msg(self):

@@ -23,7 +23,7 @@ class Message:
         self.remote_port = remote_port
         self.data = data
         self.switch2controller = switch2controller
-        self.msg_name = ""
+        self.msg_name = None
         self.of_msg = None
 
     @property
@@ -32,10 +32,11 @@ class Message:
 
     @property
     def message_type(self):
+        """OpenFlow message type"""
         if self.of_msg:
             return self.of_msg.header.message_type
         else:
             return None
 
     def __repr__(self):
-        return "<Message msg_name={} timestamp={}>".format(self.msg_name, self.timestamp)
+        return "<Message msg_name={} of_msg={} timestamp={}>".format(self.msg_name, self.of_msg, self.timestamp)
