@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-class Message:
+class OFMsg:
     """Message"""
 
     def __init__(self, timestamp, local_ip, remote_ip, local_port, remote_port, data, switch2controller):

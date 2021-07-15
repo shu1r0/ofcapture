@@ -52,7 +52,7 @@ class OFCapture:
                                               controller_ip=controller_ip,
                                               controller_port=controller_port)
         self.observable = ObservableData(self.channel_manager.get_queue_all_data())
-        self.observer = CaptureWithRepo(self.observable)
+        self.capture = CaptureWithRepo(self.observable)
         self.switch_handler = SwitchHandler(host=local_ip,
                                             port=local_port,
                                             loop=self.event_loop,

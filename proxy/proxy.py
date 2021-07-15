@@ -8,7 +8,7 @@ import asyncio
 from datetime import datetime
 from logging import getLogger, Logger
 
-from util.packet import Message
+from util.packet import OFMsg
 
 
 class Channel:
@@ -105,7 +105,7 @@ class Channel:
         timestamp = datetime.now().timestamp()
         local_ip, local_port = self.switch_writer.get_extra_info('peername')
         remote_ip, remote_port = self.controller_writer.get_extra_info('peername')
-        msg = Message(timestamp, local_ip, remote_ip, local_port, remote_port, data, switch2controller)
+        msg = OFMsg(timestamp, local_ip, remote_ip, local_port, remote_port, data, switch2controller)
         await self.q_all.put(msg)
 
     def is_closing(self):
