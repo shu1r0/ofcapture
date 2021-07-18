@@ -18,6 +18,11 @@ class CaptureBase(OFObserver):
 
 
 class CaptureWithRepo(CaptureBase):
+    """
+
+    Todo:
+        * to get ofport from phy_port
+    """
 
     def __init__(self, observable):
         super(CaptureWithRepo, self).__init__(observable)
@@ -26,7 +31,7 @@ class CaptureWithRepo(CaptureBase):
     def get_msg(self, msg):
         if msg.message_type == Type.OFPT_FEATURES_REPLY:
             # save datapath id
-            self.port_to_dpid[msg.local_port] = msg.of_msg.datapath_id
+            self.port_to_dpid[msg.local_port] = int(msg.of_msg.datapath_id)
         self.add_repo(msg)
 
     def add_repo(self, msg):
@@ -42,3 +47,10 @@ class CaptureWithRepo(CaptureBase):
 
     def get_datapathid(self, port):
         return self.port_to_dpid[port]
+
+    def get_port(self, datapath_id):
+        if not isinstance(datapath_id, int):
+            datapath_id = int(datapath_id)
+        for p, d in self.port_to_dpid.items():
+            if d == datapath_id:
+                return p
