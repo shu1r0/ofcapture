@@ -27,11 +27,17 @@ class CaptureWithRepo(CaptureBase):
     def __init__(self, observable):
         super(CaptureWithRepo, self).__init__(observable)
         self.port_to_dpid = {}
+        self.ports = {}
 
     def get_msg(self, msg):
         if msg.message_type == Type.OFPT_FEATURES_REPLY:
             # save datapath id
             self.port_to_dpid[msg.local_port] = int(msg.of_msg.datapath_id)
+        if msg.message_type == Type.OFPT_MULTIPART_REPLY:
+            # save port to name
+            self.ports.setdefault(msg.local_port, {})
+            for port in msg.of_msg.body:
+                self.ports[msg.local_port][int(port.port_no)] = str(port.name)
         self.add_repo(msg)
 
     def add_repo(self, msg):
@@ -54,3 +60,6 @@ class CaptureWithRepo(CaptureBase):
         for p, d in self.port_to_dpid.items():
             if d == datapath_id:
                 return p
+
+    def get_port_name(self, port, port_no):
+        return self.ports[port][port_no]
