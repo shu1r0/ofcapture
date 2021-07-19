@@ -36,18 +36,24 @@ class OFMessageRepository(AbstractOFMessageRepository):
         return self.repository.pop(port)
 
     def _pop_until(self, port, until):
-        tmp = []
+        tmp_i = []
         msgs = self.repository[port]
         for i in range(len(msgs)):
             if msgs[i].timestamp < until:
-                tmp.append(msgs.pop(i))
+                tmp_i.append(i)
+        tmp = []
+        for i in tmp_i[::-1]:
+            tmp.insert(0, msgs.pop(i))
         return tmp
 
     def _pop_count(self, port, count):
-        tmp = []
+        tmp_i = []
         msgs = self.repository[port]
         for i in range(min(len(msgs), count)):
-            tmp.append(msgs.pop(i))
+                tmp_i.append(i)
+        tmp = []
+        for i in tmp_i[::-1]:
+            tmp.insert(0, msgs.pop(i))
         return tmp
 
 

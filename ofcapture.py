@@ -63,8 +63,11 @@ class OFCapture:
 
     def start_server(self):
         self.event_loop.run_until_complete(asyncio.wait([
-            self.switch_handler.start_server()
+            self.start_server_coro()
         ]))
+
+    async def start_server_coro(self):
+        await self.switch_handler.start_server()
 
     def server_restart(self):
         raise NotImplementedError
