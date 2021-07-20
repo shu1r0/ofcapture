@@ -1,4 +1,9 @@
 from abc import ABCMeta, abstractmethod
+from logging import getLogger, setLoggerClass, Logger
+
+
+setLoggerClass(Logger)
+logger = getLogger('ofcapture.of_msg_repository')
 
 
 class AbstractOFMessageRepository(metaclass=ABCMeta):
@@ -23,14 +28,19 @@ class OFMessageRepository(AbstractOFMessageRepository):
     def add(self, msg):
         self.repository.setdefault(msg.local_port, [])
         self.repository[msg.local_port].append(msg)
+        logger.debug("added msg {} to repo {}".format(msg, self.repository))
 
     def pop(self, port, until=None, count=None):
-        if until is not None:
-            return self._pop_until(port, until)
-        elif count is not None:
-            return self._pop_count(port, count)
-        else:
-            return self._pop(port)
+        try:
+            if until is not None:
+                return self._pop_until(port, until)
+            elif count is not None:
+                return self._pop_count(port, count)
+            else:
+                return self._pop(port)
+        except KeyError:
+            logger.error("Failed to pop from of repository (repo={})".format(self.repository))
+            return None
 
     def _pop(self, port):
         return self.repository.pop(port)
@@ -50,7 +60,7 @@ class OFMessageRepository(AbstractOFMessageRepository):
         tmp_i = []
         msgs = self.repository[port]
         for i in range(min(len(msgs), count)):
-                tmp_i.append(i)
+            tmp_i.append(i)
         tmp = []
         for i in tmp_i[::-1]:
             tmp.insert(0, msgs.pop(i))

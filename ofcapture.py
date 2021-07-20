@@ -8,7 +8,7 @@ import asyncio
 import datetime
 from logging import getLogger, DEBUG, StreamHandler, Formatter, handlers, INFO
 
-from capture.capture import CaptureWithRepo
+from capture.capture import CaptureWithRepo, CaptureWithPipe
 from proxy.proxy import ChannelManager, SwitchHandler
 from proxy.observable import ObservableData
 
@@ -20,10 +20,10 @@ def set_logger(log_level=DEBUG, filename=default_logfile):
     logger.setLevel(log_level)
     formatter = Formatter(
         "%(asctime)s | %(process)d | %(name)s, %(funcName)s, %(lineno)d | %(levelname)s | %(message)s")
-    handler = StreamHandler()
-    handler.setLevel(DEBUG)
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
+    # handler = StreamHandler()
+    # handler.setLevel(DEBUG)
+    # handler.setFormatter(formatter)
+    # logger.addHandler(handler)
     handler = handlers.RotatingFileHandler(filename=filename,
                                            maxBytes=16777216,
                                            backupCount=2)
@@ -53,6 +53,47 @@ class OFCapture:
                                               controller_port=controller_port)
         self.observable = ObservableData(self.channel_manager.get_queue_all_data())
         self.capture = CaptureWithRepo(self.observable)
+        self.switch_handler = SwitchHandler(host=local_ip,
+                                            port=local_port,
+                                            loop=self.event_loop,
+                                            channel_manager=self.channel_manager)
+
+        if log_file:
+            set_logger(log_level=INFO, filename=log_file)
+
+    def start_server(self):
+        self.event_loop.run_until_complete(asyncio.wait([
+            self.start_server_coro()
+        ]))
+
+    async def start_server_coro(self):
+        await self.switch_handler.start_server()
+
+    def server_restart(self):
+        raise NotImplementedError
+
+
+class OFCaptureWithPipe:
+    """OpenFlow proxy to capture with pipe
+
+    Attributes:
+        channel_manager (ChannelManager) :
+        observable (Observable) : observable instance
+        observer (Observer) : observer instance
+        switch_handler (SwitchHandler) : local server
+        event_loop (asyncio.EventLoop) : event loop
+    """
+
+    def __init__(self, local_ip='127.0.0.1', local_port=63333, controller_ip='127.0.0.1', controller_port=6633,
+                 event_loop=None, log_file=None, parent_conn=None):
+        self.event_loop = event_loop
+        if self.event_loop is None:
+            self.event_loop = asyncio.get_event_loop()
+        self.channel_manager = ChannelManager(loop=self.event_loop,
+                                              controller_ip=controller_ip,
+                                              controller_port=controller_port)
+        self.observable = ObservableData(self.channel_manager.get_queue_all_data())
+        self.capture = CaptureWithPipe(self.observable, parent_conn=parent_conn)
         self.switch_handler = SwitchHandler(host=local_ip,
                                             port=local_port,
                                             loop=self.event_loop,
