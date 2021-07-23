@@ -6,6 +6,7 @@ Todo:
 """
 import asyncio
 import datetime
+from abc import ABCMeta, abstractmethod
 from logging import getLogger, DEBUG, StreamHandler, Formatter, handlers, INFO
 
 from capture.capture import CaptureWithRepo, CaptureWithPipe
@@ -32,7 +33,17 @@ def set_logger(log_level=DEBUG, filename=default_logfile):
     logger.addHandler(handler)
 
 
-class OFCapture:
+class OFCaptureBase(metaclass=ABCMeta):
+
+    def __init__(self):
+        pass
+
+    @abstractmethod
+    def start_server(self):
+        raise NotImplementedError
+
+
+class OFCapture(OFCaptureBase):
     """OpenFlow proxy to capture
 
     Attributes:
@@ -45,6 +56,7 @@ class OFCapture:
 
     def __init__(self, local_ip='127.0.0.1', local_port=63333, controller_ip='127.0.0.1', controller_port=6633,
                  event_loop=None, log_file=None):
+        super(OFCapture, self).__init__()
         self.event_loop = event_loop
         if self.event_loop is None:
             self.event_loop = asyncio.get_event_loop()
@@ -73,7 +85,7 @@ class OFCapture:
         raise NotImplementedError
 
 
-class OFCaptureWithPipe:
+class OFCaptureWithPipe(OFCaptureBase):
     """OpenFlow proxy to capture with pipe
 
     Attributes:
@@ -86,6 +98,7 @@ class OFCaptureWithPipe:
 
     def __init__(self, local_ip='127.0.0.1', local_port=63333, controller_ip='127.0.0.1', controller_port=6633,
                  event_loop=None, log_file=None, parent_conn=None):
+        super(OFCaptureWithPipe, self).__init__()
         self.event_loop = event_loop
         if self.event_loop is None:
             self.event_loop = asyncio.get_event_loop()

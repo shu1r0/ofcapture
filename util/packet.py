@@ -21,6 +21,7 @@ class OFMsg:
         self.remote_ip = remote_ip
         self.local_port = local_port
         self.remote_port = remote_port
+        self.datapath_id = None
         self.data = data
         self.switch2controller = switch2controller
         self.msg_name = None
@@ -39,4 +40,5 @@ class OFMsg:
             return None
 
     def __repr__(self):
-        return "<Message msg_name={} of_msg={} timestamp={}>".format(self.msg_name, self.of_msg, self.timestamp)
+        return "<Message msg_name={} of_msg={} timestamp={} local_port={} datapath_id={}>"\
+            .format(self.msg_name, self.of_msg, self.timestamp, self.local_port, self.datapath_id)

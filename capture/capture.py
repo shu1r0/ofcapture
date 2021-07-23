@@ -1,3 +1,5 @@
+import pickle
+
 from pyof.v0x04.common.header import Type
 from pyof.foundation.basic_types import DPID
 
@@ -93,9 +95,19 @@ class CaptureWithPipe(CaptureBase):
     def send_pipe(self, msg):
         if self.parent_conn:
             if msg.message_type == Type.OFPT_PACKET_OUT:
-                self.parent_conn.send(msg)
+                if msg.local_port in self.port_to_dpid.keys():
+                    msg.datapath_id = self.port_to_dpid[msg.local_port]
+                # pre-pickle to avoid error
+                msg.of_msg = msg.of_msg.pack()
+                msg = pickle.dumps(msg)
+                self.parent_conn.send_bytes(msg)
             elif msg.message_type == Type.OFPT_PACKET_IN:
-                self.parent_conn.send(msg)
+                if msg.local_port in self.port_to_dpid.keys():
+                    msg.datapath_id = self.port_to_dpid[msg.local_port]
+                # pre-pickle to avoid error
+                msg.of_msg = msg.of_msg.pack()
+                msg = pickle.dumps(msg)
+                self.parent_conn.send_bytes(msg)
 
     def get_packet_in_out_repo(self):
         return packet_in_out_repo
