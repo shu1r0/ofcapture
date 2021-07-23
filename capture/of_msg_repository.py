@@ -73,5 +73,47 @@ class PacketInOutRepository(OFMessageRepository):
     def __init__(self):
         super(PacketInOutRepository, self).__init__()
 
+    def add(self, msg):
+        if msg.datapath_id:
+            self.repository.setdefault(msg.datapath_id, [])
+            self.repository[msg.datapath_id].append(msg)
+            logger.debug("added msg {} to repo {}".format(msg, self.repository))
+
+    def pop(self, datapath_id, until=None, count=None):
+        try:
+            if until is not None:
+                return self._pop_until(datapath_id, until)
+            elif count is not None:
+                return self._pop_count(datapath_id, count)
+            else:
+                return self._pop(datapath_id)
+        except KeyError:
+            logger.error("Failed to pop from of repository (repo={})".format(self.repository))
+            return None
+
+    def _pop(self, datapath_id):
+        return self.repository.pop(datapath_id)
+
+    def _pop_until(self, datapath_id, until):
+        tmp_i = []
+        msgs = self.repository[datapath_id]
+        for i in range(len(msgs)):
+            if msgs[i].timestamp < until:
+                tmp_i.append(i)
+        tmp = []
+        for i in tmp_i[::-1]:
+            tmp.insert(0, msgs.pop(i))
+        return tmp
+
+    def _pop_count(self, datapath_id, count):
+        tmp_i = []
+        msgs = self.repository[datapath_id]
+        for i in range(min(len(msgs), count)):
+            tmp_i.append(i)
+        tmp = []
+        for i in tmp_i[::-1]:
+            tmp.insert(0, msgs.pop(i))
+        return tmp
+
 
 packet_in_out_repo = PacketInOutRepository()
