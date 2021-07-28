@@ -7,7 +7,7 @@ This hides various external OpenFlow modules to ofcaputure.
 
 from enum import Enum
 
-from pyof.foundation.base import GenericMessage, UBIntBase, GenericBitMask
+from pyof.foundation.base import GenericMessage, UBIntBase, GenericBitMask, GenericType
 # from pyof.utils import unpack
 from pyof.v0x04.common.header import Header
 from pyof.v0x04.common.utils import unpack_message, new_message_from_header, MESSAGE_TYPES
@@ -55,13 +55,13 @@ def todict(obj, logger=None, classkey=None):
         return [todict(v, logger, classkey) for v in obj]
     elif hasattr(obj, "__dict__"):
         # value
-        if isinstance(obj, UBIntBase):
+        if isinstance(obj, GenericType):
             # logger.debug("UBIntBase, key : {}".format(vars(obj)))
             if obj.enum_ref is None:
                 return obj._value
             elif isinstance(obj._value, GenericBitMask):
                 return obj._value.__str__()
-        if isinstance(obj, Enum):
+        elif isinstance(obj, Enum):
             return obj.value
         data = dict([(key, todict(value, logger, classkey))
                      for key, value in obj.__dict__.items()
