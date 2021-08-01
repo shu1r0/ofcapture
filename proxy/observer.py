@@ -19,7 +19,7 @@ class AbstractObserver(metaclass=ABCMeta):
         """
 
 
-class OFObserver(AbstractObserver):
+class OFObserver(AbstractObserver, metaclass=ABCMeta):
 
     def __init__(self, observable):
         """init params and register for observable
@@ -36,8 +36,9 @@ class OFObserver(AbstractObserver):
         msg_name, of_msg, dict_of_msg = util.openflow.parse(msg, self.logger)
         msg.msg_name = msg_name
         msg.of_msg = of_msg
-        self.get_msg(msg)
+        self.msg_handler(msg)
 
-    def get_msg(self, msg):
+    @abstractmethod
+    def msg_handler(self, msg):
         pass
 

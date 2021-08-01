@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Datapath {
+  string id = 1;
+  string local_port = 2;
+}
+
+message OpenFlowMessage{
+  Datapath datapath = 1;
+  int64 xid = 2;
+  string message_type = 3;
+  float timestamp = 4;
+}

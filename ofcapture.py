@@ -6,12 +6,16 @@ Todo:
 """
 import asyncio
 import datetime
+import threading
 from abc import ABCMeta, abstractmethod
 from logging import getLogger, DEBUG, StreamHandler, Formatter, handlers, INFO
 
-from capture.capture import CaptureWithRepo, CaptureWithPipe
+from capture.capture import CaptureWithRepo, CaptureWithPipe, CaptureWithWeb
 from proxy.proxy import ChannelManager, SwitchHandler
 from proxy.observable import ObservableData
+
+from web.server import app, socketio
+
 
 logger = getLogger("ofcapture")
 default_logfile = "log/" + "ofcapture-" + datetime.datetime.now().strftime('%Y-%m-%d-%H-%M') + ".log"  # debug用
@@ -49,7 +53,7 @@ class OFCapture(OFCaptureBase):
     Attributes:
         channel_manager (ChannelManager) :
         observable (Observable) : observable instance
-        observer (Observer) : observer instance
+        capture (Observer) : observer instance
         switch_handler (SwitchHandler) : local server
         event_loop (asyncio.EventLoop) : event loop
     """
@@ -60,16 +64,20 @@ class OFCapture(OFCaptureBase):
         self.event_loop = event_loop
         if self.event_loop is None:
             self.event_loop = asyncio.get_event_loop()
+        # TCP client
         self.channel_manager = ChannelManager(loop=self.event_loop,
                                               controller_ip=controller_ip,
                                               controller_port=controller_port)
+        # observable OpenFlow message
         self.observable = ObservableData(self.channel_manager.get_queue_all_data())
+        # OpenFlow message observer
         self.capture = CaptureWithRepo(self.observable)
+        # local server
         self.switch_handler = SwitchHandler(host=local_ip,
                                             port=local_port,
                                             loop=self.event_loop,
                                             channel_manager=self.channel_manager)
-
+        # set logger
         if log_file:
             set_logger(log_level=INFO, filename=log_file)
 
@@ -91,7 +99,7 @@ class OFCaptureWithPipe(OFCaptureBase):
     Attributes:
         channel_manager (ChannelManager) :
         observable (Observable) : observable instance
-        observer (Observer) : observer instance
+        capture (Observer) : observer instance
         switch_handler (SwitchHandler) : local server
         event_loop (asyncio.EventLoop) : event loop
     """
@@ -126,28 +134,23 @@ class OFCaptureWithPipe(OFCaptureBase):
     def server_restart(self):
         raise NotImplementedError
 
-#
-# def main():
-#     setup_logger()
-#
-#     # datamanager
-#     channel_manager = ChannelManager(loop)
-#
-#     # observer
-#     observable = ObservableData(channel_manager.get_queue_all_data())
-#     observer = CaputerFlowTables(observable)
-#
-#     # handler
-#     switch_handler = SwitchHandler('127.0.0.1', 63333, loop, channel_manager)
-#
-#     loop.run_until_complete(asyncio.wait([
-#         switch_handler.start_server()
-#     ]))
-#
+
+class OFCaptureWithWeb(OFCapture):
+
+    def __init__(self, log_file=None):
+        super(OFCaptureWithWeb, self).__init__(log_file=log_file)
+        # thread = threading.Thread(target=socketio.run, kwargs={"app": app, "debug": True, "port": 8080})
+        # socketio.run(app, debug=True, port=8080)
+        # thread.start()
+        self.capture = CaptureWithWeb(self.observable, socketio)
+
+    def start_server(self):
+        asyncio.ensure_future(self.start_server_coro())
+        socketio.run(app, debug=True, port=8080)
 
 
 if __name__ == "__main__":
-    ofcapture = OFCapture(log_file=default_logfile)
+    ofcapture = OFCaptureWithWeb(log_file=default_logfile)
     try:
         ofcapture.start_server()
     except KeyboardInterrupt as e:

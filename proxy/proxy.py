@@ -3,6 +3,7 @@
 Todo:
     * to create reconnecting method
     * to create openflow packet obj
+    * to implement filter function
 """
 import asyncio
 from datetime import datetime
@@ -22,6 +23,7 @@ class Channel:
         """
         self.q_all = queue
         self.logger = getLogger("ofcapture." + __name__)
+
         self.switch_handler = None
         self.switch_writer = None
         self.controller_handler = None
@@ -128,7 +130,6 @@ class Channel:
         return is_closing
 
 
-
 class ChannelManager:
     """Channel Manager
     * This has queue that holds all data and gives the queue to api_module
@@ -143,7 +144,7 @@ class ChannelManager:
     """
 
     def __init__(self, loop, controller_ip='127.0.0.1', controller_port=6633):
-        """
+        """init
 
         Args:
             loop (asyncio.AbstractEventLoop) : event loop
@@ -321,10 +322,10 @@ class ControllerHandler:
         """init SwitchHandler
 
         Args:
-            host (str) :
-            port (int) :
-            loop (asyncio.AbstractEventLoop) :
-            channel_manager (ChannelManager) :
+            host (str) : controller ip address
+            port (int) : controller listen port
+            loop (asyncio.AbstractEventLoop) : event loop
+            channel_manager (ChannelManager) : channel manager
         """
         self.host = host
         self.port = port
@@ -353,7 +354,7 @@ class ControllerHandler:
             return writer
 
     async def handle_controller(self, reader, writer, channel):
-        """
+        """handle controller connection
 
         Args:
             reader (asyncio.StreamReader) :
@@ -406,4 +407,4 @@ class ControllerHandler:
             self.logger.info("Connection reset: {}".format(str(e)))
         except Exception as e:
             self.logger.error("Connection error: {}".format(str(e)))
-            raise
+            raise e
