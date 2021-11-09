@@ -1,5 +1,8 @@
 <template>
-  <svg id="chart"></svg>
+  <div>
+    <button>draw</button>
+    <svg id="chart"></svg>
+  </div>
 </template>
 
 <script lang="ts">
@@ -40,6 +43,12 @@ export default defineComponent({
     const NODE_LABEL_X_OFFSET = -30
     const NODE_LABEL_Y_OFFSET = 25
 
+    // drawn obj
+    const verticalLines = {}
+    const nodes = {}
+    const nodeNames = []
+    const messages = []
+
     /**
      * draw vertical line
      * @param {string} name : node name
@@ -53,6 +62,7 @@ export default defineComponent({
                       .attr('y1', YPAD)
                       .attr('x2', XPAD + index * VERT_SPACE)
                       .attr('y2', YPAD + VERT_PAD + msgLength * (MESSAGE_SPACE + 5))
+      verticalLines[name] = line
     }
 
     /**
@@ -74,6 +84,8 @@ export default defineComponent({
                             .attr("text-anchor", "middle")
                             .text((d: any) => { return name })
                             .attr("dy", "16px")
+      nodes[name] = [nodeRect, nodeLabel]
+      nodeNames.push(name)
     }
 
     /**
@@ -101,6 +113,7 @@ export default defineComponent({
                         .attr("text-anchor", "begin")
                         .style("font-size", "8px")
                         .text((d: any) => {return message})
+      messages.push(line)
     }
 
     /**
@@ -121,11 +134,16 @@ export default defineComponent({
                         .text((d: any) => {return timestamp})
     }
 
+    /**
+     * ノードを描く
+     */
     const drawNodes = (nodes: Datapath[]) => {
       const nodeLength = nodes.length
       nodes.forEach((node, index) => {
-        drawNode(node.getLocalPort(), index)
-        drawVerticalLine(node.getLocalPort(), index, nodeLength)
+        if(nodeNames.indexOf(node.getLocalPort()) === -1){
+          drawNode(node.getLocalPort(), index)
+          drawVerticalLine(node.getLocalPort(), index, nodeLength)
+        }
       })
     }
 
@@ -137,20 +155,6 @@ export default defineComponent({
       })
     }
 
-    const nodes = []
-    const messages = []
-    const local_ports = []
-
-    const ws_socket = new WebSocket("ws://localhost:8080/ws")
-
-    ws_socket.onopen = (event) => {
-      console.log("ws open connection")
-      console.log(event)
-    }
-    ws_socket.onmessage = (event) => {
-      console.log("ws get message")
-      console.log(event)
-    }
   },
 })
 </script>

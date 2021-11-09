@@ -37,7 +37,7 @@ def parse(msg, logger=None):
     except Exception as e:
         header = Header()
         header.unpack(msg.data[:header.get_size()])
-        msg_name = new_message_from_header(header).name
+        msg_name = new_message_from_header(header).header.message_type.name
         if logger:
             logger.error("Failed to unpack msg({}) : {}".format(msg_name, str(e)))
         return msg_name, None, None

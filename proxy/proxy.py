@@ -71,8 +71,8 @@ class Channel:
             int : -1 if failed to send
         """
         if not self.is_closing():
-            await self.controller_handler.send_to_controller(self.controller_writer, data)
             await self._put_queue_all(data, switch2controller=True)
+            await self.controller_handler.send_to_controller(self.controller_writer, data)
             self.logger.debug("set data and sent to controller : {}".format(data))
             return 0
         else:
@@ -89,8 +89,8 @@ class Channel:
             int : -1 if failed to send
         """
         if not self.is_closing():
-            await self.switch_handler.send_to_switch(self.switch_writer, data)
             await self._put_queue_all(data, switch2controller=False)
+            await self.switch_handler.send_to_switch(self.switch_writer, data)
             self.logger.debug("set data and sent to switch : {}".format(data))
             return 0
         else:

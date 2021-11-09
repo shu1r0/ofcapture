@@ -145,7 +145,9 @@ class OFCaptureWithWeb(OFCapture):
         self.capture = CaptureWithWeb(self.observable, socketio)
 
     def start_server(self):
-        asyncio.ensure_future(self.start_server_coro())
+        t = threading.Thread(target=super(OFCaptureWithWeb, self).start_server)
+        t.start()
+        # asyncio.ensure_future(self.start_server_coro())
         socketio.run(app, debug=True, port=8080)
 
 
