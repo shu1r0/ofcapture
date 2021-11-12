@@ -15,51 +15,60 @@ from util.packet import OFMsg
 class Channel:
     """OpenFlow channel"""
 
-    def __init__(self, queue):
+    filter_func = None
+
+    def __init__(self, queue, switch_handler=None, switch_writer=None, controller_handler=None, controller_writer=None):
         """init
 
         Args:
             queue (asyncio.Queue) : queue to store packet
+            switch_handler (SwitchHandler) :
+            switch_writer (asyncio.StreamWriter) :
+            controller_handler (ControllerHandler) :
+            controller_writer (asyncio.StreamWriter) :
         """
         self.q_all = queue
         self.logger = getLogger("ofcapture." + __name__)
 
-        self.switch_handler = None
-        self.switch_writer = None
-        self.controller_handler = None
-        self.controller_writer = None
+        self._switch_handler = switch_handler
+        self.switch_writer = switch_writer
+        self._controller_handler = controller_handler
+        self.controller_writer = controller_writer
 
-    def set_switch_handler(self, switch_handler):
+    def set_switch(self, switch_handler, switch_writer):
         """set switch handler to send switch
 
         Args:
             switch_handler (SwitchHandler) :
+            switch_writer (asyncio.StreamWriter) :
         """
-        self.switch_handler = switch_handler
+        self._switch_handler = switch_handler
+        self.switch_writer = switch_writer
 
-    def set_controller_handler(self, controller_handler):
+    def set_controller(self, controller_handler, controller_writer):
         """set controller handler to send controller
 
         Args:
             controller_handler (ControllerHandler) :
-        """
-        self.controller_handler = controller_handler
-
-    def set_switch_writer(self, switch_writer):
-        """set StreamWriter to send switch
-
-        Args:
-            switch_writer (asyncio.StreamWriter) :
-        """
-        self.switch_writer = switch_writer
-
-    def set_controller_writer(self, controller_writer):
-        """set StreamWriter to send controller
-
-        Args:
             controller_writer (asyncio.StreamWriter) :
         """
+        self._controller_handler = controller_handler
         self.controller_writer = controller_writer
+
+    def _filter(self, data, switch2controller):
+        """On Packet
+
+        Args:
+            data (bytes) :
+            switch2controller (bool) :
+
+        Returns:
+            bytes
+        """
+        cls = self.__class__
+        if cls.filter_func:
+            data = cls.filter_func(data, switch2controller)
+        return data
 
     async def send_to_controller(self, data):
         """set data and sent to controller
@@ -71,9 +80,10 @@ class Channel:
             int : -1 if failed to send
         """
         if not self.is_closing():
-            await self._put_queue_all(data, switch2controller=True)
-            await self.controller_handler.send_to_controller(self.controller_writer, data)
-            self.logger.debug("set data and sent to controller : {}".format(data))
+            filtered_data = self._filter(data, switch2controller=True)
+            await self._put_queue_all(filtered_data, switch2controller=True)
+            await self._controller_handler.send_to_controller(self.controller_writer, filtered_data)
+            self.logger.debug("set data and sent to controller : {}".format(filtered_data))
             return 0
         else:
             self.logger.warning("Failed to send to controller : {}".format(data))
@@ -89,9 +99,10 @@ class Channel:
             int : -1 if failed to send
         """
         if not self.is_closing():
-            await self._put_queue_all(data, switch2controller=False)
-            await self.switch_handler.send_to_switch(self.switch_writer, data)
-            self.logger.debug("set data and sent to switch : {}".format(data))
+            filtered_data = self._filter(data, switch2controller=False)
+            await self._put_queue_all(filtered_data, switch2controller=False)
+            await self._switch_handler.send_to_switch(self.switch_writer, filtered_data)
+            self.logger.debug("set data and sent to switch : {}".format(filtered_data))
             return 0
         else:
             self.logger.warning("Failed to send to switch : {}".format(data))
@@ -118,16 +129,26 @@ class Channel:
         """
         is_closing = True
         if self.switch_writer is not None and self.controller_writer is not None\
-                and self.switch_handler is not None and self.controller_handler is not None:
+                and self._switch_handler is not None and self._controller_handler is not None:
             is_closing = self.switch_writer.is_closing() or self.controller_writer.is_closing()
 
         if is_closing:
             self.logger.debug("is_closing is {}, s writer is {}, c writer is {}, s handler is {}, c handler is {},"
                               " s writer close? {}, c writer close? {}"
                               .format(is_closing, self.switch_writer is not None, self.controller_writer is not None,
-                                      self.switch_handler is not None, self.controller_handler is not None,
+                                      self._switch_handler is not None, self._controller_handler is not None,
                                       self.switch_writer.is_closing(), self.controller_writer.is_closing()))
         return is_closing
+
+    @classmethod
+    def filter(cls, func):
+        """decorator"""
+        def wrapper(data, switch2controller):
+            data = func(data, switch2controller)
+            return data
+
+        cls.filter_func = wrapper
+        return wrapper
 
 
 class ChannelManager:
@@ -173,10 +194,8 @@ class ChannelManager:
             channel = Channel(self.q_all)
             controller_writer = await self.controller_handler.open_connection(channel)
             if controller_writer:
-                channel.set_switch_handler(switch_handler)
-                channel.set_switch_writer(switch_writer)
-                channel.set_controller_handler(self.controller_handler)
-                channel.set_controller_writer(controller_writer)
+                channel.set_switch(switch_handler, switch_writer)
+                channel.set_controller(self.controller_handler, controller_writer)
                 return channel
             else:
                 self.logger.debug("no connectable controller")
@@ -282,7 +301,8 @@ class SwitchHandler:
             raise
         finally:
             self.logger.info("Close the connection and do exit processing")
-            self.switches.remove(peername)
+            if peername in self.switches:
+                self.switches.remove(peername)
             if len(self.switches) == 0:
                 self.channel_manager.has_switch_join = False
             writer.close()
@@ -384,7 +404,8 @@ class ControllerHandler:
             raise
         finally:
             self.logger.info("Close the connection and do exit processing")
-            self.controllers.remove(peername)
+            if peername in self.controllers:
+                self.controllers.remove(peername)
             if len(self.controllers) == 0:
                 self.channel_manager.has_controller_join = False
             writer.close()

@@ -10,6 +10,8 @@ from mininet.cli import CLI
 from functools import partial
 
 class Three_switches_topo(Topo):
+
+
     def build(self, n=5):
         s1 = self.addSwitch('s1', protocols="OpenFlow13")
         s2 = self.addSwitch('s2', protocols="OpenFlow13")
@@ -25,6 +27,7 @@ class Three_switches_topo(Topo):
             host = self.addHost('h{}'.format(i+1+n*2))
             self.addLink(host, s3)
 
+
 def setup():
     topo = Three_switches_topo(n=5)
     net = Mininet(topo=topo, controller=partial(RemoteController, ip='127.0.0.1', port=63333))
@@ -32,8 +35,13 @@ def setup():
     # net.addNAT().configDefault()
     net.start()
     dumpNodeConnections(net.hosts)
+    for node in net.nameToNode.values():
+        node.cmd("sysctl -w net.ipv6.conf.all.disable_ipv6=1")
+        node.cmd("sysctl -w net.ipv6.conf.default.disable_ipv6=1")
+        node.cmd("sysctl -w net.ipv6.conf.lo.disable_ipv6=1")
     CLI(net)
     net.stop()
+
 
 if __name__ == '__main__':
     setLogLevel('info')

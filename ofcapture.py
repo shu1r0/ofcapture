@@ -39,8 +39,10 @@ def set_logger(log_level=DEBUG, filename=default_logfile):
 
 class OFCaptureBase(metaclass=ABCMeta):
 
-    def __init__(self):
-        pass
+    def __init__(self, log_file=None, log_level=INFO):
+        # set logger
+        if log_file:
+            set_logger(log_level=log_level, filename=log_file)
 
     @abstractmethod
     def start_server(self):
@@ -59,8 +61,8 @@ class OFCapture(OFCaptureBase):
     """
 
     def __init__(self, local_ip='127.0.0.1', local_port=63333, controller_ip='127.0.0.1', controller_port=6633,
-                 event_loop=None, log_file=None):
-        super(OFCapture, self).__init__()
+                 event_loop=None, log_file=None, log_level=INFO):
+        super(OFCapture, self).__init__(log_file=log_file, log_level=log_level)
         self.event_loop = event_loop
         if self.event_loop is None:
             self.event_loop = asyncio.get_event_loop()
@@ -77,9 +79,6 @@ class OFCapture(OFCaptureBase):
                                             port=local_port,
                                             loop=self.event_loop,
                                             channel_manager=self.channel_manager)
-        # set logger
-        if log_file:
-            set_logger(log_level=INFO, filename=log_file)
 
     def start_server(self):
         self.event_loop.run_until_complete(asyncio.wait([
@@ -105,8 +104,8 @@ class OFCaptureWithPipe(OFCaptureBase):
     """
 
     def __init__(self, local_ip='127.0.0.1', local_port=63333, controller_ip='127.0.0.1', controller_port=6633,
-                 event_loop=None, log_file=None, parent_conn=None):
-        super(OFCaptureWithPipe, self).__init__()
+                 event_loop=None, log_file=None, log_level=INFO, parent_conn=None):
+        super(OFCaptureWithPipe, self).__init__(log_file=log_file, log_level=log_level)
         self.event_loop = event_loop
         if self.event_loop is None:
             self.event_loop = asyncio.get_event_loop()
@@ -121,7 +120,7 @@ class OFCaptureWithPipe(OFCaptureBase):
                                             channel_manager=self.channel_manager)
 
         if log_file:
-            set_logger(log_level=INFO, filename=log_file)
+            set_logger(log_level=log_level, filename=log_file)
 
     def start_server(self):
         self.event_loop.run_until_complete(asyncio.wait([
@@ -137,8 +136,8 @@ class OFCaptureWithPipe(OFCaptureBase):
 
 class OFCaptureWithWeb(OFCapture):
 
-    def __init__(self, log_file=None):
-        super(OFCaptureWithWeb, self).__init__(log_file=log_file)
+    def __init__(self, log_file=None, log_level=INFO):
+        super(OFCaptureWithWeb, self).__init__(log_file=log_file, log_level=log_level)
         # thread = threading.Thread(target=socketio.run, kwargs={"app": app, "debug": True, "port": 8080})
         # socketio.run(app, debug=True, port=8080)
         # thread.start()
@@ -152,7 +151,14 @@ class OFCaptureWithWeb(OFCapture):
 
 
 if __name__ == "__main__":
-    ofcapture = OFCaptureWithWeb(log_file=default_logfile)
+    from proxy.proxy import Channel
+
+    @Channel.filter
+    def filter(data, switch2controller):
+        logger.debug("filter (data={}, s2c={})".format(data, switch2controller))
+        return data
+
+    ofcapture = OFCapture(log_file=default_logfile, log_level=DEBUG)
     try:
         ofcapture.start_server()
     except KeyboardInterrupt as e:

@@ -35,12 +35,20 @@ def parse(msg, logger=None):
             logger.info("Parsed msg : {} {} {}".format(msg_name, of_msg, dict_of_msg))
         return msg_name, of_msg, dict_of_msg
     except Exception as e:
-        header = Header()
-        header.unpack(msg.data[:header.get_size()])
-        msg_name = new_message_from_header(header).header.message_type.name
+        msg_name = get_header(msg)["header"].message_type.name
         if logger:
             logger.error("Failed to unpack msg({}) : {}".format(msg_name, str(e)))
         return msg_name, None, None
+
+
+def get_header(msg):
+    header = Header()
+    header.unpack(msg.data[:header.get_size()])
+    new_message = new_message_from_header(header)
+    return {
+        "header": new_message.header,
+        "message_size": new_message.get_size()
+    }
 
 
 def todict(obj, logger=None, classkey=None):
