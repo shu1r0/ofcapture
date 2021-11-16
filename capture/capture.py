@@ -6,9 +6,12 @@ from pyof.v0x04.controller2switch.common import MultipartType
 
 from proxy.observer import OFObserver
 from capture.of_msg_repository import packet_in_out_repo
-from util.packet import OFMsg
+from ofproto.packet import OFMsg
+from ofproto.datapath import Port, Datapath as Dp
+from ofproto.openflow import todict
 
-from web.proto.api_pb2 import Datapath, OpenFlowMessage
+from web.proto.api_pb2 import Datapath, OpenFlowMessage, OpenFlowMessages
+from web.ws_server import emit_ofmsg, set_getOpenFlowMessage_handler
 
 
 class CaptureBase(OFObserver):
@@ -21,6 +24,8 @@ class CaptureBase(OFObserver):
         super(CaptureBase, self).__init__(observable)
         self.lport_to_dpid = {}
         self.lport_to_port = {}
+        self._messages = []
+        self._datapathes: list[Datapath] = []
 
     def msg_handler(self, msg):
         """handle msg
@@ -28,14 +33,31 @@ class CaptureBase(OFObserver):
         Args:
             msg (OFMsg) : openflow message object
         """
+        datapath = self._get_datapath(msg.local_port)
+        if datapath is None:
+            datapath = Dp()
+            # self.logger.info("local_port type = {}".format(type(msg.local_port)))
+            datapath.local_port = msg.local_port
+            self._datapathes.append(datapath)
+
         if msg.message_type == Type.OFPT_FEATURES_REPLY:
             # set datapath id
             if isinstance(msg.of_msg.datapath_id, DPID):
-                self.lport_to_dpid[msg.local_port] = int(''.join(msg.of_msg.datapath_id.value.split(':')))
-        if msg.message_type == Type.OFPT_MULTIPART_REPLY:
+                datapath_id = int(''.join(msg.of_msg.datapath_id.value.split(':')))
+                self.lport_to_dpid[msg.local_port] = datapath_id
+                datapath.datapath_id = datapath_id
+        elif msg.message_type == Type.OFPT_MULTIPART_REPLY:
             if msg.of_msg.multipart_type == MultipartType.OFPMP_PORT_DESC:
                 # Note: OFPMP_PORT_DESC message body is a list of port
-                self.lport_to_port[msg.local_port] = msg.of_msg.body
+                port_list = []
+                for p in msg.of_msg.body:
+                    port_list.append(Port.from_dict(todict(p)))
+                self.lport_to_port[msg.local_port] = port_list
+                datapath.ports = port_list
+
+        if msg.local_port in self.lport_to_dpid.keys():
+            msg.datapath_id = self.lport_to_dpid[msg.local_port]
+        self._messages.append(msg)
 
     def get_datapathid(self, local_port):
         """get datapath id
@@ -50,6 +72,14 @@ class CaptureBase(OFObserver):
             return self.lport_to_dpid[local_port]
         else:
             return None
+
+    def _get_datapath(self, local_port: int):
+        datapath = None
+        for d in self._datapathes:
+            if d.local_port == local_port:
+                datapath = d
+                break
+        return datapath
 
     def get_port(self, datapath_id):
         """get local port of datapath
@@ -118,16 +148,8 @@ class CaptureWithPipe(CaptureBase):
 
     def send_pipe(self, msg):
         if self.parent_conn:
-            if msg.message_type == Type.OFPT_PACKET_OUT:
-                if msg.local_port in self.lport_to_dpid.keys():
-                    msg.datapath_id = self.lport_to_dpid[msg.local_port]
-                # pre-pickle to avoid error
-                msg.of_msg = msg.of_msg.pack()
-                msg = pickle.dumps(msg)
-                self.parent_conn.send_bytes(msg)
-            elif msg.message_type == Type.OFPT_PACKET_IN:
-                if msg.local_port in self.lport_to_dpid.keys():
-                    msg.datapath_id = self.lport_to_dpid[msg.local_port]
+            send_types = [Type.OFPT_PACKET_OUT, Type.OFPT_PACKET_IN, Type.OFPT_FLOW_MOD]
+            if msg.message_type in send_types:
                 # pre-pickle to avoid error
                 msg.of_msg = msg.of_msg.pack()
                 msg = pickle.dumps(msg)
@@ -139,9 +161,11 @@ class CaptureWithPipe(CaptureBase):
 
 class CaptureWithWeb(CaptureBase):
 
-    def __init__(self, observable, socketio):
+    def __init__(self, observable):
         super(CaptureWithWeb, self).__init__(observable)
-        self.socketio = socketio
+        self.messages = []
+
+        set_getOpenFlowMessage_handler(self._get_ofmsgs)
 
     def msg_handler(self, msg):
         super(CaptureWithWeb, self).msg_handler(msg)
@@ -158,5 +182,14 @@ class CaptureWithWeb(CaptureBase):
         proto_OFMsg.xid = int(msg.of_msg.header.xid)
         proto_OFMsg.message_type = msg.msg_name
         proto_OFMsg.timestamp = msg.timestamp
-        self.socketio.emit('getOpenFlowMessage', proto_OFMsg.SerializeToString())
+        proto_OFMsg.switch2controller = msg.switch2controller
+        self.messages.append(proto_OFMsg)
+        emit_ofmsg(proto_OFMsg.SerializeToString())
+
+    def _get_ofmsgs(self, _request):
+        ofmsgs = OpenFlowMessages()
+        for m in self.messages:
+            ofmsgs.messages.append(m)
+        self.messages = []
+        return ofmsgs.SerializeToString()
 

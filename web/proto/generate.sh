@@ -6,7 +6,7 @@ DIST_DIR=./
 DIST_DIR_TS=../html/src/api
 
 protoc \
---js_out=import_style=commonjs,binary:"${DIST_DIR}"/ \
+--js_out=import_style=commonjs,binary:"${DIST_DIR_TS}"/ \
 --ts_out=import_style=commonjs,binary:"${DIST_DIR_TS}"/ \
 --python_out="${DIST_DIR}"/ \
 --grpc_out="${DIST_DIR}"/ \

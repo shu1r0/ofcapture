@@ -10,4 +10,13 @@ message OpenFlowMessage{
   int64 xid = 2;
   string message_type = 3;
   float timestamp = 4;
+  bool switch2controller = 5;
+}
+
+message OpenFlowMessages{
+  repeated OpenFlowMessage messages = 1;
+}
+
+message OpenFlowMessageRequest{
+  optional string option = 1;
 }

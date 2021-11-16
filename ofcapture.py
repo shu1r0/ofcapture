@@ -15,6 +15,7 @@ from proxy.proxy import ChannelManager, SwitchHandler
 from proxy.observable import ObservableData
 
 from web.server import app, socketio
+from web.ws_server import ws_server_start, ws_server_stop
 
 
 logger = getLogger("ofcapture")
@@ -136,32 +137,23 @@ class OFCaptureWithPipe(OFCaptureBase):
 
 class OFCaptureWithWeb(OFCapture):
 
-    def __init__(self, log_file=None, log_level=INFO):
+    def __init__(self, log_file=None, log_level=INFO, ws_ip="0.0.0.0", ws_port=8889):
         super(OFCaptureWithWeb, self).__init__(log_file=log_file, log_level=log_level)
-        # thread = threading.Thread(target=socketio.run, kwargs={"app": app, "debug": True, "port": 8080})
-        # socketio.run(app, debug=True, port=8080)
-        # thread.start()
-        self.capture = CaptureWithWeb(self.observable, socketio)
+        self.capture = CaptureWithWeb(self.observable)
+        self.ws_ip = ws_ip
+        self.ws_port = ws_port
 
     def start_server(self):
-        t = threading.Thread(target=super(OFCaptureWithWeb, self).start_server)
-        t.start()
-        # asyncio.ensure_future(self.start_server_coro())
-        socketio.run(app, debug=True, port=8080)
+        self.event_loop.run_until_complete(asyncio.wait([
+            self.start_server_coro(),
+            ws_server_start(self.ws_ip, self.ws_port)
+        ]))
 
 
 if __name__ == "__main__":
-    from proxy.proxy import Channel
-
-    @Channel.filter
-    def filter(data, switch2controller):
-        logger.debug("filter (data={}, s2c={})".format(data, switch2controller))
-        return data
-
-    ofcapture = OFCapture(log_file=default_logfile, log_level=DEBUG)
+    ofcapture = OFCaptureWithWeb(log_file=default_logfile, log_level=INFO, ws_ip="10.0.0.109")
     try:
         ofcapture.start_server()
     except KeyboardInterrupt as e:
         logger.info("keyboardInterrupt : {}".format(str(e)))
-
     exit()

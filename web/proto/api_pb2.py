@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\tapi.proto\"*\n\x08\x44\x61tapath\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nlocal_port\x18\x02 \x01(\t\"d\n\x0fOpenFlowMessage\x12\x1b\n\x08\x64\x61tapath\x18\x01 \x01(\x0b\x32\t.Datapath\x12\x0b\n\x03xid\x18\x02 \x01(\x03\x12\x14\n\x0cmessage_type\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\x02\x62\x06proto3'
+  serialized_pb=b'\n\tapi.proto\"*\n\x08\x44\x61tapath\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nlocal_port\x18\x02 \x01(\t\"\x7f\n\x0fOpenFlowMessage\x12\x1b\n\x08\x64\x61tapath\x18\x01 \x01(\x0b\x32\t.Datapath\x12\x0b\n\x03xid\x18\x02 \x01(\x03\x12\x14\n\x0cmessage_type\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\x02\x12\x19\n\x11switch2controller\x18\x05 \x01(\x08\"6\n\x10OpenFlowMessages\x12\"\n\x08messages\x18\x01 \x03(\x0b\x32\x10.OpenFlowMessage\"8\n\x16OpenFlowMessageRequest\x12\x13\n\x06option\x18\x01 \x01(\tH\x00\x88\x01\x01\x42\t\n\x07_optionb\x06proto3'
 )
 
 
@@ -100,6 +100,13 @@ _OPENFLOWMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='switch2controller', full_name='OpenFlowMessage.switch2controller', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -113,12 +120,87 @@ _OPENFLOWMESSAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=57,
-  serialized_end=157,
+  serialized_end=184,
+)
+
+
+_OPENFLOWMESSAGES = _descriptor.Descriptor(
+  name='OpenFlowMessages',
+  full_name='OpenFlowMessages',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='messages', full_name='OpenFlowMessages.messages', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=186,
+  serialized_end=240,
+)
+
+
+_OPENFLOWMESSAGEREQUEST = _descriptor.Descriptor(
+  name='OpenFlowMessageRequest',
+  full_name='OpenFlowMessageRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='option', full_name='OpenFlowMessageRequest.option', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='_option', full_name='OpenFlowMessageRequest._option',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=242,
+  serialized_end=298,
 )
 
 _OPENFLOWMESSAGE.fields_by_name['datapath'].message_type = _DATAPATH
+_OPENFLOWMESSAGES.fields_by_name['messages'].message_type = _OPENFLOWMESSAGE
+_OPENFLOWMESSAGEREQUEST.oneofs_by_name['_option'].fields.append(
+  _OPENFLOWMESSAGEREQUEST.fields_by_name['option'])
+_OPENFLOWMESSAGEREQUEST.fields_by_name['option'].containing_oneof = _OPENFLOWMESSAGEREQUEST.oneofs_by_name['_option']
 DESCRIPTOR.message_types_by_name['Datapath'] = _DATAPATH
 DESCRIPTOR.message_types_by_name['OpenFlowMessage'] = _OPENFLOWMESSAGE
+DESCRIPTOR.message_types_by_name['OpenFlowMessages'] = _OPENFLOWMESSAGES
+DESCRIPTOR.message_types_by_name['OpenFlowMessageRequest'] = _OPENFLOWMESSAGEREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Datapath = _reflection.GeneratedProtocolMessageType('Datapath', (_message.Message,), {
@@ -134,6 +216,20 @@ OpenFlowMessage = _reflection.GeneratedProtocolMessageType('OpenFlowMessage', (_
   # @@protoc_insertion_point(class_scope:OpenFlowMessage)
   })
 _sym_db.RegisterMessage(OpenFlowMessage)
+
+OpenFlowMessages = _reflection.GeneratedProtocolMessageType('OpenFlowMessages', (_message.Message,), {
+  'DESCRIPTOR' : _OPENFLOWMESSAGES,
+  '__module__' : 'api_pb2'
+  # @@protoc_insertion_point(class_scope:OpenFlowMessages)
+  })
+_sym_db.RegisterMessage(OpenFlowMessages)
+
+OpenFlowMessageRequest = _reflection.GeneratedProtocolMessageType('OpenFlowMessageRequest', (_message.Message,), {
+  'DESCRIPTOR' : _OPENFLOWMESSAGEREQUEST,
+  '__module__' : 'api_pb2'
+  # @@protoc_insertion_point(class_scope:OpenFlowMessageRequest)
+  })
+_sym_db.RegisterMessage(OpenFlowMessageRequest)
 
 
 # @@protoc_insertion_point(module_scope)

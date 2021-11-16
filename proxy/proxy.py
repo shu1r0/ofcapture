@@ -9,7 +9,7 @@ import asyncio
 from datetime import datetime
 from logging import getLogger, Logger
 
-from util.packet import OFMsg
+from ofproto.packet import OFMsg
 
 
 class Channel:

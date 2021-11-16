@@ -41,6 +41,8 @@ export class OpenFlowMessage extends jspb.Message {
     setMessageType(value: string): OpenFlowMessage;
     getTimestamp(): number;
     setTimestamp(value: number): OpenFlowMessage;
+    getSwitch2controller(): boolean;
+    setSwitch2controller(value: boolean): OpenFlowMessage;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): OpenFlowMessage.AsObject;
@@ -58,5 +60,51 @@ export namespace OpenFlowMessage {
         xid: number,
         messageType: string,
         timestamp: number,
+        switch2controller: boolean,
+    }
+}
+
+export class OpenFlowMessages extends jspb.Message { 
+    clearMessagesList(): void;
+    getMessagesList(): Array<OpenFlowMessage>;
+    setMessagesList(value: Array<OpenFlowMessage>): OpenFlowMessages;
+    addMessages(value?: OpenFlowMessage, index?: number): OpenFlowMessage;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): OpenFlowMessages.AsObject;
+    static toObject(includeInstance: boolean, msg: OpenFlowMessages): OpenFlowMessages.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: OpenFlowMessages, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): OpenFlowMessages;
+    static deserializeBinaryFromReader(message: OpenFlowMessages, reader: jspb.BinaryReader): OpenFlowMessages;
+}
+
+export namespace OpenFlowMessages {
+    export type AsObject = {
+        messagesList: Array<OpenFlowMessage.AsObject>,
+    }
+}
+
+export class OpenFlowMessageRequest extends jspb.Message { 
+
+    hasOption(): boolean;
+    clearOption(): void;
+    getOption(): string | undefined;
+    setOption(value: string): OpenFlowMessageRequest;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): OpenFlowMessageRequest.AsObject;
+    static toObject(includeInstance: boolean, msg: OpenFlowMessageRequest): OpenFlowMessageRequest.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: OpenFlowMessageRequest, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): OpenFlowMessageRequest;
+    static deserializeBinaryFromReader(message: OpenFlowMessageRequest, reader: jspb.BinaryReader): OpenFlowMessageRequest;
+}
+
+export namespace OpenFlowMessageRequest {
+    export type AsObject = {
+        option?: string,
     }
 }
