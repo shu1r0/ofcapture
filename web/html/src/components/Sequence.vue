@@ -148,6 +148,7 @@ export default defineComponent({
         const xPos = XPAD + MESSAGE_LABEL_X_OFFSET
         const yPos = MESSAGE_LABEL_Y_OFFSET + index * MESSAGE_SPACE
         const date = new Date(timestamp)
+        const time = date.getHours() + "h" + date.getMinutes() + "m" + date.getSeconds() + "." + date.getMilliseconds()
 
         const label = svg.append("g")
                           .attr("transform", "translate(" + xPos + ", " + yPos + ")")
@@ -155,7 +156,7 @@ export default defineComponent({
                           .attr("text-anchor", "middle")
                           .append("text")
                           .style("font-size", "8px")
-                          .text((d: any) => {return date.toLocaleTimeString()})
+                          .text((d: any) => {return time})
       }
 
 
