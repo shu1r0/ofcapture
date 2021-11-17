@@ -57,6 +57,12 @@ def todict(obj, logger=None, classkey=None):
         for (k, v) in obj.items():
             data[k] = todict(v, logger, classkey)
         return data
+    if isinstance(obj, bytes):  # bytes convert test
+        value = ""
+        for v in obj:
+            v = hex(v)[2:]
+            value += v
+        return value
     elif hasattr(obj, "_ast"):
         return todict(obj._ast(), logger)
     elif hasattr(obj, "__iter__") and not isinstance(obj, str):
