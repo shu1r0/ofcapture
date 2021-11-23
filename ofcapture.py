@@ -105,7 +105,7 @@ class OFCaptureWithPipe(OFCaptureBase):
     """
 
     def __init__(self, local_ip='127.0.0.1', local_port=63333, controller_ip='127.0.0.1', controller_port=6633,
-                 event_loop=None, log_file=None, log_level=INFO, parent_conn=None):
+                 event_loop=None, log_file=None, log_level=INFO, parent_conn=None, start=False):
         super(OFCaptureWithPipe, self).__init__(log_file=log_file, log_level=log_level)
         self.event_loop = event_loop
         if self.event_loop is None:
@@ -122,6 +122,8 @@ class OFCaptureWithPipe(OFCaptureBase):
 
         if log_file:
             set_logger(log_level=log_level, filename=log_file)
+        if start:
+            self.start_server()
 
     def start_server(self):
         self.event_loop.run_until_complete(asyncio.wait([

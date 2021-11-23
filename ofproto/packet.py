@@ -1,6 +1,9 @@
 from datetime import datetime
 
 
+import macaddress
+import ipaddress
+
 class OFMsg:
     """Message"""
 
@@ -42,3 +45,15 @@ class OFMsg:
     def __repr__(self):
         return "<Message msg_name={} of_msg={} timestamp={} local_port={} datapath_id={}>"\
             .format(self.msg_name, self.of_msg, self.timestamp, self.local_port, self.datapath_id)
+
+
+def macaddress_bytes2string(data):
+    addr = macaddress.MAC(data)
+    return str(addr).replace('-', ':').lower()
+
+
+def ipv4address_bytes2string(data):
+    addr = ipaddress.IPv4Address(data)
+    return str(addr)
+
+

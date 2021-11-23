@@ -160,6 +160,9 @@ class CaptureWithPipe(CaptureBase):
 
 
 class CaptureWithWeb(CaptureBase):
+    """
+    Capture With Web
+    """
 
     def __init__(self, observable):
         super(CaptureWithWeb, self).__init__(observable)

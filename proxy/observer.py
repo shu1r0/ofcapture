@@ -35,7 +35,7 @@ class OFObserver(AbstractObserver, metaclass=ABCMeta):
     def update(self, msg):
         self.logger.debug("observed from observable: {}".format(msg.data[:8]))  # 8 : header Byte size
         msg_name, of_msg, dict_of_msg = parse(msg, self.logger)
-        if of_msg:
+        if of_msg is not None:
             msg.msg_name = msg_name
             msg.of_msg = of_msg
             self.msg_handler(msg)
@@ -46,10 +46,11 @@ class OFObserver(AbstractObserver, metaclass=ABCMeta):
             data2 = msg.data[int(header.length):]
             msg1 = msg
             msg1.data = data1
-            msg2 = OFMsg(msg.timestamp, msg.local_ip, msg.remote_ip, msg.local_port, msg.remote_port, data2, msg.switch2controller)
-            self.logger.debug("message separate (data1={}, data2={})".format(data1, data2))
-            for m in [msg1, msg2]:
-                self.update(m)
+            self.update(msg1)
+            if len(data2) > 0:
+                msg2 = OFMsg(msg.timestamp, msg.local_ip, msg.remote_ip, msg.local_port, msg.remote_port, data2, msg.switch2controller)
+                self.logger.debug("message separate (data1={}, data2={})".format(data1, data2))
+                self.update(msg2)
 
     @abstractmethod
     def msg_handler(self, msg):
