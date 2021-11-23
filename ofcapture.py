@@ -126,9 +126,10 @@ class OFCaptureWithPipe(OFCaptureBase):
             self.start_server()
 
     def start_server(self):
-        self.event_loop.run_until_complete(asyncio.wait([
-            self.start_server_coro()
-        ]))
+        # self.event_loop.run_until_complete(asyncio.wait([
+        #     self.start_server_coro()
+        # ]))
+        asyncio.run(self.start_server_coro())
 
     async def start_server_coro(self):
         await self.switch_handler.start_server()
