@@ -2,6 +2,8 @@ from abc import ABCMeta, abstractmethod
 from logging import getLogger
 import asyncio
 
+from ofproto.openflow import parse
+
 
 class Observable(metaclass=ABCMeta):
     """Observable class"""
@@ -43,9 +45,8 @@ class ObservableData(Observable):
         self.observers = set()
         self.data_queue = data_queue
         self.logger = getLogger("ofcapture." + __name__)
-        asyncio.ensure_future(self.search_msg())
 
-    async def search_msg(self):
+    async def start_search(self):
         """get msg from queue
 
         Notes:
@@ -53,7 +54,9 @@ class ObservableData(Observable):
         """
         while True:
             msg = await self.data_queue.get()
-            self.notify_observers(msg)
+            msgs = parse(msg, logger=self.logger)
+            for m in msgs:
+                self.notify_observers(m)
 
     def register_observer(self, observer):
         self.observers.add(observer)

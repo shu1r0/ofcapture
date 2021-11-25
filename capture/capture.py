@@ -1,4 +1,5 @@
 import pickle
+from abc import ABCMeta, abstractmethod
 
 from pyof.foundation.basic_types import DPID
 from pyof.v0x04.common.header import Type
@@ -14,7 +15,7 @@ from web.proto.api_pb2 import Datapath, OpenFlowMessage, OpenFlowMessages
 from web.ws_server import emit_ofmsg, set_getOpenFlowMessage_handler
 
 
-class CaptureBase(OFObserver):
+class CaptureBase(OFObserver, metaclass=ABCMeta):
     """CaptureBase
 
     This is a base class for saving messages to a repository or output to stdout.
@@ -24,15 +25,21 @@ class CaptureBase(OFObserver):
         super(CaptureBase, self).__init__(observable)
         self.lport_to_dpid = {}
         self.lport_to_port = {}
+
+        # all captured messages
         self._messages = []
+        # datapathes
         self._datapathes: list[Datapath] = []
 
-    def msg_handler(self, msg):
+    def update(self, msg):
         """handle msg
+
+        * this method called by observable
 
         Args:
             msg (OFMsg) : openflow message object
         """
+        # datapthes
         datapath = self._get_datapath(msg.local_port)
         if datapath is None:
             datapath = Dp()
@@ -40,6 +47,7 @@ class CaptureBase(OFObserver):
             datapath.local_port = msg.local_port
             self._datapathes.append(datapath)
 
+        # set datapathid and ports
         if msg.message_type == Type.OFPT_FEATURES_REPLY:
             # set datapath id
             if isinstance(msg.of_msg.datapath_id, DPID):
@@ -55,9 +63,18 @@ class CaptureBase(OFObserver):
                 self.lport_to_port[msg.local_port] = port_list
                 datapath.ports = port_list
 
+        # update msg datapath_id
         if msg.local_port in self.lport_to_dpid.keys():
             msg.datapath_id = self.lport_to_dpid[msg.local_port]
+
         self._messages.append(msg)
+
+        # notify subclass
+        self.msg_handler(msg)
+
+    @abstractmethod
+    def msg_handler(self, msg):
+        raise NotImplementedError
 
     def get_datapathid(self, local_port):
         """get datapath id
@@ -103,6 +120,18 @@ class CaptureBase(OFObserver):
                 return port.name
         return None
 
+    def __str__(self):
+        msgs = ""
+        for msg in self._messages:
+            datapathid = self.get_datapathid(msg.local_port)
+            order = "switch(dpid={}) -> controller".format(datapathid)
+            if not msg.switch2controller:
+                order = "controller -> switch(dpid={})".format(datapathid)
+            msg_name = "{}(xid={})".format(msg.msg_name, msg.xid)
+
+            msgs += "{} {} {} \n".format(msg.datetime, order, msg_name)
+        return msgs
+
 
 class CaptureWithRepo(CaptureBase):
     """
@@ -116,7 +145,6 @@ class CaptureWithRepo(CaptureBase):
         self.repo = packet_in_out_repo
 
     def msg_handler(self, msg):
-        super(CaptureWithRepo, self).msg_handler(msg)
         self.add_repo(msg)
 
     def add_repo(self, msg):
@@ -141,15 +169,14 @@ class CaptureWithPipe(CaptureBase):
     def __init__(self, observable, parent_conn=None):
         super(CaptureWithPipe, self).__init__(observable)
         self.parent_conn = parent_conn
+        self._send_types = [Type.OFPT_PACKET_OUT, Type.OFPT_PACKET_IN, Type.OFPT_FLOW_MOD]
 
     def msg_handler(self, msg):
-        super(CaptureWithPipe, self).msg_handler(msg)
         self.send_pipe(msg)
 
     def send_pipe(self, msg):
         if self.parent_conn:
-            send_types = [Type.OFPT_PACKET_OUT, Type.OFPT_PACKET_IN, Type.OFPT_FLOW_MOD]
-            if msg.message_type in send_types:
+            if msg.message_type in self._send_types:
                 # pre-pickle to avoid error
                 msg.of_msg = msg.of_msg.pack()
                 msg = pickle.dumps(msg)
@@ -166,12 +193,12 @@ class CaptureWithWeb(CaptureBase):
 
     def __init__(self, observable):
         super(CaptureWithWeb, self).__init__(observable)
+        # protobuf messages
         self.messages = []
 
         set_getOpenFlowMessage_handler(self._get_ofmsgs)
 
     def msg_handler(self, msg):
-        super(CaptureWithWeb, self).msg_handler(msg)
         proto_datapath = Datapath()
         proto_datapath.local_port = str(msg.local_port)
         dpid = self.get_datapathid(msg.local_port)

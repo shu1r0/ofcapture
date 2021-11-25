@@ -147,8 +147,8 @@ export default defineComponent({
       const drawMessageTimestamp = (timestamp: number, index: number) => {
         const xPos = XPAD + MESSAGE_LABEL_X_OFFSET
         const yPos = MESSAGE_LABEL_Y_OFFSET + index * MESSAGE_SPACE
-        const date = new Date(timestamp)
-        const time = date.getHours() + "h" + date.getMinutes() + "m" + date.getSeconds() + "." + date.getMilliseconds()
+        const date = new Date(timestamp * 1000)
+        const time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "." + date.getMilliseconds()
 
         const label = svg.append("g")
                           .attr("transform", "translate(" + xPos + ", " + yPos + ")")

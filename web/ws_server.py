@@ -1,4 +1,3 @@
-from enum import Enum
 from aiohttp import web
 import asyncio
 import socketio

@@ -1,26 +1,10 @@
 from abc import ABCMeta, abstractmethod
 from logging import getLogger
-import json
-from ofproto.openflow import parse, get_header
-
 
 from proxy.observable import Observable
-from capture.of_msg_repository import packet_in_out_repo
-from ofproto.packet import OFMsg
 
 
-class AbstractObserver(metaclass=ABCMeta):
-
-    @abstractmethod
-    def update(self, msg):
-        """update method
-
-        Args:
-            msg (Message) : OpenFlow msg
-        """
-
-
-class OFObserver(AbstractObserver, metaclass=ABCMeta):
+class OFObserver(metaclass=ABCMeta):
 
     def __init__(self, observable):
         """init params and register for observable
@@ -32,27 +16,7 @@ class OFObserver(AbstractObserver, metaclass=ABCMeta):
         self.observable.register_observer(self)
         self.logger = getLogger("ofcapture." + __name__)
 
-    def update(self, msg):
-        self.logger.debug("observed from observable: {}".format(msg.data[:8]))  # 8 : header Byte size
-        msg_name, of_msg, dict_of_msg = parse(msg, self.logger)
-        if of_msg is not None:
-            msg.msg_name = msg_name
-            msg.of_msg = of_msg
-            self.msg_handler(msg)
-        else:
-            result = get_header(msg)
-            header = result["header"]
-            data1 = msg.data[:int(header.length)]
-            data2 = msg.data[int(header.length):]
-            msg1 = msg
-            msg1.data = data1
-            self.update(msg1)
-            if len(data2) > 0:
-                msg2 = OFMsg(msg.timestamp, msg.local_ip, msg.remote_ip, msg.local_port, msg.remote_port, data2, msg.switch2controller)
-                self.logger.debug("message separate (data1={}, data2={})".format(data1, data2))
-                self.update(msg2)
-
     @abstractmethod
-    def msg_handler(self, msg):
+    def update(self, msg):
         pass
 

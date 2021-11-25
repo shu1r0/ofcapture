@@ -4,6 +4,7 @@ from datetime import datetime
 import macaddress
 import ipaddress
 
+
 class OFMsg:
     """Message"""
 
@@ -27,7 +28,6 @@ class OFMsg:
         self.datapath_id = None
         self.data = data
         self.switch2controller = switch2controller
-        self.msg_name = None
         self.of_msg = None
 
     @property
@@ -39,6 +39,17 @@ class OFMsg:
         """OpenFlow message type"""
         if self.of_msg:
             return self.of_msg.header.message_type
+        else:
+            return None
+
+    @property
+    def msg_name(self):
+        return self.message_type.name
+
+    @property
+    def xid(self):
+        if self.of_msg:
+            return self.of_msg.header.xid
         else:
             return None
 

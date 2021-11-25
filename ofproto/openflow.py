@@ -15,6 +15,8 @@ from ryu.lib.packet.openflow import openflow
 from ryu.lib.packet.stream_parser import StreamParser
 from ryu.ofproto.ofproto_v1_3_parser import msg_parser, OFPPacketOut
 
+from ofproto.packet import OFMsg
+
 
 def parse(msg, logger=None):
     """parse OpenFlow message
@@ -24,31 +26,42 @@ def parse(msg, logger=None):
         logger (Logger) :
 
     Returns:
-        (str, object, dict)
+        list[Message]
     """
+    msgs = []
     try:
-        # header, _, _ = openflow.parser(msg.data)
+        header = get_header(msg)
+        data = msg.data[:int(header.length)]
+        rest = msg.data[int(header.length):]
+        msg.data = data
+
         of_msg = unpack_message(msg.data)
-        msg_name = of_msg.header.message_type.name
-        dict_of_msg = todict(of_msg, logger)
+        msg.of_msg = of_msg
+
+        msgs.append(msg)
+
         if logger:
-            logger.info("Parsed msg : {} {} {}".format(msg_name, of_msg, dict_of_msg))
-        return msg_name, of_msg, dict_of_msg
+            dict_of_msg = todict(of_msg, logger)
+            logger.info("Parsed msg : {} {} {}".format(msg.msg_name, of_msg, dict_of_msg))
+
+        if len(rest) > 0:
+            msg_rest = OFMsg(msg.timestamp, msg.local_ip, msg.remote_ip, msg.local_port, msg.remote_port,
+                             rest, msg.switch2controller)
+            rest_msgs = parse(msg_rest, logger=logger)
+            msgs.extend(rest_msgs)
+
+        return msgs
     except Exception as e:
-        msg_name = get_header(msg)["header"].message_type.name
+        msg_name = get_header(msg).message_type.name
         if logger:
             logger.error("Failed to unpack msg({}) : {}".format(msg_name, str(e)))
-        return msg_name, None, None
+    return []
 
 
 def get_header(msg):
     header = Header()
     header.unpack(msg.data[:header.get_size()])
-    new_message = new_message_from_header(header)
-    return {
-        "header": new_message.header,
-        "message_size": new_message.get_size()
-    }
+    return header
 
 
 def todict(obj, logger=None, classkey=None):
