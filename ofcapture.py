@@ -63,17 +63,21 @@ class OFCaptureBase(metaclass=ABCMeta):
 
         if log_file:
             set_logger(log_level=log_level, filename=log_file)
+        logger.info("OFCapture ready (lip={}, lport={}, cip={}, cport={}, async_queue={})".format(
+            local_ip, local_port, controller_ip, controller_port, self.channel_manager.q_all
+        ))
 
     def start_server(self):
         self.event_loop.run_until_complete(self.start_server_coro())
 
     async def start_server_coro(self, coro: list = None):
         coro = coro if coro is not None else []
+        print(self.channel_manager.q_all)
         await asyncio.wait([
             self.switch_handler.start_server(),
             self.observable.start_search(),
             *coro
-        ])
+        ], loop=self.event_loop)
 
     def stop_server(self):
         self.event_loop.stop()

@@ -172,7 +172,8 @@ class ChannelManager:
             controller_ip (str) : controller ip
             controller_port (int) : controller port
         """
-        self.q_all = asyncio.Queue()
+        self.loop = loop
+        self.q_all = asyncio.Queue(loop=self.loop)
         self.logger = getLogger("ofcapture." + __name__)
 
         self.has_switch_join = False
