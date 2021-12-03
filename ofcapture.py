@@ -72,8 +72,7 @@ class OFCaptureBase(metaclass=ABCMeta):
 
     async def start_server_coro(self, coro: list = None):
         coro = coro if coro is not None else []
-        print(self.channel_manager.q_all)
-        await asyncio.wait([
+        await asyncio.gather(*[
             self.switch_handler.start_server(),
             self.observable.start_search(),
             *coro

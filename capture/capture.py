@@ -53,7 +53,7 @@ class CaptureBase(OFObserver, metaclass=ABCMeta):
         if msg.message_type == Type.OFPT_FEATURES_REPLY:
             # set datapath id
             if isinstance(msg.of_msg.datapath_id, DPID):
-                datapath_id = int(''.join(msg.of_msg.datapath_id.value.split(':')))
+                datapath_id = int(''.join(msg.of_msg.datapath_id.value.split(':')), 16)
                 self.lport_to_dpid[msg.local_port] = datapath_id
                 datapath.datapath_id = datapath_id
         # set port obj
