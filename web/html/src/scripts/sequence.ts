@@ -1,15 +1,16 @@
+// eslint-disable-next-line
 //@ts-ignore
 import * as d3 from 'd3'
 
 
 import { Datapath, OpenFlowMessage } from '../api/api_pb'
 
-
+/**
+ * Sequence diagram
+ */
 export class Sequence {
 
   private svg: any
-
-  private margin  = {top: 20, right: 50, bottom: 100, left: 80}
 
   // graph padding
   private XPAD = 100
@@ -35,6 +36,10 @@ export class Sequence {
 
   private drawnDatapathes: string[] = []
 
+  /**
+   * set sequence diagram
+   * @param id 
+   */
   constructor(id: string){
     this.svg = d3.select(id)
   }
@@ -83,6 +88,11 @@ export class Sequence {
                           .attr("dy", "16px")
   }
 
+  /**
+   * draw controller
+   * @param index 
+   * @param messageLength 
+   */
   drawController(index: number, messageLength: number){
     this.drawNode("controller", index)
     this.drawVerticalLine(index, messageLength)
@@ -90,6 +100,7 @@ export class Sequence {
 
   /**
    * draw message arrow
+   * 
    * @param {string} message : message  (label)
    * @param {number} index : message index
    * @param {number} senderIndex : message sender index
@@ -195,7 +206,4 @@ export class Sequence {
     this.drawnDatapathes = datapathes
   }
 
-  getWidth(){
-    return this.svg.attr('width') - this.margin.left - this.margin.right
-  }
 }

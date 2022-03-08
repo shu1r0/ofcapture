@@ -118,7 +118,7 @@ class OFCaptureWithWeb(OFCaptureBase):
 
 
 if __name__ == "__main__":
-    ofcapture = OFCaptureWithWeb(log_file=default_logfile, log_level=INFO, ws_ip="10.0.0.109")
+    ofcapture = OFCaptureWithWeb(log_level=INFO, ws_ip="10.0.0.109")
 
     try:
         ofcapture.start_server()

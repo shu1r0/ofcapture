@@ -1,12 +1,14 @@
 <template>
   <div>
-    <!-- <button>draw</button> -->
+    <button @click="update()">update</button>
+    <div>
     <svg id="chart" width="1000" height="800"></svg>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 
 import { WSClient } from '../client/remoteClient'
 
@@ -14,6 +16,8 @@ import {Sequence} from '../scripts/sequence'
 
 export default defineComponent({
   setup() {
+    let update = ref<any>()
+
     onMounted(() => {
       const client = new WSClient("10.0.0.109", "8889")
 
@@ -22,7 +26,7 @@ export default defineComponent({
       /**
        * update
        */
-      const update = (args: any[]) => {
+      const updateDiagram = (args: any[]) => {
         const datapathes = client.getDatapathes()
         const messages = client.getMessages()
 
@@ -33,14 +37,20 @@ export default defineComponent({
         seq.drawMessages(messages)
       }
 
+      client.onGetOpenFlowMessage(updateDiagram)
+      client.connect()
+
       /**
        * setup
        */
-      client.onGetOpenFlowMessage(update)
-      client.connect()
-      setInterval(client.emitGetOpenFlowMessageRequest.bind(client), 5000)
-
+      update.value = () => {
+        client.emitGetOpenFlowMessageRequest()
+      }
     })
+
+    return {
+      update
+    }
   }
 })
 </script>
@@ -52,6 +62,11 @@ export default defineComponent({
   fill: white;
   stroke-width: 1px;
   stroke: black;
+}
+
+button {
+  background: #2c3e50;
+  color: white;
 }
 </style>
 
