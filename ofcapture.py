@@ -67,8 +67,8 @@ class OFCaptureBase(metaclass=ABCMeta):
             local_ip, local_port, controller_ip, controller_port, self.channel_manager.q_all
         ))
 
-    def start_server(self):
-        self.event_loop.run_until_complete(self.start_server_coro())
+    def start_server(self, coro: list = None):
+        self.event_loop.run_until_complete(self.start_server_coro(coro))
 
     async def start_server_coro(self, coro: list = None):
         coro = coro if coro is not None else []
@@ -110,8 +110,8 @@ class OFCaptureWithWeb(OFCaptureBase):
         self.ws_ip = ws_ip
         self.ws_port = ws_port
 
-    def start_server(self):
-        self.event_loop.run_until_complete(self.start_server_coro([ws_server_start(self.ws_ip, self.ws_port)]))
+    def start_server(self, coro: list = None):
+        self.event_loop.run_until_complete(self.start_server_coro([ws_server_start(self.ws_ip, self.ws_port)].extend(coro)))
 
     def stop_server(self):
         super(OFCaptureWithWeb, self).stop_server()
@@ -119,10 +119,10 @@ class OFCaptureWithWeb(OFCaptureBase):
 
 if __name__ == "__main__":
     ofcapture = OFCaptureWithWeb(log_file=default_logfile, log_level=INFO, ws_ip="10.0.0.109")
+
     try:
         ofcapture.start_server()
     except KeyboardInterrupt as e:
         logger.info("keyboardInterrupt : {}".format(str(e)))
         print(ofcapture.capture)
-        # ofcapture.stop_server()
     exit()

@@ -1,0 +1,1097 @@
+/*
+
+
+## TODO
+ * ErrorExperimenterMsg
+
+*/
+
+syntax = "proto3";
+
+
+/*==================================================*
+ * OpenFlow Tables
+ *==================================================*/
+
+/*--------------------------------------------------*
+ * Port
+ *--------------------------------------------------*/
+
+enum PortNo {
+  OFPP_INVALID = 0;  // for protobuf
+
+  OFPP_MAX = 0x7fffff00;  //0xffffff00;
+  OFPP_IN_PORT = 0x7ffffff8;  // 0xfffffff8;
+  OFPP_TABLE = 0x7ffffff9;  //0xfffffff9;
+  OFPP_NORMAL = 0x7ffffffa;  // 0xfffffffa;
+  OFPP_FLOOD = 0x7ffffffb;  // 0xfffffffb;
+  OFPP_ALL = 0x7ffffffc;  // 0xfffffffc;
+  OFPP_CONTROLLER = 0x7ffffffd;  // 0xfffffffd;
+  OFPP_LOCAL = 0x7ffffffe;  // 0xfffffffe;
+  OFPP_ANY = 0x7fffffff;  // 0xffffffff;
+}
+
+enum PortConfig {
+  OFPPC_INVALID      = 0;  // for protobuf
+
+  OFPPC_PORT_DOWN    = 1;
+  OFPPC_NO_RECV      = 4;
+  OFPPC_NO_FWD       = 32;
+  OFPPC_NO_PACKET_IN = 64;
+}
+
+enum PortFeatures {
+  OFPPF_INVALID    = 0;  // for protobuf
+  OFPPF_10MB_HD    = 1;
+  OFPPF_10MB_FD    = 2;
+  OFPPF_100MB_HD   = 4;
+  OFPPF_100MB_FD   = 8;
+  OFPPF_1GB_HD     = 16;
+  OFPPF_1GB_FD     = 32;
+  OFPPF_10GB_FD    = 64;
+  OFPPF_40GB_FD    = 128;
+  OFPPF_100GB_FD   = 256;
+  OFPPF_1TB_FD     = 512;
+  OFPPF_OTHER      = 1024;   
+  OFPPF_COPPER     = 2048;   
+  OFPPF_FIBER      = 4096;   
+  OFPPF_AUTONEG    = 8192;   
+  OFPPF_PAUSE      = 16384;  
+  OFPPF_PAUSE_ASYM = 32768;  
+}
+
+enum PortState {
+  OFPPS_INVALID      = 0;  // for protobuf
+  OFPPS_LINK_DOWN    = 1;
+  OFPPS_BLOCKED      = 2;
+  OFPPS_LIVE         = 4;
+}
+
+message Port {
+  uint32 port_no = 1;  // port numbor or PortNo
+  uint32 pad = 2;  // Pad(4)
+  string hw_addr = 3;  // bytes
+  uint32 pad2 = 4;  // Pad(2)
+  string name = 5;
+  PortConfig config = 6;  // uint32
+  PortState state = 7;  // uint32
+  PortFeatures curr = 8;  // uint32
+  PortFeatures advertised = 9;  // uint32
+  PortFeatures supported = 10;  // uint32
+  PortFeatures peer = 11;  // uint32
+  uint32 curr_speed = 12;
+  uint32 max_speed = 13;
+}
+
+/*--------------------------------------------------*
+ * Match
+ *--------------------------------------------------*/
+
+enum IPv6ExtHdrFlags {
+  OFPIEH_INVALID = 0;  // for protobuf
+
+  OFPIEH_NONEXT  = 1;
+  OFPIEH_ESP     = 2;
+  OFPIEH_AUTH    = 4;
+  OFPIEH_DEST    = 8;
+  OFPIEH_FRAG    = 16;
+  OFPIEH_ROUTER  = 32;
+  OFPIEH_HOP     = 64;
+  OFPIEH_UNREP   = 128;
+  OFPIEH_UNSEQ   = 256;
+}
+
+// Match Field Type
+enum OxmOfbMatchField {
+  OFPXMT_OFB_IN_PORT = 0;
+  OFPXMT_OFB_IN_PHY_PORT = 1;
+  OFPXMT_OFB_METADATA = 2;
+  OFPXMT_OFB_ETH_DST = 3;
+  OFPXMT_OFB_ETH_SRC = 4;
+  OFPXMT_OFB_ETH_TYPE = 5;
+  OFPXMT_OFB_VLAN_VID = 6;
+  OFPXMT_OFB_VLAN_PCP = 7;
+  OFPXMT_OFB_IP_DSCP = 8;
+  OFPXMT_OFB_IP_ECN = 9;
+  OFPXMT_OFB_IP_PROTO = 10;
+  OFPXMT_OFB_IPV4_SRC = 11;
+  OFPXMT_OFB_IPV4_DST = 12;
+  OFPXMT_OFB_TCP_SRC = 13;
+  OFPXMT_OFB_TCP_DST = 14;
+  OFPXMT_OFB_UDP_SRC = 15;
+  OFPXMT_OFB_UDP_DST = 16;
+  OFPXMT_OFB_SCTP_SRC = 17;
+  OFPXMT_OFB_SCTP_DST = 18;
+  OFPXMT_OFB_ICMPV4_TYPE = 19;
+  OFPXMT_OFB_ICMPV4_CODE = 20;
+  OFPXMT_OFB_ARP_OP = 21;
+  OFPXMT_OFB_ARP_SPA = 22;
+  OFPXMT_OFB_ARP_TPA = 23;
+  OFPXMT_OFB_ARP_SHA = 24;
+  OFPXMT_OFB_ARP_THA = 25;
+  OFPXMT_OFB_IPV6_SRC = 26;
+  OFPXMT_OFB_IPV6_DST = 27;
+  OFPXMT_OFB_IPV6_FLABEL = 28;
+  OFPXMT_OFB_ICMPV6_TYPE = 29;
+  OFPXMT_OFB_ICMPV6_CODE = 30;
+  OFPXMT_OFB_IPV6_ND_TARGET = 31;
+  OFPXMT_OFB_IPV6_ND_SLL = 32;
+  OFPXMT_OFB_IPV6_ND_TLL = 33;
+  OFPXMT_OFB_MPLS_LABEL = 34;
+  OFPXMT_OFB_MPLS_TC = 35;
+  OFPXMT_OFP_MPLS_BOS = 36;
+  OFPXMT_OFB_PBB_ISID = 37;
+  OFPXMT_OFB_TUNNEL_ID = 38;
+  OFPXMT_OFB_IPV6_EXTHDR = 39;
+}
+
+enum MatchType {
+  OFPMT_STANDARD = 0;
+  OFPMT_OXM = 1;
+}
+
+enum OxmClass {
+  OFPXMC_NXM_0 = 0x0000;
+  OFPXMC_NXM_1 = 0x0001;
+  OFPXMC_OPENFLOW_BASIC = 0x8000;
+  OFPXMC_EXPERIMENTER = 0xFFFF;
+}
+
+enum VlanId {
+  OFPVID_PRESENT = 0x1000;
+  OFPVID_NONE = 0x0000;
+}
+
+message OxmTLV {
+  OxmClass oxm_class = 1;
+  OxmOfbMatchField oxm_field = 2;  // uint7
+  bool oxm_hasmask = 3;  // uint1
+  uint32 oxm_length = 4;  // uint8
+
+  oneof oxm_value {
+    uint32 port = 10;
+    uint32 physical_port = 11; 
+    uint64 table_metadata = 12; 
+
+    string eth_dst = 13;  // bytes
+    string eth_src = 14;  // bytes
+
+    uint32 eth_type = 15; 
+
+    uint32 vlan_vid = 16; 
+    uint32 vlan_pcp = 17; 
+
+    uint32 ip_dscp = 18; 
+    uint32 ip_ecn = 19; 
+
+    uint32 ip_proto = 20; 
+
+    string ipv4_src = 21;  // uint32
+    string ipv4_dst = 22;  // uint32
+
+    uint32 tcp_src = 23; 
+    uint32 tcp_dst = 24; 
+
+    uint32 udp_src = 25; 
+    uint32 udp_dst = 26; 
+
+    uint32 sctp_src = 27; 
+    uint32 sctp_dst = 28; 
+
+    uint32 icmpv4_type = 29; 
+    uint32 icmpv4_code = 30; 
+
+    uint32 arp_op = 31; 
+
+    uint32 arp_spa = 32; 
+    uint32 arp_tpa = 33; 
+
+    string arp_sha = 34;  // bytes
+    string arp_tha = 35; // bytes
+
+    string ipv6_src = 36;   // bytes
+    string ipv6_dst = 37;   // bytes
+
+    uint32 ipv6_flabel = 38; 
+
+    uint32 icmpv6_type = 39; 
+    uint32 icmpv6_code = 40; 
+
+    bytes ipv6_nd_target = 41; 
+    bytes ipv6_nd_ssl = 42; 
+    bytes ipv6_nd_tll = 43; 
+
+    uint32 mpls_label = 44; 
+    uint32 mpls_tc = 45; 
+    uint32 mpls_bos = 46; 
+
+    uint32 pbb_isid = 47; 
+    uint64 tunnel_id = 48; 
+
+    uint32 ipv6_exthdr = 49; 
+  }
+
+  oneof oxm_mask {
+    uint64 table_metadata_mask = 105; 
+
+    string eth_dst_mask = 106;  // bytes
+    string eth_src_mask = 107;  // bytes
+
+    uint32 vlan_vid_mask = 109; 
+
+    string ipv4_src_mask = 114;  // bytes
+    string ipv4_dst_mask = 115;  //bytes
+
+    uint32 arp_spa_mask = 125; 
+    uint32 arp_tpa_mask = 126; 
+
+    string ipv6_src_mask = 129;  // bytes
+    string ipv6_dst_mask = 130;  // bytes
+
+    uint32 ipv6_flabel_mask = 131; 
+    uint32 pbb_isid_mask = 140; 
+
+    uint64 tunnel_id_mask = 141; 
+    uint32 ipv6_exthdr_mask = 142; 
+  }
+}
+
+message Match {
+  MatchType match_type = 1;
+  uint32 length = 2;  // uint16
+  repeated OxmTLV oxm_fields = 3;
+}
+
+/*--------------------------------------------------*
+ * Action
+ *--------------------------------------------------*/
+
+// Action Type
+enum ActionType {
+  OFPAT_OUTPUT = 0;
+  OFPAT_COPY_TTL_OUT = 11;
+  OFPAT_COPY_TTL_IN = 12;
+  OFPAT_SET_MPLS_TTL = 15;
+  OFPAT_DEC_MPLS_TTL = 16;
+  OFPAT_PUSH_VLAN = 17;
+  OFPAT_POP_VLAN = 18;
+  OFPAT_PUSH_MPLS = 19;
+  OFPAT_POP_MPLS = 20;
+  OFPAT_SET_QUEUE = 21;
+  OFPAT_GROUP = 22;
+  OFPAT_SET_NW_TTL = 23;
+  OFPAT_DEC_NW_TTL = 24;
+  OFPAT_SET_FIELD = 25;
+  OFPAT_PUSH_PBB = 26;
+  OFPAT_POP_PBB = 27;
+  OFPAT_EXPERIMENTER = 0xffff;
+}
+
+// 
+enum ControllerMaxLen {
+  OFPCML_INVALID = 0;  // for protobuf
+  OFPCML_MAX = 0xffe5;
+  OFPCML_NO_BUFFER = 0xffff;
+}
+
+/**
+ * Action (Action Header + action)
+ */
+message Action {
+  ActionType action_type = 1;
+  uint32 length = 2;  // uint16
+
+  oneof action {  // or none
+    ActionOutput output = 3;
+    ActionSetMPLSTTL mpls_ttl = 4;  // set mpls ttl
+    ActionPush push = 5;
+    ActionPopMPLS pop_mpls = 6;
+    ActionGroup group = 7;
+    ActionSetNWTTL nw_ttl = 8;  // set nw ttl
+    ActionSetField set_field = 9;
+    ActionExperimenter experimenter = 10;
+  }
+}
+
+message ActionOutput {
+  uint32 port = 1;
+  uint32 max_length = 2;  // uint16
+  uint32 pad = 3;  // Pad(6)
+}
+
+message ActionSetMPLSTTL {
+  uint32 mpls_ttl = 1;  // uint8
+  uint32 pad = 2;  // Pad(3)
+}
+
+// OFPAT_PUSH_[VLAN/MPLS/PBB]
+message ActionPush {
+  uint32 ethertype = 1;  // uint16
+  uint32 pad = 2;  // Pad(2)
+}
+
+message ActionPopMPLS {
+  uint32 ethertype = 1;  // uint16
+  uint32 pad = 2;
+}
+
+message ActionGroup {
+  uint32 group_id = 1;
+}
+
+message ActionSetField {
+  OxmTLV field = 1;
+}
+
+message ActionSetNWTTL {
+  uint32 nw_ttl = 1;  // uint8
+  uint32 pad = 2;  // Pad(3)
+}
+
+message ActionExperimenter {
+  uint32 experimenter = 1;
+  bytes body = 2;
+}
+
+
+/*--------------------------------------------------*
+ * Instruction
+ *--------------------------------------------------*/
+
+enum InstructionType {
+  OFPIT_INVALID    = 0;  // for protobuf
+  OFPIT_GOTO_TABLE = 1;
+  OFPIT_WRITE_METADATA = 2;
+  OFPIT_WRITE_ACTIONS = 3;
+  OFPIT_APPLY_ACTIONS = 4;
+  OFPIT_CLEAR_ACTIONS = 5;
+  OFPIT_METER = 6;
+  OFPIT_EXPERIMENTER = 0xFFFF; 
+}
+
+message Instruction {
+  InstructionType instruction_type = 1;  // uint16
+  uint32 length = 2;  // uint16
+
+  oneof instruction {
+    InstructionGotoTable goto_table = 10;
+    InstructionWriteMetadata write_metadata = 11;
+    InstructionApplyAction apply_action = 12;
+    InstructionWriteAction write_action = 13;
+    InstructionClearAction clear_action = 14;
+    InstructionMeter meter = 15;
+    InstructionExperimenter experimenter = 16;
+  }
+}
+
+message InstructionGotoTable {
+
+}
+
+message InstructionWriteMetadata {
+  uint32 pad = 1;  // Pad(4)
+  uint64 metadata = 2;
+  uint64 metadata_mask = 3;
+}
+
+message InstructionApplyAction {
+  uint32 pad = 1;  // Pad(4)
+  repeated Action actions = 2;
+}
+
+message InstructionWriteAction {
+  uint32 pad = 1;  // Pad(4)
+  repeated Action actions = 2;
+}
+
+message InstructionClearAction {
+  uint32 pad = 1;  // Pad(4)
+  repeated Action actions = 2;
+}
+
+message InstructionMeter {
+  uint32 meter_id = 1;
+}
+
+message InstructionExperimenter {
+  uint32 experimenter = 1;
+  bytes data = 2;
+}
+
+
+
+/*--------------------------------------------------*
+ * Queue
+ *--------------------------------------------------*/
+
+enum QueueProperties {
+  OFPQT_INVALID       = 0;  // for protobuf
+  OFPQT_MIN_RATE      = 1;
+  OFPQT_MAX_RATE      = 2;
+  OFPQT_EXPERIMENTER  = 0xffff;
+}
+
+message QueuePropHeader {
+  QueueProperties queue_property = 1;  // uint16
+  uint32 length = 2;  // uint16
+  uint32 pad = 3;  // Pad(4)
+}
+
+message PacketQueue {
+  uint32 queue_id = 1;
+  uint32 port = 2;
+  uint32 length = 3;  // uint16
+  uint32 pad = 4;  // Pad(6)
+  repeated QueuePropHeader properties = 5;
+}
+
+message QueuePropExperimenter {
+  QueuePropHeader prop_header = 1;
+  uint32 experimenter = 2;
+  uint32 pad = 3;  // Pad(4)
+  bytes data = 4;
+}
+
+message QueuePropMaxRate {
+  QueuePropHeader prop_header = 1;
+  uint32 rate = 2;  // uint16
+  uint32 pad = 3;  // Pad(6)
+}
+
+message QueuePropMinRate {
+  QueuePropHeader prop_header = 1;
+  uint32 rate = 2;  // uint16
+  uint32 pad = 3;  // Pad(6)
+}
+
+
+/*==================================================*
+ * OpenFlow Message
+ *==================================================*/
+
+/**
+ * OpenFlow Message Type
+ */
+enum OFPType {
+  OFPT_HELLO                     = 0;  
+  OFPT_ERROR                     = 1;  
+  OFPT_ECHO_REQUEST              = 2;  
+  OFPT_ECHO_REPLY                = 3;  
+  OFPT_EXPERIMENTER              = 4;  
+
+  OFPT_FEATURES_REQUEST          = 5;  
+  OFPT_FEATURES_REPLY            = 6;  
+  OFPT_GET_CONFIG_REQUEST        = 7;  
+  OFPT_GET_CONFIG_REPLY          = 8;  
+  OFPT_SET_CONFIG                = 9;  
+
+  OFPT_PACKET_IN                 = 10; 
+  OFPT_FLOW_REMOVED              = 11;
+  OFPT_PORT_STATUS               = 12;
+
+  OFPT_PACKET_OUT                = 13; 
+  OFPT_FLOW_MOD                  = 14; 
+  OFPT_GROUP_MOD                 = 15; 
+  OFPT_PORT_MOD                  = 16; 
+  OFPT_TABLE_MOD                 = 17; 
+
+  OFPT_MULTIPART_REQUEST         = 18; 
+  OFPT_MULTIPART_REPLY           = 19; 
+
+  OFPT_BARRIER_REQUEST           = 20; 
+  OFPT_BARRIER_REPLY             = 21; 
+
+  OFPT_QUEUE_GET_CONFIG_REQUEST  = 22;  
+  OFPT_QUEUE_GET_CONFIG_REPLY    = 23;  
+
+  OFPT_ROLE_REQUEST              = 24; 
+  OFPT_ROLE_REPLY                = 25; 
+
+  OFPT_GET_ASYNC_REQUEST         = 26; 
+  OFPT_GET_ASYNC_REPLY           = 27; 
+  OFPT_SET_ASYNC                 = 28; 
+
+  OFPT_METER_MOD                 = 29; 
+}
+
+/**
+ * OpenFlow Message Header
+ */
+message Header{
+  uint32 version = 1;  // uint8 0x04
+  OFPType message_type = 2;  // uint8
+  uint32 length = 3; // uint16
+  uint32 xid = 4;
+}
+
+message Message{
+  Header header = 1;
+  oneof content {
+    BarrierRequest barrier_request = 2;
+  }
+}
+
+
+
+/*--------------------------------------------------*
+ * Controller to Switch
+ *--------------------------------------------------*/
+
+/**
+ * Barrier Request Message
+ */
+message BarrierRequest {
+  // no content
+}
+
+/**
+ * Barrier Reply Message
+ */
+message BarrierReply {
+  // no content
+}
+
+/**
+ * Features Request Message
+ */
+message FeaturesRequest {
+  // no content
+}
+
+enum  Capabilities{
+  OFPC_INVALID = 0;  // for protobuf
+//@TODO* 数字おかしい
+  OFPC_FLOW_STATS   = 0x00000001;
+  OFPC_TABLE_STATS  = 0x00000010;
+  OFPC_PORT_STATS   = 0x00000100;
+  OFPC_GROUP_STATS  = 0x00001000;
+  OFPC_IP_REASM     = 0x00100000;
+  OFPC_QUEUE_STATS  = 0x01000000;
+  OFPC_PORT_BLOCKED = 0x10000000;
+}
+
+/**
+ * Features Reply Message (SwitchFeatures struct)
+ */
+message FeaturesReply {
+  uint64 datapath_id = 1;
+  uint32 n_buffers = 2;
+  uint32 n_tables = 3;  // uint8
+  uint32 auxiliary_id = 4;  // uint8
+  uint32 pad = 5;  // uint8
+  Capabilities capability = 6;
+  uint32 reserved = 7;
+}
+
+// flow mod command
+enum FlowModCommand {
+  OFPFC_ADD = 0;
+  OFPFC_MODIFY = 1;
+  OFPFC_MODIFY_STRICT = 2;
+  OFPFC_DELETE = 3;
+  OFPFC_DELETE_STRICT = 4;
+}
+
+// Flow Mod Flags
+enum FlowModFlags {
+  OFPFF_INVALID = 0;  // for protobuf
+//@TODO* 数字おかしい
+  OFPFF_SEND_FLOW_REM  = 0x00001;
+  OFPFF_CHECK_OVERLAP  = 0x00010;
+  OFPFF_RESET_COUNTS   = 0x00100;
+  OFPFF_NO_PKT_COUNTS  = 0x01000;
+  OFPFF_NO_BYT_COUNTS  = 0x10000;
+}
+
+/**
+ * Flow Mod Message
+ */
+message FlowMod {
+  uint64 cookie = 1;
+  uint64 cookie_mask = 2;
+
+  uint32 table_id = 3;  // uint8
+  FlowModCommand command = 4;  // uint8
+  uint32 idle_timeout = 5;  // uint16
+  uint32 hard_timeout = 6;  // uint16
+  uint32 priority = 7;  // uint16
+  uint32 buffer_id = 8;
+  uint32 out_port = 9;
+  FlowModFlags flags = 10;  // uint16
+  uint32 pad = 11;  // Pad(2)
+  Match match = 12;
+  repeated Instruction instructions = 13;
+}
+
+enum ConfigFlag {
+  OFPC_FRAG_NORMAL = 0;
+  OFPC_FRAG_DROP = 1;
+  OFPC_FRAG_REASM = 2;
+  OFPC_FRAG_MASK = 3;
+}
+
+/**
+ * Get Async Request
+ */
+message GetAsyncRequest {
+  // no content
+}
+
+/**
+ * Get Async Reply (AsyncConfig struct)
+ */
+message GetAsyncReply {
+  PacketInReason packet_in_mask1 = 1;  // uint32
+  PacketInReason packet_in_mask2 = 2;  // uint32
+  PortReason port_status_mask1 = 3;  // uint32
+  PortReason port_status_mask2 = 4;  // uint32
+  FlowRemovedReason flow_removed_mask1 = 5;  // uint32
+  FlowRemovedReason flow_removed_mask2 = 6;  // uint32
+}
+
+message GetConfigRequest {
+}
+
+/**
+ * Get Config Reply (SwitchConfig struct)
+ */
+message GetConfigReply {
+  ConfigFlag flags = 1;  // uint16
+  uint32 miss_send_len = 2;  // uint32
+}
+
+// Group Numbering
+enum Group{
+  OFPG_INVALID = 0;  // for protobuf
+  OFPG_MAX = 0x7fffff00;  // 0xffffff00
+  OFPG_ALL = 0x7ffffffc;  // 0xfffffffc
+  OFPG_ANY = 0x7fffffff;  //0xffffffff;
+}
+
+// Group Mod Command
+enum GroupModCommand {
+  OFPGC_ADD = 0;
+  OFPGC_MODIFY = 1;
+  OFPGC_DELETE = 2;
+}
+
+// Group Type
+enum GroupType {
+  OFPGT_ALL = 0;
+  OFPGT_SELECT = 1;
+  OFPGT_INDIRECT = 2;
+  OFPGT_FF = 3;
+}
+
+/**
+ * Group Mod Message
+ */
+message GroupMod {
+  GroupModCommand command = 1;  // uint16
+  GroupType group_type = 2;  // uint32
+  uint32 pad = 3;  // Pad(1)
+  uint32 group_id = 4;
+  repeated Bucket buckets = 5;
+}
+
+message MeterMod {
+}
+
+// flags for multipart request
+enum MultipartRequestFlags {
+  OFPMPF_REQ_NONE = 0;
+  OFPMPF_REQ_MORE = 1;
+}
+
+enum MultipartType {
+  OFPMP_DESC = 0;
+  OFPMP_FLOW = 1;
+  OFPMP_AGGREGATE = 2;
+  OFPMP_TABLE = 3;
+  OFPMP_PORT_STATS = 4;
+  OFPMP_QUEUE = 5;
+  OFPMP_GROUP = 6;
+  OFPMP_GROUP_DESC = 7;
+  OFPMP_GROUP_FEATURES = 8;
+  OFPMP_METER = 9;
+  OFPMP_METER_CONFIG = 10;
+  OFPMP_METER_FEATURES = 11;
+  OFPMP_TABLE_FEATURES = 12;
+  OFPMP_PORT_DESC = 13;
+  OFPMP_EXPERIMENTER = 0xffff;
+}
+
+/**
+ * Multipart Request Message
+ */
+message MultipartRequest {
+  MultipartType multipart_type = 1;
+  MultipartRequestFlags flags = 2;  // uint 16
+  int32 pad = 3;  // Pad(4)
+  bytes body = 4;  // obj
+}
+
+// flags
+enum MultipartReplyFlags {
+  OFPMPF_INVALID = 0;  // for protobuf
+  OFPMPF_REPLY_MORE = 1;
+}
+
+// capabilities
+enum GroupCapabilities {
+  OFPGFC_INVALID = 0;  // for protobuf
+
+//@TODO* 数字おかしい
+  OFPGFC_SELECT_WEIGHT = 0x0001;
+  OFPGFC_SELECT_LIVENESS = 0x0010;
+  OFPGFC_CHAINING = 0x0100;
+  OFPGFC_CHAINING_CHECKS = 0x1000;
+}
+
+/**
+ * Multipart Reply Message
+ */
+message MultipartReply {
+  MultipartType multipart_type = 1;
+  MultipartReplyFlags flags = 2;  // uint16
+  uint32 pad = 3;  // Pad(4)
+  bytes body = 4;  // obj
+}
+
+/**
+ * Packet Out Message
+ */ 
+message PacketOut {
+  uint32 buffer_id = 1;
+  uint32 in_port = 2;
+  uint32 actions_len = 3;  // uint16
+  uint32 pad = 4;  // Pad(6)
+  repeated Action actions = 5; 
+  bytes data = 6;
+}
+
+/**
+ * Port Mod Message
+ */
+message PortMod {
+}
+
+/**
+ * Queue Get Config Request Message
+ */
+message QueueGetConfigRequest {
+}
+
+/**
+ * Queue Get Config Reply Message
+ */
+message QueueGetConfigReply {
+}
+
+/**
+ * Role Request Message
+ */
+message RoleRequest {
+}
+
+/**
+ * Role Reply Message
+ */
+message RoleReply {
+}
+
+/**
+ * Set Async Message
+ */
+message SetAsync {
+}
+
+/**
+ * Set Config Reply (SwitchConfig struct)
+ */
+message SetConfig {
+  ConfigFlag flags = 1;  // uint16
+  uint32 miss_send_len = 2;  // uint32
+}
+
+/**
+ * Table Mod Message
+ */
+message TableMod {
+}
+
+
+
+/*--------------------------------------------------*
+ * Asynchronous
+ *--------------------------------------------------*/
+
+enum GenericFailedCode {
+  GENERIC_ERROR = 0;
+}
+
+enum BadActionCode {
+  OFPBAC_BAD_TYPE = 0;
+  OFPBAC_BAD_LEN = 1;
+  OFPBAC_BAD_EXPERIMENTER = 2;
+  OFPBAC_BAD_EXP_TYPE = 3;
+  OFPBAC_BAD_OUT_PORT = 4;
+  OFPBAC_BAD_ARGUMENT = 5;
+  OFPBAC_EPERM = 6;
+  OFPBAC_TOO_MANY = 7;
+  OFPBAC_BAD_QUEUE = 8;
+  OFPBAC_BAD_OUT_GROUP = 9;
+  OFPBAC_MATCH_INCONSISTENT = 10;
+  OFPBAC_UNSUPPORTED_ORDER = 11;
+  OFPBAC_BAD_TAG = 12;
+  OFPBAC_BAD_SET_TYPE = 13;
+  OFPBAC_BAD_SET_LEN = 14;
+  OFPBAC_BAD_SET_ARGUMENT = 15;
+}
+
+enum BadInstructionCode {
+  OFPBIC_UNKNOWN_INST = 0;
+  OFPBIC_UNSUP_INST = 1;
+  OFPBIC_BAD_TABLE_ID = 2;
+  OFPBIC_UNSUP_METADATA = 3;
+  OFPBIC_UNSUP_METADATA_MASK = 4;
+  OFPBIC_BAD_EXPERIMENTER = 5;
+  OFPBIC_BAD_EXP_TYPE = 6;
+  OFPBIC_BAD_LEN = 7;
+  OFPBIC_EPERM = 8;
+}
+
+enum BadMatchCode {
+  OFPBMC_BAD_TYPE = 0;
+  OFPBMC_BAD_LEN = 1;
+  OFPBMC_BAD_TAG = 2;
+  OFPBMC_BAD_DL_ADDR_MASK = 3;
+  OFPBMC_BAD_NW_ADDR_MASK = 4;
+  OFPBMC_BAD_WILDCARDS = 5;
+  OFPBMC_BAD_FIELD = 6;
+  OFPBMC_BAD_VALUE = 7;
+  OFPBMC_BAD_MASK = 8;
+  OFPBMC_BAD_PREREQ = 9;
+  OFPBMC_DUP_FIELD = 10;
+  OFPBMC_EPERM = 11;
+}
+
+enum ErrorType {
+  OFPET_HELLO_FAILED = 0;
+  OFPET_BAD_REQUEST = 1;
+  OFPET_BAD_ACTION = 2;
+  OFPET_BAD_INSTRUCTION = 3;
+  OFPET_BAD_MATCH = 4;
+  OFPET_FLOW_MOD_FAILED = 5;
+  OFPET_GROUP_MOD_FAILED = 6;
+  OFPET_PORT_MOD_FAILED = 7;
+  OFPET_TABLE_MOD_FAILED = 8;
+  OFPET_QUEUE_OP_FAILED = 9;
+  OFPET_SWITCH_CONFIG_FAILED = 10;
+  OFPET_ROLE_REQUEST_FAILED = 11;
+  OFPET_METER_MOD_FAILED = 12;
+  OFPET_TABLE_FEATURES_FAILED = 13;
+  OFPET_EXPERIMENTER = 0xffff;
+}
+
+enum FlowModFailedCode {
+  OFPFMFC_UNKNOWN = 0;
+  OFPFMFC_TABLE_FULL = 1;
+  OFPFMFC_BAD_TABLE_ID = 2;
+  OFPFMFC_OVERLAP = 3;
+  OFPFMFC_EPERM = 4;
+  OFPFMFC_BAD_TIMEOUT = 5;
+  OFPFMFC_BAD_COMMAND = 6;
+  OFPFMFC_BAD_FLAGS = 7;
+}
+
+enum GroupModFaildCode {
+  OFPGMFC_GROUP_EXISTS = 0;
+  OFPGMFC_INVALID_GROUP = 1;
+  OFPGMFC_WEIGHT_UNSUPPORTED = 2;
+  OFPGMFC_OUT_OF_GROUPS = 3;
+  OFPGMFC_OUT_OF_BUCKETS = 4;
+  OFPGMFC_CHAINING_UNSUPPORTED = 5;
+  OFPGMFC_WATCH_UNSUPPORTED = 6;
+  OFPGMFC_LOOP = 7;
+  OFPGMFC_UNKNOWN_GROUP = 8;
+  OFPGMFC_CHAINED_GROUP = 9;
+  OFPGMFC_BAD_TYPE = 10;
+  OFPGMFC_BAD_COMMAND = 11;
+  OFPGMFC_BAD_BUCKET = 12;
+  OFPGMFC_BAD_WATCH = 13;
+  OFPGMFC_EPERM = 14;
+}
+
+enum HelloFailedCode {
+  OFPHFC_INCOMPATIBLE = 0;
+  OFPHFC_EPERM = 1;
+}
+
+enum MeterModFailedCode {
+  OFPMMFC_UNKNOWN = 0;
+  OFPMMFC_METER_EXISTS = 1;
+  OFPMMFC_INVALID_METER = 2;
+  OFPMMFC_UNKNOWN_METER = 3;
+  OFPMMFC_BAD_COMMAND = 4;
+  OFPMMFC_BAD_FLAGS = 5;
+  OFPMMFC_BAD_RATE = 6;
+  OFPMMFC_BAD_BURST = 7;
+  OFPMMFC_BAD_BAND = 8;
+  OFPMMFC_BAD_BAND_VALUE = 9;
+  OFPMMFC_OUT_OF_METERS = 10;
+  OFPMMFC_OUT_OF_BANDS = 11;
+}
+
+enum PortModFailedCode {
+  OFPPMFC_BAD_PORT = 0;
+  OFPPMFC_BAD_HW_ADDR = 1;
+  OFPPMFC_BAD_CONFIG = 2;
+  OFPPMFC_BAD_ADVERTISE = 3;
+  OFPPMFC_EPERM = 4;
+}
+
+enum QueueOpFailedCode {
+  OFPQOFC_BAD_PORT = 0;
+  OFPQOFC_BAD_QUEUE = 1;
+  OFPQOFC_EPERM = 2;
+}
+
+enum RoleRequestFailedCode {
+  OFPRRFC_STALE = 0;
+  OFPRRFC_UNSUP = 1;
+  OFPRRFC_BAD_ROLE = 2;
+}
+
+enum SwitchConfigFailedCode {
+  OFPSCFC_BAD_FLAGS = 0;
+  OFPSCFC_BAD_LEN = 1;
+  OFPQCFC_EPERM = 2;
+}
+
+enum TableFeaturesFailedCode {
+  OFPTFFC_BAD_TABLE = 0;
+  OFPTFFC_BAD_METADATA = 1;
+  OFPTFFC_BAD_TYPE = 2;
+  OFPTFFC_BAD_LEN = 3;
+  OFPTFFC_BAD_ARGUMENT = 4;
+  OFPTFFC_EPERM = 5;
+}
+
+enum TableModFailedCode {
+  OFPTMFC_BAD_TABLE = 0;
+  OFPTMFC_BAD_CONFIG = 1;
+  OFPTMFC_EPERM = 2;
+}
+
+/**
+ *  Message
+ */ 
+message ErrorMsg{
+  ErrorType error_type = 1;  // uint16
+  uint32 code = 2;  // uint16
+  bytes data = 3;
+}
+
+/**
+ *  Message
+ */
+message ErrorExperimentMsg{
+  ErrorType error_type = 1;  // uint16
+  uint32 exp_type = 2;  // uint16
+  uint32 experimenter = 3;
+  bytes data = 4;
+}
+
+enum FlowRemovedReason {
+  OFPRR_IDLE_TIMEOUT = 0;
+  OFPRR_HARD_TIMEOUT = 1;
+  OFPRR_DELETE = 2;
+  OFPRR_GROUP_DELETE = 3;
+}
+
+/**
+ * Flow Removed Message
+ */
+message FlowRemoved{
+  uint64 cookie = 1;
+  uint32 priority = 2;  // uint16
+  FlowRemovedReason reason = 3;  // uint8
+  uint32 table_id = 4;  // uint8
+  uint32 duration_sec = 5;
+  uint32 duration_nsec = 6;
+  uint32 idle_timeout = 7;  // uint16
+  uint32 hard_timeout = 8;  // uint16
+  uint64 packet_count = 9;
+  uint64 byte_count = 10;
+  Match match = 11;
+}
+
+enum PacketInReason {
+  OFPR_NO_MATCH = 0;
+  OFPR_ACTION = 1;
+  OFPR_INVALID_TTL = 2;
+}
+
+/**
+ * Packet in Message
+ */
+message PacketIn{
+  uint32 buffer_id = 1;
+  uint32 total_len = 2;  // uint16
+  PacketInReason reason = 3;  // uint8
+  uint32 table_id = 4;  // uint8
+  uint64 cookie = 5;
+  Match match = 6;
+  uint32 pad = 7;  // Pad(2)
+  bytes data = 8;
+}
+
+/**
+ * Port Status Message
+ */
+message PortStatus{
+}
+
+
+/*--------------------------------------------------*
+ * Symmetric
+ *--------------------------------------------------*/
+
+/**
+ * Echo Request Message
+ */
+message EchoRequest{
+  bytes data = 1;
+}
+
+/**
+ * Echo Reply Message
+ */
+message EchoReply{
+  bytes data = 1;
+}
+
+/**
+ * Experimenter Message
+ */
+message Experimenter{
+}
+
+enum HelloElemType {
+  OFPHET_INVALID           = 0;  // for protobuf
+  OFPHET_VERSIONBITMAP     = 1;
+}
+
+message HelloElemHeader {
+  HelloElemType ElementType = 1;  // uint16
+  uint32 length = 2;  // uint16
+  bytes content = 3;
+}
+
+/**
+ * Hello Message
+ */
+message Hello{
+  repeated HelloElemHeader hello_elem_header = 1;
+}

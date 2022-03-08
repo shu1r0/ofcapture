@@ -1,3 +1,7 @@
+"""
+Capture App
+"""
+
 import pickle
 from abc import ABCMeta, abstractmethod
 
@@ -139,6 +143,15 @@ class CaptureBase(OFObserver, metaclass=ABCMeta):
         return msgs
 
 
+class SimpleCapture(CaptureBase):
+
+    def __init__(self, observable):
+        super(SimpleCapture, self).__init__(observable)
+
+    def msg_handler(self, msg):
+        pass
+
+
 class CaptureWithRepo(CaptureBase):
     """
 
@@ -198,7 +211,7 @@ class CaptureWithWeb(CaptureBase):
     """
 
     def __init__(self, observable):
-        super(CaptureWithWeb, self).__init__(observable, do_capture=False)
+        super(CaptureWithWeb, self).__init__(observable, do_capture=True)
         # protobuf messages
         self.messages = []
 
