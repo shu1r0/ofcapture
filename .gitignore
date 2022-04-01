@@ -1,6 +1,7 @@
 log/*
 .idea
 .DS_Store
+.vagrant/
 
 __pycache__
 

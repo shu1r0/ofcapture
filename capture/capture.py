@@ -232,6 +232,7 @@ class CaptureWithWeb(CaptureBase):
         proto_OFMsg.message_type = msg.msg_name
         proto_OFMsg.timestamp = msg.timestamp
         proto_OFMsg.switch2controller = msg.switch2controller
+        proto_OFMsg.content = str(todict(msg.of_msg))
         self.messages.append(proto_OFMsg)
         emit_ofmsg(proto_OFMsg.SerializeToString())
 

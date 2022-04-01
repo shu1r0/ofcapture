@@ -44,6 +44,11 @@ export class OpenFlowMessage extends jspb.Message {
     getSwitch2controller(): boolean;
     setSwitch2controller(value: boolean): OpenFlowMessage;
 
+    hasContent(): boolean;
+    clearContent(): void;
+    getContent(): string | undefined;
+    setContent(value: string): OpenFlowMessage;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): OpenFlowMessage.AsObject;
     static toObject(includeInstance: boolean, msg: OpenFlowMessage): OpenFlowMessage.AsObject;
@@ -61,6 +66,7 @@ export namespace OpenFlowMessage {
         messageType: string,
         timestamp: number,
         switch2controller: boolean,
+        content?: string,
     }
 }
 

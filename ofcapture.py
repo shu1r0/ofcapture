@@ -111,14 +111,15 @@ class OFCaptureWithWeb(OFCaptureBase):
         self.ws_port = ws_port
 
     def start_server(self, coro: list = None):
-        self.event_loop.run_until_complete(self.start_server_coro([ws_server_start(self.ws_ip, self.ws_port)].extend(coro)))
+        coro = coro if coro is not None else []
+        self.event_loop.run_until_complete(self.start_server_coro([ws_server_start(self.ws_ip, self.ws_port),*coro]))
 
     def stop_server(self):
         super(OFCaptureWithWeb, self).stop_server()
 
 
 if __name__ == "__main__":
-    ofcapture = OFCaptureWithWeb(log_level=INFO, ws_ip="10.0.0.109")
+    ofcapture = OFCaptureWithWeb(log_level=INFO, ws_ip="0.0.0.0")
 
     try:
         ofcapture.start_server()

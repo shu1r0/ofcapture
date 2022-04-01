@@ -6,22 +6,50 @@
 
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <div id="sequence-container">
-    <Sequence />
+    <Sequence
+      @showinfo="showInfo" />
   </div>
 
-  <div id="information"></div>
+  <div id="message-information">
+    <div>MessageType: {{ data.messageType }}</div>
+    <div>order: {{ data.order }}</div>
+    <div>timestamp: {{ data.timestamp }}</div>
+    <div>content: </div>
+    <div>{{ data.content }}</div>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive } from 'vue';
 import Sequence from './components/Sequence.vue';
+import { MessageInformation } from './scripts/information';
 
 export default defineComponent({
   name: 'App',
   components: {
     Sequence
+  },
+  setup(){
+    const data = reactive({
+      messageType: "",
+      order: "",
+      timestamp: 0,
+      content: ""
+    })
+    const showinfo = (information: MessageInformation) => {
+      data.messageType = information.messageType
+      data.order = information.order
+      data.timestamp = information.timestamp
+      data.content = information.content
+    }
+
+    return {
+      showinfo,
+      data
+    }
   }
 });
+
 </script>
 
 <style>
@@ -40,8 +68,8 @@ export default defineComponent({
     5rem
     minmax(50rem, auto);
   grid-auto-columns: 
-  auto
-    auto;
+    3fr
+    1fr;
   grid-gap: 1rem;
 }
 

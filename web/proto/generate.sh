@@ -14,4 +14,4 @@ protoc \
 --plugin=protoc-gen-ts="${PLUGIN_TS}" \
 --proto_path=./ \
 -I $DIST_DIR \
-./*.proto
+./api.proto

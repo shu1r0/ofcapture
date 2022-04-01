@@ -127,11 +127,18 @@ export class WSClient extends RemoteClient {
     this.socket.emit(event, data)
   }
 
+  /**
+   * emit GetOpenFlowMessage Request
+   */
   emitGetOpenFlowMessageRequest(){
     const req = new OpenFlowMessageRequest()
     this.emit("getOpenFlowMessage", req.serializeBinary())
   }
 
+  /**
+   * set GetOpenFlowMessage Handler
+   * @param handler 
+   */
   onGetOpenFlowMessage(handler: (message: OpenFlowMessage[]) => void){
     this.handlers.set("getOpenFlowMessage", handler)
   }

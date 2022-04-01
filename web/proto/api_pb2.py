@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\tapi.proto\"*\n\x08\x44\x61tapath\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nlocal_port\x18\x02 \x01(\t\"\x7f\n\x0fOpenFlowMessage\x12\x1b\n\x08\x64\x61tapath\x18\x01 \x01(\x0b\x32\t.Datapath\x12\x0b\n\x03xid\x18\x02 \x01(\x03\x12\x14\n\x0cmessage_type\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\x02\x12\x19\n\x11switch2controller\x18\x05 \x01(\x08\"6\n\x10OpenFlowMessages\x12\"\n\x08messages\x18\x01 \x03(\x0b\x32\x10.OpenFlowMessage\"8\n\x16OpenFlowMessageRequest\x12\x13\n\x06option\x18\x01 \x01(\tH\x00\x88\x01\x01\x42\t\n\x07_optionb\x06proto3'
+  serialized_pb=b'\n\tapi.proto\"*\n\x08\x44\x61tapath\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\nlocal_port\x18\x02 \x01(\t\"\xa1\x01\n\x0fOpenFlowMessage\x12\x1b\n\x08\x64\x61tapath\x18\x01 \x01(\x0b\x32\t.Datapath\x12\x0b\n\x03xid\x18\x02 \x01(\x03\x12\x14\n\x0cmessage_type\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\x02\x12\x19\n\x11switch2controller\x18\x05 \x01(\x08\x12\x14\n\x07\x63ontent\x18\x06 \x01(\tH\x00\x88\x01\x01\x42\n\n\x08_content\"6\n\x10OpenFlowMessages\x12\"\n\x08messages\x18\x01 \x03(\x0b\x32\x10.OpenFlowMessage\"8\n\x16OpenFlowMessageRequest\x12\x13\n\x06option\x18\x01 \x01(\tH\x00\x88\x01\x01\x42\t\n\x07_optionb\x06proto3'
 )
 
 
@@ -107,6 +107,13 @@ _OPENFLOWMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='content', full_name='OpenFlowMessage.content', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -118,9 +125,14 @@ _OPENFLOWMESSAGE = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='_content', full_name='OpenFlowMessage._content',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
   ],
-  serialized_start=57,
-  serialized_end=184,
+  serialized_start=58,
+  serialized_end=219,
 )
 
 
@@ -151,8 +163,8 @@ _OPENFLOWMESSAGES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=186,
-  serialized_end=240,
+  serialized_start=221,
+  serialized_end=275,
 )
 
 
@@ -188,11 +200,14 @@ _OPENFLOWMESSAGEREQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=242,
-  serialized_end=298,
+  serialized_start=277,
+  serialized_end=333,
 )
 
 _OPENFLOWMESSAGE.fields_by_name['datapath'].message_type = _DATAPATH
+_OPENFLOWMESSAGE.oneofs_by_name['_content'].fields.append(
+  _OPENFLOWMESSAGE.fields_by_name['content'])
+_OPENFLOWMESSAGE.fields_by_name['content'].containing_oneof = _OPENFLOWMESSAGE.oneofs_by_name['_content']
 _OPENFLOWMESSAGES.fields_by_name['messages'].message_type = _OPENFLOWMESSAGE
 _OPENFLOWMESSAGEREQUEST.oneofs_by_name['_option'].fields.append(
   _OPENFLOWMESSAGEREQUEST.fields_by_name['option'])

@@ -299,7 +299,8 @@ proto.OpenFlowMessage.toObject = function(includeInstance, msg) {
     xid: jspb.Message.getFieldWithDefault(msg, 2, 0),
     messageType: jspb.Message.getFieldWithDefault(msg, 3, ""),
     timestamp: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
-    switch2controller: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
+    switch2controller: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    content: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -356,6 +357,10 @@ proto.OpenFlowMessage.deserializeBinaryFromReader = function(msg, reader) {
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setSwitch2controller(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setContent(value);
       break;
     default:
       reader.skipField();
@@ -419,6 +424,13 @@ proto.OpenFlowMessage.serializeBinaryToWriter = function(message, writer) {
   if (f) {
     writer.writeBool(
       5,
+      f
+    );
+  }
+  f = /** @type {string} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
+    writer.writeString(
+      6,
       f
     );
   }
@@ -531,6 +543,42 @@ proto.OpenFlowMessage.prototype.getSwitch2controller = function() {
  */
 proto.OpenFlowMessage.prototype.setSwitch2controller = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
+};
+
+
+/**
+ * optional string content = 6;
+ * @return {string}
+ */
+proto.OpenFlowMessage.prototype.getContent = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.OpenFlowMessage} returns this
+ */
+proto.OpenFlowMessage.prototype.setContent = function(value) {
+  return jspb.Message.setField(this, 6, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.OpenFlowMessage} returns this
+ */
+proto.OpenFlowMessage.prototype.clearContent = function() {
+  return jspb.Message.setField(this, 6, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.OpenFlowMessage.prototype.hasContent = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

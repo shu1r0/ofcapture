@@ -15,13 +15,13 @@ import { WSClient } from '../client/remoteClient'
 import {Sequence} from '../scripts/sequence'
 
 export default defineComponent({
-  setup() {
+  setup(props, ctx) {
     let update = ref<any>()
 
     onMounted(() => {
       const client = new WSClient("10.0.0.109", "8889")
 
-      const seq = new Sequence('#chart')
+      const seq = new Sequence('#chart', ctx)
 
       /**
        * update

@@ -1,9 +1,11 @@
 // eslint-disable-next-line
 //@ts-ignore
 import * as d3 from 'd3'
+import { EmitsOptions, SetupContext } from 'vue'
 
 
 import { Datapath, OpenFlowMessage } from '../api/api_pb'
+import { MessageInformation } from './information'
 
 /**
  * Sequence diagram
@@ -36,14 +38,20 @@ export class Sequence {
 
   private drawnDatapathes: string[] = []
 
+  private ctx: SetupContext<EmitsOptions>
+
   /**
    * set sequence diagram
    * @param id 
    */
-  constructor(id: string){
+  constructor(id: string, ctx: SetupContext<EmitsOptions>){
     this.svg = d3.select(id)
+    this.ctx = ctx
   }
 
+  /**
+   * remove all element
+   */
   reset(){
     this.svg.selectAll("*").remove()
   }
@@ -105,8 +113,9 @@ export class Sequence {
    * @param {number} index : message index
    * @param {number} senderIndex : message sender index
    * @param {number} receiverIndex : message receiver index
+   * @returns any : message label obj
    */
-  private drawMessageArrow(message: string, index: number, senderIndex: number, receiverIndex: number){
+  private drawMessageArrow(message: string, index: number, senderIndex: number, receiverIndex: number): any{
     // Arrow
     this.svg.append("svg:defs").append("svg:marker")
       .attr("id", "arrow")
@@ -138,6 +147,7 @@ export class Sequence {
                       .attr("text-anchor", "begin")
                       .style("font-size", "8px")
                       .text((d: any) => {return message})
+    return label
   }
 
   /**
@@ -189,13 +199,27 @@ export class Sequence {
       // switch to controller
       const datapath_index = this.drawnDatapathes.indexOf((message.getDatapath() as Datapath).getLocalPort()) + 1
       const controller_index = 0
+      let msgLabel: any
       if(message.getSwitch2controller()){
-        this.drawMessageArrow(message.getMessageType(), index, datapath_index, controller_index)
+        msgLabel = this.drawMessageArrow(message.getMessageType(), index, datapath_index, controller_index)
       }else{
-        this.drawMessageArrow(message.getMessageType(), index, controller_index, datapath_index)
+        msgLabel = this.drawMessageArrow(message.getMessageType(), index, controller_index, datapath_index)
       }
       this.drawMessageTimestamp(message.getTimestamp(), index)
+      msgLabel.on("click", () => {
+        this.showInformation(message)
+      })
     })
+  }
+
+  private showInformation(message: OpenFlowMessage) {
+    const information: MessageInformation = {
+      messageType: message.getMessageType(),
+      order: message.getSwitch2controller() ? "switch => controller" : "controller => switch",
+      timestamp: message.getTimestamp(),
+      content: message.getContent() ?? ""
+    }
+    this.ctx.emit("showinfo", information)
   }
 
   getDrawnDatapathes(){
