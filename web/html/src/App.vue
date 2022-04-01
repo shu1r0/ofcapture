@@ -11,10 +11,10 @@
   </div>
 
   <div id="message-information">
-    <div>MessageType: {{ data.messageType }}</div>
-    <div>order: {{ data.order }}</div>
-    <div>timestamp: {{ data.timestamp }}</div>
-    <div>content: </div>
+    <div><b>MessageType:</b> {{ data.messageType }}</div>
+    <div><b>order:</b> {{ data.order }}</div>
+    <div><b>timestamp:</b> {{ data.timestamp }}</div>
+    <div><b>content:</b> </div>
     <div>{{ data.content }}</div>
   </div>
 </template>
@@ -36,7 +36,8 @@ export default defineComponent({
       timestamp: 0,
       content: ""
     })
-    const showinfo = (information: MessageInformation) => {
+    const showInfo = (information: MessageInformation) => {
+      console.log(information)
       data.messageType = information.messageType
       data.order = information.order
       data.timestamp = information.timestamp
@@ -44,7 +45,7 @@ export default defineComponent({
     }
 
     return {
-      showinfo,
+      showInfo,
       data
     }
   }

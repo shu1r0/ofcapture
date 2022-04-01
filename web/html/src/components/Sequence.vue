@@ -19,7 +19,7 @@ export default defineComponent({
     let update = ref<any>()
 
     onMounted(() => {
-      const client = new WSClient("10.0.0.109", "8889")
+      const client = new WSClient("10.0.0.100", "8889")
 
       const seq = new Sequence('#chart', ctx)
 

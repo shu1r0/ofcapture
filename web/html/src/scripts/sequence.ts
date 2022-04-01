@@ -207,6 +207,7 @@ export class Sequence {
       }
       this.drawMessageTimestamp(message.getTimestamp(), index)
       msgLabel.on("click", () => {
+        console.log("click")
         this.showInformation(message)
       })
     })
