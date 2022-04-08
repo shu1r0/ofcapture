@@ -6,7 +6,8 @@ import asyncio
 import datetime
 from logging import getLogger, DEBUG, StreamHandler, Formatter, handlers, INFO
 
-from capture.capture import CaptureWithRepo, CaptureWithPipe, CaptureWithWeb
+from capture.capture import CaptureWithRepo, CaptureWithPipe, CaptureWithWeb, CaptureBase, SimpleCapture
+from ofproto.packet import OFMsg
 from proxy.proxy import ChannelManager, SwitchHandler
 from proxy.observable import ObservableData
 
@@ -58,6 +59,9 @@ class OFCaptureBase:
                                             loop=self.event_loop,
                                             channel_manager=self.channel_manager)
 
+        # capture
+        self.capture: CaptureBase = SimpleCapture(observable=self.observable)
+
         if log_file:
             set_logger(log_level=log_level, filename=log_file)
         logger.info("OFCapture ready (lip={}, lport={}, cip={}, cport={}, async_queue={})".format(
@@ -78,6 +82,28 @@ class OFCaptureBase:
     def stop_server(self):
         self.event_loop.stop()
         self.event_loop.close()
+
+    def on(self, msg_type, handler=None):
+        """
+
+        Examples:
+
+            # get only packet in message
+            @ofcapture.on(10)
+            def packetin_handler(msg):
+                print(msg)
+
+            # get all message
+            @ofcapture.on("*")
+            def all_msg_handler(msg):
+                print(msg)
+        """
+        def set_handler(handler):
+            self.capture.handlers[msg_type] = handler
+            return handler
+        if handler is None:
+            return set_handler
+        set_handler(handler)
 
 
 class OFCaptureWithPipe(OFCaptureBase):

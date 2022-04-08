@@ -3,7 +3,6 @@ Capture App
 """
 
 import pickle
-from abc import ABCMeta, abstractmethod
 
 from pyof.foundation.basic_types import DPID
 from pyof.v0x04.common.header import Type
@@ -13,13 +12,13 @@ from proxy.observer import OFObserver
 from capture.of_msg_repository import packet_in_out_repo
 from ofproto.packet import OFMsg
 from ofproto.datapath import Port, Datapath
-from ofproto.openflow import todict
+from ofproto.packet import todict
 
 import web.proto.api_pb2 as pb
 from web.ws_server import emit_ofmsg, set_getOpenFlowMessage_handler
 
 
-class CaptureBase(OFObserver, metaclass=ABCMeta):
+class CaptureBase(OFObserver):
     """CaptureBase
 
     This is a base class for saving messages to a repository or output to stdout.
@@ -35,8 +34,12 @@ class CaptureBase(OFObserver, metaclass=ABCMeta):
         # all captured messages
         self._messages = []
         self.do_capture = do_capture
+
         # datapathes
         self._datapathes: list[Datapath] = []
+        
+        # handlers
+        self.handlers = {}
 
     def update(self, msg):
         """handle msg
@@ -60,6 +63,7 @@ class CaptureBase(OFObserver, metaclass=ABCMeta):
                 datapath_id = int(''.join(msg.of_msg.datapath_id.value.split(':')), 16)
                 self.lport_to_dpid[msg.local_port] = datapath_id
                 datapath.datapath_id = datapath_id
+        
         # set port obj
         elif msg.message_type == Type.OFPT_MULTIPART_REPLY:
             if msg.of_msg.multipart_type == MultipartType.OFPMP_PORT_DESC:
@@ -80,9 +84,11 @@ class CaptureBase(OFObserver, metaclass=ABCMeta):
         # notify subclass
         self.msg_handler(msg)
 
-    @abstractmethod
     def msg_handler(self, msg):
-        raise NotImplementedError
+        if msg.message_type in self.handlers.keys():
+            self.handlers[msg.message_type](msg)
+        if "*" in self.handlers.keys():
+            self.handlers["*"](msg)
 
     def get_datapathid(self, local_port):
         """get datapath id
@@ -148,9 +154,6 @@ class SimpleCapture(CaptureBase):
     def __init__(self, observable):
         super(SimpleCapture, self).__init__(observable)
 
-    def msg_handler(self, msg):
-        pass
-
 
 class CaptureWithRepo(CaptureBase):
     """
@@ -164,6 +167,7 @@ class CaptureWithRepo(CaptureBase):
         self.repo = packet_in_out_repo
 
     def msg_handler(self, msg):
+        super(CaptureWithRepo, self).msg_handler(msg)
         self.add_repo(msg)
 
     def add_repo(self, msg):
@@ -191,6 +195,7 @@ class CaptureWithPipe(CaptureBase):
         self._send_types = [Type.OFPT_PACKET_OUT, Type.OFPT_PACKET_IN, Type.OFPT_FLOW_MOD]
 
     def msg_handler(self, msg):
+        super(CaptureWithPipe, self).msg_handler(msg)
         self.send_pipe(msg)
 
     def send_pipe(self, msg):
@@ -218,6 +223,7 @@ class CaptureWithWeb(CaptureBase):
         set_getOpenFlowMessage_handler(self._get_ofmsgs)
 
     def msg_handler(self, msg):
+        super(CaptureWithWeb, self).msg_handler(msg)
         proto_datapath = pb.Datapath()
         proto_datapath.local_port = str(msg.local_port)
         dpid = self.get_datapathid(msg.local_port)

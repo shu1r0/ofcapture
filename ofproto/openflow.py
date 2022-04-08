@@ -41,8 +41,7 @@ def parse(msg, logger=None):
         msgs.append(msg)
 
         if logger:
-            dict_of_msg = todict(of_msg, logger)
-            logger.info("Parsed msg : {} {} {}".format(msg.msg_name, of_msg, dict_of_msg))
+            logger.info("Parsed msg : {} {} ".format(msg.msg_name, of_msg))
 
         if len(rest) > 0:
             msg_rest = OFMsg(msg.timestamp, msg.local_ip, msg.remote_ip, msg.local_port, msg.remote_port,
@@ -62,42 +61,3 @@ def get_header(msg):
     header = Header()
     header.unpack(msg.data[:header.get_size()])
     return header
-
-
-def todict(obj, logger=None, classkey=None):
-    if isinstance(obj, dict):
-        data = {}
-        for (k, v) in obj.items():
-            data[k] = todict(v, logger, classkey)
-        return data
-    elif isinstance(obj, bytes):  # bytes convert test
-        # value = ""
-        # for v in obj:
-        #     v = hex(v)[2:]
-        #     value += v
-        return obj
-    elif isinstance(obj, Enum):
-        name = obj.name
-        return name
-    elif hasattr(obj, "_ast"):
-        return todict(obj._ast(), logger)
-    elif hasattr(obj, "__iter__") and not isinstance(obj, str):
-        return [todict(v, logger, classkey) for v in obj]
-    elif hasattr(obj, "__dict__"):
-        # value
-        if isinstance(obj, GenericType):
-            # logger.debug("UBIntBase, key : {}".format(vars(obj)))
-            if obj.enum_ref is None:
-                return obj._value
-            elif isinstance(obj._value, GenericBitMask):
-                return obj._value.__str__()
-        elif isinstance(obj, Enum):
-            return obj.value
-        data = dict([(key, todict(value, logger, classkey))
-                     for key, value in obj.__dict__.items()
-                     if not callable(value) and not key.startswith('_')])
-        if classkey is not None and hasattr(obj, "__class__"):
-            data[classkey] = obj.__class__.__name__
-        return data
-    else:
-        return obj
