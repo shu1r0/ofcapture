@@ -1,12 +1,9 @@
 """
 main module of OpenFlow Capture
-
-Todo:
-    * Encapsulate OpenFlo Capture
 """
+import argparse
 import asyncio
 import datetime
-from abc import ABCMeta
 from logging import getLogger, DEBUG, StreamHandler, Formatter, handlers, INFO
 
 from capture.capture import CaptureWithRepo, CaptureWithPipe, CaptureWithWeb
@@ -36,7 +33,7 @@ def set_logger(log_level=DEBUG, filename=default_logfile):
     logger.addHandler(handler)
 
 
-class OFCaptureBase(metaclass=ABCMeta):
+class OFCaptureBase:
     """OpenFlow proxy to capture
 
     Attributes:
@@ -112,14 +109,27 @@ class OFCaptureWithWeb(OFCaptureBase):
 
     def start_server(self, coro: list = None):
         coro = coro if coro is not None else []
-        self.event_loop.run_until_complete(self.start_server_coro([ws_server_start(self.ws_ip, self.ws_port),*coro]))
+        self.event_loop.run_until_complete(self.start_server_coro([ws_server_start(self.ws_ip, self.ws_port), *coro]))
 
     def stop_server(self):
         super(OFCaptureWithWeb, self).stop_server()
 
 
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-v', '--verbose', action='store_true')
+    parser.add_argument('--log_file', help="log file path", default=None)
+    parser.add_argument('--ws_ip', help="web socket server ip address", default="0.0.0.0")
+    parser.add_argument('--ws_port', help="web socket server port", default=8889)
+
+    args = parser.parse_args()
+    return args
+
+
 if __name__ == "__main__":
-    ofcapture = OFCaptureWithWeb(log_level=INFO, ws_ip="0.0.0.0")
+    args = get_args()
+    loglevel = DEBUG if args.verbose else INFO
+    ofcapture = OFCaptureWithWeb(log_file=args.log_file, log_level=loglevel, ws_ip=args.ws_ip, ws_port=args.ws_port)
 
     try:
         ofcapture.start_server()
