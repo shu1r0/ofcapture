@@ -78,6 +78,7 @@ def ipv4address_bytes2string(data):
     addr = ipaddress.IPv4Address(data)
     return str(addr)
 
+
 def todict(obj, logger=None, classkey=None):
     if isinstance(obj, dict):
         data = {}
@@ -100,13 +101,8 @@ def todict(obj, logger=None, classkey=None):
     elif hasattr(obj, "__dict__"):
         # value
         if isinstance(obj, GenericType):
-            # logger.debug("UBIntBase, key : {}".format(vars(obj)))
-            if obj.enum_ref is None:
-                return obj._value
-            elif isinstance(obj._value, GenericBitMask):
-                return obj._value.__str__()
-        elif isinstance(obj, Enum):
             return obj.value
+
         data = dict([(key, todict(value, logger, classkey))
                      for key, value in obj.__dict__.items()
                      if not callable(value) and not key.startswith('_')])
