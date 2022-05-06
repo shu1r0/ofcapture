@@ -42,6 +42,10 @@ $ python3 ofcapture.py
 2021-11-25 12:02:51.461787 switch(dpid=3) -> controller OFPT_ECHO_REQUEST(xid=0)
 ```
 
+## System Architecutre
+
+![system architecture](./doc/images/system_architecture.drawio.png)
+
 
 ## web system
 
